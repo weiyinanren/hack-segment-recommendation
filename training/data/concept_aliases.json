@@ -1,0 +1,6 @@
+{
+  "groups": [
+    ["female", "miss", "ms", "mrs", "woman", "women"]
+  ],
+  "note": "OPTIONAL only. Prefer --name-backend embedding. Do not try to enumerate all synonyms here. Enable with --name-alias-boost."
+}

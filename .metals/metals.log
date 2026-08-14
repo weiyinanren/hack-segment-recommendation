@@ -1,0 +1,66 @@
+2026.08.12 15:28:03 INFO  Started: Metals version 1.6.8 in folders '/Users/stevlu/Desktop/Hack' for client Cursor 1.128.0.
+2026.08.12 15:28:03 INFO  Memory monitor started
+2026.08.12 15:28:04 WARN  Using H2 2.4.240 which is newer than the version Flyway has been verified with. The latest verified version of H2 is 2.3.232.
+2026.08.12 16:39:11 INFO  no build target found for /Users/stevlu/Desktop/Hack/online/src/main/java/com/hack/segmentrec/config/SegmentRecProperties.java. Using fallback presentation compiler.
+2026.08.12 16:39:16 INFO  no build target found for /Users/stevlu/Desktop/Hack/online/src/main/java/com/hack/segmentrec/config/SegmentRecProperties.java. Using fallback presentation compiler.
+2026.08.12 16:39:16 INFO  no build target found for /Users/stevlu/Desktop/Hack/online/src/main/java/com/hack/segmentrec/controller/RecommendController.java. Using fallback presentation compiler.
+2026.08.12 16:39:18 INFO  no build target found for /Users/stevlu/Desktop/Hack/online/src/main/java/com/hack/segmentrec/controller/RecommendController.java. Using fallback presentation compiler.
+2026.08.12 16:39:25 INFO  no build target found for /Users/stevlu/Desktop/Hack/online/src/main/java/com/hack/segmentrec/controller/RecommendController.java. Using fallback presentation compiler.
+2026.08.12 16:40:36 INFO  no build target found for /Users/stevlu/Desktop/Hack/online/src/main/java/com/hack/segmentrec/controller/RecommendController.java. Using fallback presentation compiler.
+2026.08.12 16:40:54 INFO  no build target found for /Users/stevlu/Desktop/Hack/online/src/main/java/com/hack/segmentrec/model/RecommendResponse.java. Using fallback presentation compiler.
+2026.08.12 16:41:08 INFO  no build target found for /Users/stevlu/Desktop/Hack/online/src/main/java/com/hack/segmentrec/service/RankingService.java. Using fallback presentation compiler.
+2026.08.12 16:41:08 INFO  no build target found for /Users/stevlu/Desktop/Hack/online/src/main/java/com/hack/segmentrec/service/ArtifactStore.java. Using fallback presentation compiler.
+2026.08.12 16:41:55 INFO  no build target found for /Users/stevlu/Desktop/Hack/online/src/main/java/com/hack/segmentrec/controller/RecommendController.java. Using fallback presentation compiler.
+2026.08.12 16:42:32 INFO  no build target found for /Users/stevlu/Desktop/Hack/online/src/main/java/com/hack/segmentrec/controller/RecommendController.java. Using fallback presentation compiler.
+2026.08.12 16:44:22 INFO  no build target found for /Users/stevlu/Desktop/Hack/online/src/main/java/com/hack/segmentrec/controller/RecommendController.java. Using fallback presentation compiler.
+2026.08.12 17:07:28 INFO  no build target found for /Users/stevlu/Desktop/Hack/recommendation/src/main/java/com/hack/segmentrec/service/ArtifactStore.java. Using fallback presentation compiler.
+2026.08.12 17:26:28 INFO  no build target found for /Users/stevlu/Desktop/Hack/recommendation/src/main/java/com/hack/segmentrec/config/SegmentRecProperties.java. Using fallback presentation compiler.
+2026.08.12 17:26:44 INFO  no build target found for /Users/stevlu/Desktop/Hack/recommendation/src/main/java/com/hack/segmentrec/model/RecommendResponse.java. Using fallback presentation compiler.
+2026.08.12 17:26:44 INFO  no build target found for /Users/stevlu/Desktop/Hack/recommendation/src/main/java/com/hack/segmentrec/service/ArtifactStore.java. Using fallback presentation compiler.
+2026.08.12 17:26:53 INFO  no build target found for /Users/stevlu/Desktop/Hack/recommendation/src/main/java/com/hack/segmentrec/service/ArtifactStore.java. Using fallback presentation compiler.
+2026.08.12 17:27:03 INFO  no build target found for /Users/stevlu/Desktop/Hack/recommendation/src/main/java/com/hack/segmentrec/service/ArtifactStore.java. Using fallback presentation compiler.
+2026.08.12 17:27:09 INFO  no build target found for /Users/stevlu/Desktop/Hack/recommendation/src/main/java/com/hack/segmentrec/service/RankingService.java. Using fallback presentation compiler.
+2026.08.13 09:53:36 INFO  Tracing is disabled for protocol LSP. To enable tracing of incoming and outgoing JSON messages, create an empty file at /Users/stevlu/Desktop/Hack/.metals/lsp.trace.json
+2026.08.13 09:53:36 ERROR Failed to get project directories
+java.lang.NumberFormatException: For input string: "23-valhalla"
+	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:67)
+	at java.lang.Integer.parseInt(Integer.java:589)
+	at java.lang.Integer.parseInt(Integer.java:686)
+	at dev.dirs.jni.WindowsJni.getJdkAwareSupplier(WindowsJni.java:25)
+	at scala.meta.internal.metals.MetalsProjectDirectories$.$anonfun$fromPath$1(MetalsProjectDirectories.scala:41)
+	at scala.concurrent.Future$.$anonfun$apply$1(Future.scala:691)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:500)
+	at java.util.concurrent.ForkJoinTask$RunnableExecuteAction.compute(ForkJoinTask.java:1726)
+	at java.util.concurrent.ForkJoinTask$RunnableExecuteAction.compute(ForkJoinTask.java:1717)
+	at java.util.concurrent.ForkJoinTask$InterruptibleTask.exec(ForkJoinTask.java:1641)
+	at java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:507)
+	at java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1491)
+	at java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:2073)
+	at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:2035)
+	at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:189)
+
+2026.08.13 09:53:37 ERROR Failed to get project directories
+java.lang.NumberFormatException: For input string: "23-valhalla"
+	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:67)
+	at java.lang.Integer.parseInt(Integer.java:589)
+	at java.lang.Integer.parseInt(Integer.java:686)
+	at dev.dirs.jni.WindowsJni.getJdkAwareSupplier(WindowsJni.java:25)
+	at scala.meta.internal.metals.MetalsProjectDirectories$.$anonfun$from$1(MetalsProjectDirectories.scala:33)
+	at scala.concurrent.Future$.$anonfun$apply$1(Future.scala:691)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:500)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.lang.Thread.run(Thread.java:1575)
+
+2026.08.13 09:53:37 INFO  logging to files /Users/stevlu/Desktop/Hack/.metals/metals.log
+2026.08.13 09:53:37 INFO  Started: Metals version 1.6.8 in folders '/Users/stevlu/Desktop/Hack' for client Cursor 1.128.0.
+2026.08.13 09:53:39 INFO  Memory monitor started
+2026.08.13 09:53:40 WARN  Using H2 2.4.240 which is newer than the version Flyway has been verified with. The latest verified version of H2 is 2.3.232.
+2026.08.13 10:20:47 INFO  Started: Metals version 1.6.8 in folders '/Users/stevlu/Desktop/Hack' for client Cursor 1.128.0.
+2026.08.13 10:20:47 INFO  Memory monitor started
+2026.08.13 10:20:48 WARN  Using H2 2.4.240 which is newer than the version Flyway has been verified with. The latest verified version of H2 is 2.3.232.
+2026.08.13 16:33:12 INFO  no build target found for /Users/stevlu/Desktop/Hack/recommendation/src/main/java/com/hack/segmentrec/service/ArtifactStore.java. Using fallback presentation compiler.
+2026.08.13 16:33:15 INFO  no build target found for /Users/stevlu/Desktop/Hack/recommendation/src/main/java/com/hack/segmentrec/controller/RecommendController.java. Using fallback presentation compiler.
+2026.08.13 17:52:48 INFO  no build target found for /Users/stevlu/Desktop/Hack/recommendation/src/main/java/com/hack/segmentrec/service/RankingService.java. Using fallback presentation compiler.
+2026.08.13 17:52:48 INFO  no build target found for /Users/stevlu/Desktop/Hack/recommendation/src/main/java/com/hack/segmentrec/service/ArtifactStore.java. Using fallback presentation compiler.
+2026.08.13 17:52:48 INFO  no build target found for /Users/stevlu/Desktop/Hack/recommendation/src/main/java/com/hack/segmentrec/controller/RecommendController.java. Using fallback presentation compiler.

@@ -1,0 +1,26 @@
+[
+  {
+    "segmentId": "S8",
+    "count": 4,
+    "weightSum": 2.562009,
+    "score": 1.0
+  },
+  {
+    "segmentId": "S2",
+    "count": 4,
+    "weightSum": 1.947154,
+    "score": 0.649363
+  },
+  {
+    "segmentId": "S4",
+    "count": 3,
+    "weightSum": 1.662371,
+    "score": 0.486958
+  },
+  {
+    "segmentId": "S9",
+    "count": 2,
+    "weightSum": 0.808472,
+    "score": 0.0
+  }
+]

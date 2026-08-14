@@ -1,0 +1,13 @@
+.venv/
+__pycache__/
+*.pyc
+.DS_Store
+target/
+*.class
+*.iml
+.idea/
+.vscode/
+artifacts/index.json
+artifacts/global/
+artifacts/clients/
+!artifacts/.gitkeep

@@ -1,0 +1,16 @@
+server:
+  port: 8080
+
+segment-rec:
+  artifacts-path: ${SEGMENT_REC_ARTIFACTS:../artifacts}
+  weights:
+    global-popularity: 0.12
+    industry-popularity: 0.20
+    client-popularity: 0.12
+    similarity: 0.26
+    embedding: 0.12
+    name-similarity: 0.18
+
+logging:
+  level:
+    com.hack.segmentrec: INFO
