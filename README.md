@@ -82,9 +82,12 @@ mvn -s maven-settings.xml -DskipTests package
 方式 A — Maven 直接跑：
 
 ```bash
+export OPENAI_API_KEY=sk-...
 cd recommendation
 mvn -s maven-settings.xml spring-boot:run
 ```
+
+Chat 接口 `/api/chat/recommend` 用 OpenAI `gpt-4o-mini` 解析自然语言。详见 [`docs/QUERY_UNDERSTANDING.md`](docs/QUERY_UNDERSTANDING.md)。
 
 方式 B — 跑已打好的 jar：
 
@@ -157,7 +160,7 @@ score = w_g*global + w_i*industry + w_c*client + w_sim*sim + w_emb*emb_nbr + w_n
 - [`docs/NAME_SIMILARITY.md`](docs/NAME_SIMILARITY.md) — 全局名称近邻（MiniLM）
 - [`docs/ALGORITHMS.md`](docs/ALGORITHMS.md) — 训练算法
 - [`docs/TENANCY.md`](docs/TENANCY.md) — 三层隔离与 Serving
-- [`docs/SAMPLE_WEIGHTS.md`](docs/SAMPLE_WEIGHTS.md) — 创建时间 / 分发样本权重
+- [`docs/QUERY_UNDERSTANDING.md`](docs/QUERY_UNDERSTANDING.md) — OpenAI query 解析（industry / concept / 排除项）
 - [`segment_tranning.md`](segment_tranning.md) — 原始设计 Spec
 - [`training/README.md`](training/README.md) — 训练启动与参数
 - [`recommendation/README.md`](recommendation/README.md) — 推荐 API 与启动

@@ -1,8 +1,11 @@
 package com.hack.segmentrec.controller;
 
+import com.hack.segmentrec.model.ChatRecommendRequest;
+import com.hack.segmentrec.model.ChatRecommendResponse;
 import com.hack.segmentrec.model.RecommendRequest;
 import com.hack.segmentrec.model.RecommendResponse;
 import com.hack.segmentrec.service.ArtifactStore;
+import com.hack.segmentrec.service.ConversationalRecommendationService;
 import com.hack.segmentrec.service.RankingService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -23,10 +26,16 @@ import java.util.TreeSet;
 public class RecommendController {
 
     private final RankingService rankingService;
+    private final ConversationalRecommendationService conversationalRecommendationService;
     private final ArtifactStore artifactStore;
 
-    public RecommendController(RankingService rankingService, ArtifactStore artifactStore) {
+    public RecommendController(
+            RankingService rankingService,
+            ConversationalRecommendationService conversationalRecommendationService,
+            ArtifactStore artifactStore
+    ) {
         this.rankingService = rankingService;
+        this.conversationalRecommendationService = conversationalRecommendationService;
         this.artifactStore = artifactStore;
     }
 
@@ -43,6 +52,18 @@ public class RecommendController {
             request.setTopN(10);
         }
         return rankingService.recommend(request);
+    }
+
+    /**
+     * Natural-language recommendation flow:
+     * query -> parse industry/concept -> retrieve seed segments -> rank final segments.
+     */
+    @PostMapping("/chat/recommend")
+    public ChatRecommendResponse chatRecommend(@RequestBody ChatRecommendRequest request) {
+        if (request.getTopN() <= 0) {
+            request.setTopN(10);
+        }
+        return conversationalRecommendationService.recommend(request);
     }
 
     @GetMapping("/health")

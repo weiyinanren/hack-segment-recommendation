@@ -7,6 +7,7 @@ import com.hack.segmentrec.model.RecommendResponse.RecommendedItem;
 import com.hack.segmentrec.model.ScoredSegment;
 import com.hack.segmentrec.service.ArtifactStore.ClientArtifacts;
 import com.hack.segmentrec.service.ArtifactStore.GlobalArtifacts;
+import com.hack.segmentrec.service.query.SegmentExclusionFilter;
 import org.springframework.stereotype.Service;
 
 import java.util.Comparator;
@@ -29,16 +30,23 @@ public class RankingService {
 
     private final ArtifactStore artifactStore;
     private final SegmentRecProperties properties;
+    private final SegmentExclusionFilter exclusionFilter;
 
-    public RankingService(ArtifactStore artifactStore, SegmentRecProperties properties) {
+    public RankingService(
+            ArtifactStore artifactStore,
+            SegmentRecProperties properties,
+            SegmentExclusionFilter exclusionFilter
+    ) {
         this.artifactStore = artifactStore;
         this.properties = properties;
+        this.exclusionFilter = exclusionFilter;
     }
 
     public RecommendResponse recommend(RecommendRequest request) {
         ClientArtifacts client = artifactStore.requireClient(request.getClientName());
         GlobalArtifacts global = artifactStore.getGlobal();
         boolean expand = request.isExpandBeyondCatalog();
+        List<String> excludeConcepts = request.getExcludeConcepts();
 
         int topN = Math.max(1, Math.min(request.getTopN(), 100));
         List<String> selected = request.getSelectedSegmentIds();
@@ -51,21 +59,21 @@ public class RankingService {
         Map<String, double[]> scores = new HashMap<>();
 
         for (ScoredSegment s : global.getSegmentPrior()) {
-            if (!eligible(client, s.getSegmentId(), expand)) {
+            if (!eligible(client, s.getSegmentId(), expand, excludeConcepts)) {
                 continue;
             }
             bump(scores, s.getSegmentId(), 0, s.getScore());
         }
 
         for (ScoredSegment s : artifactStore.industryPopularityFor(request.getIndustry())) {
-            if (!eligible(client, s.getSegmentId(), expand)) {
+            if (!eligible(client, s.getSegmentId(), expand, excludeConcepts)) {
                 continue;
             }
             bump(scores, s.getSegmentId(), 1, s.getScore());
         }
 
         for (ScoredSegment s : client.popularityFor(request.getIndustry())) {
-            if (!eligible(client, s.getSegmentId(), expand)) {
+            if (!eligible(client, s.getSegmentId(), expand, excludeConcepts)) {
                 continue;
             }
             bump(scores, s.getSegmentId(), 2, s.getScore());
@@ -76,13 +84,13 @@ public class RankingService {
             for (String selectedId : selected) {
                 if (client.isInCatalog(selectedId)) {
                     for (ScoredSegment s : client.similarTo(selectedId)) {
-                        if (!eligible(client, s.getSegmentId(), expand)) {
+                        if (!eligible(client, s.getSegmentId(), expand, excludeConcepts)) {
                             continue;
                         }
                         bump(scores, s.getSegmentId(), 3, s.getScore());
                     }
                     for (ScoredSegment s : client.embeddingNeighbors(selectedId)) {
-                        if (!eligible(client, s.getSegmentId(), expand)) {
+                        if (!eligible(client, s.getSegmentId(), expand, excludeConcepts)) {
                             continue;
                         }
                         bump(scores, s.getSegmentId(), 4, s.getScore());
@@ -90,7 +98,7 @@ public class RankingService {
                 }
                 // Name similarity is global (synonyms); seed can be any known segment id
                 for (ScoredSegment s : global.nameNeighborsOf(selectedId)) {
-                    if (!eligible(client, s.getSegmentId(), expand)) {
+                    if (!eligible(client, s.getSegmentId(), expand, excludeConcepts)) {
                         continue;
                     }
                     bump(scores, s.getSegmentId(), 5, s.getScore());
@@ -108,7 +116,7 @@ public class RankingService {
 
         List<RecommendedItem> items = scores.entrySet().stream()
                 .filter(e -> !exclude.contains(e.getKey()))
-                .filter(e -> eligible(client, e.getKey(), expand))
+                .filter(e -> eligible(client, e.getKey(), expand, excludeConcepts))
                 .map(e -> {
                     double[] c = e.getValue();
                     RecommendedItem item = new RecommendedItem();
@@ -145,8 +153,17 @@ public class RankingService {
         return hasSelection ? "three_layer_name_catalog_fusion" : "three_layer_catalog_cold_start";
     }
 
-    private static boolean eligible(ClientArtifacts client, String segmentId, boolean expand) {
-        return expand || client.isInCatalog(segmentId);
+    private boolean eligible(
+            ClientArtifacts client,
+            String segmentId,
+            boolean expand,
+            List<String> excludeConcepts
+    ) {
+        if (!expand && !client.isInCatalog(segmentId)) {
+            return false;
+        }
+        String name = artifactStore.globalSegmentNames().getOrDefault(segmentId, segmentId);
+        return !exclusionFilter.isExcluded(segmentId, name, excludeConcepts);
     }
 
     private static void bump(Map<String, double[]> scores, String segmentId, int channel, double value) {

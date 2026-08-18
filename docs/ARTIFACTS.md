@@ -12,6 +12,7 @@ artifacts/
   global/
     segment_prior.json      # 平台级 Segment 加权热门
     segment_names.json      # segmentId → segment_name
+    segment_name_embeddings.json # segmentId → 384D 名称向量 ★ Chat concept retrieval
     name_neighbors.json     # 名称语义近邻（MiniLM）★ Serving 使用
     meta.json
   industries/{Industry}/
@@ -37,6 +38,8 @@ artifacts/
 | `clients/.../emb_neighbors.json` | 本 client | PPMI+SVD 行为向量近邻 | ✅ | 选购行为模式像谁？（可含间接关系） |
 
 `name_neighbors` **不按 client / industry 拆分**；Serving 再用 `segment_catalog` 过滤。
+
+`segment_name_embeddings.json` 也是 **global 一份**，给 `/api/chat/recommend` 做 `concept -> seed segments` 的实时余弦检索。
 
 ---
 

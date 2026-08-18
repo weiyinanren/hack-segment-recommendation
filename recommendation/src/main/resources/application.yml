@@ -3,6 +3,22 @@ server:
 
 segment-rec:
   artifacts-path: ${SEGMENT_REC_ARTIFACTS:../artifacts}
+  query-understanding:
+    # OpenAI Chat Completions. Set OPENAI_API_KEY before starting.
+    provider: ${SEGMENT_QUERY_LLM_PROVIDER:openai}
+    api-key: ${OPENAI_API_KEY:${SEGMENT_QUERY_LLM_API_KEY:}}
+    base-url: ${SEGMENT_QUERY_LLM_BASE_URL:https://api.openai.com/v1}
+    model: ${SEGMENT_QUERY_LLM_MODEL:gpt-4o-mini}
+    temperature: 0
+    timeout-seconds: 30
+    json-response: true
+    fallback-to-rule: true
+  query-embedding:
+    python-path: ${SEGMENT_QUERY_EMBED_PYTHON:../training/.venv/bin/python}
+    script-path: ${SEGMENT_QUERY_EMBED_SCRIPT:../training/scripts/embed_texts.py}
+    model: ${SEGMENT_QUERY_EMBED_MODEL:sentence-transformers/all-MiniLM-L6-v2}
+    top-k: 8
+    min-score: 0.25
   weights:
     global-popularity: 0.12
     industry-popularity: 0.20

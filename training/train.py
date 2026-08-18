@@ -25,6 +25,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 from src.embeddings import build_embeddings, nearest_neighbors_from_embeddings
 from src.name_similarity import (
+    build_name_embeddings_map,
     build_name_neighbors,
     build_segment_name_map,
     load_concept_groups,
@@ -33,7 +34,7 @@ from src.popularity import build_popularity, global_segment_counts, global_segme
 from src.similarity import build_audiences, build_similarity
 from src.weights import WeightConfig, attach_sample_weights
 
-SAFE_SLUG_RE = re.compile(r"[^A-Za-z0-9._-]+")
+SAFE_SLUG_RE = re.compile(r"[^\w._-]+", re.UNICODE)
 
 
 def write_json(path: Path, payload: object) -> None:
@@ -89,6 +90,12 @@ def train_global(
 
     segment_names = build_segment_name_map(df)
     write_json(out_dir / "segment_names.json", segment_names)
+    segment_name_embeddings, embedding_meta = build_name_embeddings_map(
+        segment_names,
+        backend=name_backend,  # type: ignore[arg-type]
+    )
+    if segment_name_embeddings:
+        write_json(out_dir / "segment_name_embeddings.json", segment_name_embeddings)
     groups = load_concept_groups(concept_aliases_path) if name_alias_boost else []
     name_neighbors, name_meta = build_name_neighbors(
         segment_names,
@@ -113,13 +120,19 @@ def train_global(
         ),
         "topN": top_n,
         "topKName": top_k_name,
+        "segmentNameEmbeddings": embedding_meta,
         "nameSimilarity": name_meta,
         "sampleWeights": weight_cfg.to_meta(),
-        "contents": "segment_prior + segment_names + name_neighbors",
+        "contents": "segment_prior + segment_names + segment_name_embeddings + name_neighbors",
         "excludes": "industry split, co-occurrence, embeddings",
         "artifacts": [
             "segment_prior.json",
             "segment_names.json",
+            *(
+                ["segment_name_embeddings.json"]
+                if segment_name_embeddings
+                else []
+            ),
             "name_neighbors.json",
             "meta.json",
         ],

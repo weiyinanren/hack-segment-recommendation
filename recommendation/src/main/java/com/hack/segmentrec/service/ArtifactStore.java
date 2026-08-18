@@ -165,6 +165,8 @@ public class ArtifactStore {
         g.segmentPrior = Files.exists(prior) ? readList(prior) : Collections.emptyList();
         Path namesPath = dir.resolve("segment_names.json");
         g.segmentNames = Files.exists(namesPath) ? readStringMap(namesPath) : Collections.emptyMap();
+        Path nameEmb = dir.resolve("segment_name_embeddings.json");
+        g.segmentNameEmbeddings = Files.exists(nameEmb) ? readVectorMap(nameEmb) : Collections.emptyMap();
         Path nameNbr = dir.resolve("name_neighbors.json");
         g.nameNeighbors = Files.exists(nameNbr) ? readMapOfLists(nameNbr) : Collections.emptyMap();
         Path metaPath = dir.resolve("meta.json");
@@ -175,8 +177,8 @@ public class ArtifactStore {
             }
         }
         g.loaded = true;
-        log.info("Global layer loaded segmentPrior={} nameNeighbors={}",
-                g.segmentPrior.size(), g.nameNeighbors.size());
+        log.info("Global layer loaded segmentPrior={} nameEmbeddings={} nameNeighbors={}",
+                g.segmentPrior.size(), g.segmentNameEmbeddings.size(), g.nameNeighbors.size());
         return g;
     }
 
@@ -246,6 +248,14 @@ public class ArtifactStore {
         return raw != null ? raw : new HashMap<>();
     }
 
+    private Map<String, List<Double>> readVectorMap(Path path) throws IOException {
+        Map<String, List<Double>> raw = objectMapper.readValue(
+                path.toFile(),
+                new TypeReference<Map<String, List<Double>>>() {
+                });
+        return raw != null ? raw : new HashMap<>();
+    }
+
     public String getIndexVersion() {
         return indexVersion;
     }
@@ -277,6 +287,10 @@ public class ArtifactStore {
         return Collections.unmodifiableSet(industryPopularity.keySet());
     }
 
+    public Map<String, String> globalSegmentNames() {
+        return Collections.unmodifiableMap(global.segmentNames);
+    }
+
     public ClientArtifacts requireClient(String clientName) {
         if (clientName == null || clientName.isBlank()) {
             throw new IllegalArgumentException("clientName is required");
@@ -293,6 +307,7 @@ public class ArtifactStore {
         private String version = "none";
         private List<ScoredSegment> segmentPrior = Collections.emptyList();
         private Map<String, String> segmentNames = Collections.emptyMap();
+        private Map<String, List<Double>> segmentNameEmbeddings = Collections.emptyMap();
         private Map<String, List<ScoredSegment>> nameNeighbors = Collections.emptyMap();
 
         static GlobalArtifacts empty() {
@@ -315,6 +330,10 @@ public class ArtifactStore {
 
         public Map<String, String> getSegmentNames() {
             return segmentNames;
+        }
+
+        public Map<String, List<Double>> getSegmentNameEmbeddings() {
+            return segmentNameEmbeddings;
         }
 
         public List<ScoredSegment> nameNeighborsOf(String segmentId) {
@@ -362,6 +381,10 @@ public class ArtifactStore {
 
         public boolean isInCatalog(String segmentId) {
             return segmentCatalog.contains(segmentId);
+        }
+
+        public Set<String> getSegmentCatalog() {
+            return Collections.unmodifiableSet(segmentCatalog);
         }
     }
 }

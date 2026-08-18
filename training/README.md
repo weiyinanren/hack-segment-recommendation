@@ -2,6 +2,16 @@
 
 三层产物：`global` + `industries` + `clients`。详见 [`docs/TENANCY.md`](../docs/TENANCY.md)。
 
+## 生成 10 万行测试数据
+
+```bash
+cd training
+source .venv/bin/activate
+python scripts/generate_audiences.py --rows 100000 --output data/audiences.csv
+```
+
+行业：CPG / OEM / Retail / HealthCheck / Dining。可复现（`--seed 42`）。
+
 ## 启动
 
 ```bash
@@ -30,7 +40,7 @@ python train.py --name-backend embedding --as-of 2026-08-12
 ## 产物
 
 ```text
-artifacts/global/           # 含 name_neighbors.json（全局一份）
+artifacts/global/           # 含 name_neighbors.json + segment_name_embeddings.json（全局一份）
 artifacts/industries/{slug}/
 artifacts/clients/{slug}/   # similarity + emb_neighbors（Serving）；embeddings 仅训练产物
 ```

@@ -8,6 +8,8 @@ import org.springframework.stereotype.Component;
 public class SegmentRecProperties {
 
     private String artifactsPath = "../artifacts";
+    private QueryUnderstanding queryUnderstanding = new QueryUnderstanding();
+    private QueryEmbedding queryEmbedding = new QueryEmbedding();
     private Weights weights = new Weights();
 
     public String getArtifactsPath() {
@@ -24,6 +26,22 @@ public class SegmentRecProperties {
 
     public void setWeights(Weights weights) {
         this.weights = weights;
+    }
+
+    public QueryUnderstanding getQueryUnderstanding() {
+        return queryUnderstanding;
+    }
+
+    public void setQueryUnderstanding(QueryUnderstanding queryUnderstanding) {
+        this.queryUnderstanding = queryUnderstanding;
+    }
+
+    public QueryEmbedding getQueryEmbedding() {
+        return queryEmbedding;
+    }
+
+    public void setQueryEmbedding(QueryEmbedding queryEmbedding) {
+        this.queryEmbedding = queryEmbedding;
     }
 
     /**
@@ -84,6 +102,133 @@ public class SegmentRecProperties {
 
         public void setNameSimilarity(double nameSimilarity) {
             this.nameSimilarity = nameSimilarity;
+        }
+    }
+
+    /**
+     * Natural-language query → industry + concept.
+     * Default vendor: OpenAI Chat Completions ({@code gpt-4o-mini}).
+     */
+    public static class QueryUnderstanding {
+        private String provider = "openai";
+        private String apiKey = "";
+        private String baseUrl = "https://api.openai.com/v1";
+        private String model = "gpt-4o-mini";
+        private double temperature = 0.0;
+        private int timeoutSeconds = 30;
+        private boolean jsonResponse = true;
+        private boolean fallbackToRule = true;
+
+        public String getProvider() {
+            return provider;
+        }
+
+        public void setProvider(String provider) {
+            this.provider = provider;
+        }
+
+        public String getApiKey() {
+            return apiKey;
+        }
+
+        public void setApiKey(String apiKey) {
+            this.apiKey = apiKey;
+        }
+
+        public String getBaseUrl() {
+            return baseUrl;
+        }
+
+        public void setBaseUrl(String baseUrl) {
+            this.baseUrl = baseUrl;
+        }
+
+        public String getModel() {
+            return model;
+        }
+
+        public void setModel(String model) {
+            this.model = model;
+        }
+
+        public double getTemperature() {
+            return temperature;
+        }
+
+        public void setTemperature(double temperature) {
+            this.temperature = temperature;
+        }
+
+        public int getTimeoutSeconds() {
+            return timeoutSeconds;
+        }
+
+        public void setTimeoutSeconds(int timeoutSeconds) {
+            this.timeoutSeconds = timeoutSeconds;
+        }
+
+        public boolean isJsonResponse() {
+            return jsonResponse;
+        }
+
+        public void setJsonResponse(boolean jsonResponse) {
+            this.jsonResponse = jsonResponse;
+        }
+
+        public boolean isFallbackToRule() {
+            return fallbackToRule;
+        }
+
+        public void setFallbackToRule(boolean fallbackToRule) {
+            this.fallbackToRule = fallbackToRule;
+        }
+    }
+
+    public static class QueryEmbedding {
+        private String pythonPath = "../training/.venv/bin/python";
+        private String scriptPath = "../training/scripts/embed_texts.py";
+        private String model = "sentence-transformers/all-MiniLM-L6-v2";
+        private int topK = 8;
+        private double minScore = 0.25;
+
+        public String getPythonPath() {
+            return pythonPath;
+        }
+
+        public void setPythonPath(String pythonPath) {
+            this.pythonPath = pythonPath;
+        }
+
+        public String getScriptPath() {
+            return scriptPath;
+        }
+
+        public void setScriptPath(String scriptPath) {
+            this.scriptPath = scriptPath;
+        }
+
+        public String getModel() {
+            return model;
+        }
+
+        public void setModel(String model) {
+            this.model = model;
+        }
+
+        public int getTopK() {
+            return topK;
+        }
+
+        public void setTopK(int topK) {
+            this.topK = topK;
+        }
+
+        public double getMinScore() {
+            return minScore;
+        }
+
+        public void setMinScore(double minScore) {
+            this.minScore = minScore;
         }
     }
 }

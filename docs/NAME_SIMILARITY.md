@@ -2,7 +2,7 @@
 
 目标：用语义向量连接 `miss` / `Ms.` / `female`，**不必穷举同义词**。
 
-产物：**全局一份** `artifacts/global/name_neighbors.json`（不要按 client 复制）。
+产物：**全局一份** `artifacts/global/name_neighbors.json` 与 `artifacts/global/segment_name_embeddings.json`（不要按 client 复制）。
 
 ---
 
@@ -24,6 +24,7 @@ MiniLM **不会**因为你们的 rich+miss 组合而更新向量；组合关系�
 segment_name（历史库）
     → SentenceTransformer("all-MiniLM-L6-v2")
     → 384D 向量（L2 归一化）
+    → artifacts/global/segment_name_embeddings.json
     → 两两余弦，保留 score ≥ minScore 的 Top-K
     → artifacts/global/name_neighbors.json
 ```
@@ -74,7 +75,11 @@ python train.py --name-backend embedding --as-of 2026-08-12
 ## 新名字（如 Madam）怎么办？
 
 预计算表里没有 → 查不到。优先：**重训**把新 `segment_name` 编进 `name_neighbors`。  
-Realtime LLM 不推荐做主路径；若要实时，用本机 MiniLM 对 catalog 内名称算余弦更合适。
+Realtime LLM 不推荐做主路径；当前更合适的是本机 MiniLM:
+
+- 训练期预产出 `segment_name_embeddings.json`
+- 在线把 query/concept 也用同模型 encode
+- 再和全局向量做余弦检索
 
 ---
 

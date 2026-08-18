@@ -215,6 +215,34 @@ def _tfidf_sims(docs: list[str]) -> np.ndarray:
         return sims
 
 
+def build_name_embeddings_map(
+    segment_names: dict[str, str],
+    *,
+    backend: NameBackend = "embedding",
+) -> tuple[dict[str, list[float]], dict[str, Any]]:
+    """segment_id -> embedding vector for name-based retrieval."""
+    ids = sorted(segment_names.keys())
+    meta: dict[str, Any] = {"backendRequested": backend}
+    if not ids:
+        meta["backendUsed"] = "none"
+        return {}, meta
+
+    if backend == "tfidf":
+        meta["backendUsed"] = "tfidf"
+        meta["vectorDim"] = 0
+        return {}, meta
+
+    display = [segment_names[i] if segment_names[i].strip() else i for i in ids]
+    mat, used = embed_texts(display)
+    mat = _l2_normalize(mat)
+    meta["backendUsed"] = used
+    meta["vectorDim"] = int(mat.shape[1])
+    return {
+        sid: [round(float(x), 8) for x in mat[idx].tolist()]
+        for idx, sid in enumerate(ids)
+    }, meta
+
+
 def build_name_neighbors(
     segment_names: dict[str, str],
     *,

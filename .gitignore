@@ -7,7 +7,4 @@ target/
 *.iml
 .idea/
 .vscode/
-artifacts/index.json
-artifacts/global/
-artifacts/clients/
 !artifacts/.gitkeep

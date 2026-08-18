@@ -18,6 +18,7 @@ public class RecommendRequest {
      *       (marked {@code inCatalog=false} for UI / entitlement flows).
      */
     private boolean expandBeyondCatalog = false;
+    private List<String> excludeConcepts = new ArrayList<>();
 
     public String getClientName() {
         return clientName;
@@ -65,5 +66,13 @@ public class RecommendRequest {
 
     public void setExpandBeyondCatalog(boolean expandBeyondCatalog) {
         this.expandBeyondCatalog = expandBeyondCatalog;
+    }
+
+    public List<String> getExcludeConcepts() {
+        return excludeConcepts;
+    }
+
+    public void setExcludeConcepts(List<String> excludeConcepts) {
+        this.excludeConcepts = excludeConcepts != null ? excludeConcepts : new ArrayList<>();
     }
 }
