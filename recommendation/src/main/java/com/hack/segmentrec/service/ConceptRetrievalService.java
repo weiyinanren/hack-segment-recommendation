@@ -1,19 +1,15 @@
 package com.hack.segmentrec.service;
 
-import com.fasterxml.jackson.databind.JsonNode;
-import com.fasterxml.jackson.databind.ObjectMapper;
 import com.hack.segmentrec.config.SegmentRecProperties;
 import com.hack.segmentrec.model.ChatRecommendResponse.SeedSegment;
+import com.hack.segmentrec.service.query.QueryEmbeddingClient;
 import com.hack.segmentrec.service.query.SegmentExclusionFilter;
 import org.springframework.stereotype.Service;
 
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.OutputStream;
-import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Comparator;
-import java.util.LinkedHashMap;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Locale;
 import java.util.Map;
@@ -24,19 +20,19 @@ public class ConceptRetrievalService {
 
     private final ArtifactStore artifactStore;
     private final SegmentRecProperties properties;
-    private final ObjectMapper objectMapper;
     private final SegmentExclusionFilter exclusionFilter;
+    private final QueryEmbeddingClient queryEmbeddingClient;
 
     public ConceptRetrievalService(
             ArtifactStore artifactStore,
             SegmentRecProperties properties,
-            ObjectMapper objectMapper,
-            SegmentExclusionFilter exclusionFilter
+            SegmentExclusionFilter exclusionFilter,
+            QueryEmbeddingClient queryEmbeddingClient
     ) {
         this.artifactStore = artifactStore;
         this.properties = properties;
-        this.objectMapper = objectMapper;
         this.exclusionFilter = exclusionFilter;
+        this.queryEmbeddingClient = queryEmbeddingClient;
     }
 
     public List<SeedSegment> retrieve(
@@ -164,45 +160,7 @@ public class ConceptRetrievalService {
     }
 
     private double[] embedConcept(String concept) {
-        SegmentRecProperties.QueryEmbedding cfg = properties.getQueryEmbedding();
-        ProcessBuilder pb = new ProcessBuilder(
-                cfg.getPythonPath(),
-                cfg.getScriptPath()
-        );
-        pb.redirectErrorStream(true);
-        try {
-            Process process = pb.start();
-            try (OutputStream os = process.getOutputStream()) {
-                Map<String, Object> payload = new LinkedHashMap<>();
-                payload.put("texts", List.of(concept));
-                payload.put("model", cfg.getModel());
-                objectMapper.writeValue(os, payload);
-            }
-            byte[] output;
-            try (InputStream is = process.getInputStream()) {
-                output = is.readAllBytes();
-            }
-            int exit = process.waitFor();
-            if (exit != 0) {
-                return new double[0];
-            }
-            JsonNode root = objectMapper.readTree(new String(output, StandardCharsets.UTF_8));
-            JsonNode rows = root.path("embeddings");
-            if (!rows.isArray() || rows.isEmpty() || !rows.get(0).isArray()) {
-                return new double[0];
-            }
-            JsonNode row = rows.get(0);
-            double[] vector = new double[row.size()];
-            for (int i = 0; i < row.size(); i++) {
-                vector[i] = row.get(i).asDouble();
-            }
-            return vector;
-        } catch (InterruptedException e) {
-            Thread.currentThread().interrupt();
-            return new double[0];
-        } catch (IOException e) {
-            return new double[0];
-        }
+        return queryEmbeddingClient.embed(concept);
     }
 
     private static double cosine(double[] query, List<Double> target) {
@@ -234,8 +192,8 @@ public class ConceptRetrievalService {
             return 0.95;
         }
 
-        Set<String> conceptTokens = Set.of(concept.split(" "));
-        Set<String> targetTokens = Set.of(target.split(" "));
+        Set<String> conceptTokens = new HashSet<>(Arrays.asList(concept.split(" ")));
+        Set<String> targetTokens = new HashSet<>(Arrays.asList(target.split(" ")));
         long overlap = conceptTokens.stream().filter(targetTokens::contains).count();
         double tokenScore = overlap == 0 ? 0.0 : overlap / (double) Math.max(conceptTokens.size(), targetTokens.size());
 

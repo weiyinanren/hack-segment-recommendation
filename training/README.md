@@ -12,6 +12,59 @@ python scripts/generate_audiences.py --rows 100000 --output data/audiences.csv
 
 行业：CPG / OEM / Retail / HealthCheck / Dining。可复现（`--seed 42`）。
 
+## 从真实租户 taxonomy 造 CPG demo 数据
+
+两步。第一步把 taxonomy 导出摊平成 segment 目录——一个 attribute 本身不是可投放的
+segment，必须带上 value，所以 `nodeVOList` 的每个节点各成一行，以 `taxonomyId` 为主键，
+命名为 `AttributeName > nodeValue`：
+
+```bash
+python scripts/parse_segment_mapping.py \
+  --input "data/segment mapping.txt" \
+  --output data/segments_cpg_demo.csv
+```
+
+第二步按美妆营销主题合成 audience。**共现结构来自主题而非随机采样**——
+audience 内部的共同出现是 `clients/*/similarity.json` 的唯一信号来源，
+随机组篮会让推荐模型学到噪声。人口属性刻意跨主题复用，制造主题之间的真实桥接：
+
+```bash
+python scripts/generate_cpg_audiences.py \
+  --audiences 2000 \
+  --client-name "Hack CPG Demo" \
+  --output data/audience_hack_cpg_demo.csv
+```
+
+主题写在 `THEMES` 里（Anti-Aging Prestige / Gen Z Social Beauty Explorer /
+Sensitive Skin Gentle Care / Deal Seeker / Mens Grooming 等 24 个）。
+脚本会拿 taxonomy 校验每一个 `(attribute, value)`，写错的取值会打印出来而不是静默丢弃。
+
+`audience_id` 是从 1 开始的连续整数，可用 `--audience-id-base` 加偏移（会检查不溢出 int64）。
+
+`audience_name` 由主题名加**非核心** segment 的标签拼成，例如
+`Curly and Coily Hair Care - Scalp Care Routine User and Frizz Concern`。
+核心 segment 不进名字——它们正是主题名已经表达的内容，写进去只是重复。
+
+segment 组合和名称都通过拒绝重采样保证**全局唯一**，生成结束前有断言兜底。
+名称默认取 1 个限定词，只在撞名时才追加，最多 `--max-name-parts` 个。
+
+拿它训练：
+
+```bash
+python train.py --input data/audience_hack_cpg_demo.csv --as-of 2026-08-19
+```
+
+## 环境
+
+Python 3.10–3.12（sentence-transformers 的限制）：
+
+```bash
+cd training
+python3.12 -m venv .venv
+.venv/bin/python -m pip install -r requirements.txt
+source .venv/bin/activate
+```
+
 ## 启动
 
 ```bash

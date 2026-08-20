@@ -41,11 +41,13 @@ public class ConversationalRecommendationService {
         }
 
         ArtifactStore.ClientArtifacts client = artifactStore.requireClient(request.getClientName());
-        QueryParseResult parsed = queryUnderstandingService.parse(
-                request.getQuery(),
-                request.getIndustry(),
-                artifactStore.listIndustries()
-        );
+        QueryParseResult parsed = request.getConcept() != null && !request.getConcept().isBlank()
+                ? preParsed(request)
+                : queryUnderstandingService.parse(
+                        request.getQuery(),
+                        request.getIndustry(),
+                        artifactStore.listIndustries()
+                );
 
         List<SeedSegment> seeds = conceptRetrievalService.retrieve(
                 parsed.getConcept(),
@@ -78,5 +80,16 @@ public class ConversationalRecommendationService {
         response.setSeedSegments(seeds);
         response.setRecommendations(recommendations);
         return response;
+    }
+
+    /** Reuses the caller's parse instead of spending a second LLM call on the same sentence. */
+    private static QueryParseResult preParsed(ChatRecommendRequest request) {
+        QueryParseResult parsed = new QueryParseResult();
+        parsed.setOriginalQuery(request.getQuery());
+        parsed.setIndustry(request.getIndustry());
+        parsed.setConcept(request.getConcept());
+        parsed.setExcludeConcepts(request.getExcludeConcepts());
+        parsed.setStrategy("caller_provided");
+        return parsed;
     }
 }

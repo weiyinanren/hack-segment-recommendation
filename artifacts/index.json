@@ -1,0 +1,41 @@
+{
+  "version": "20260820T055342Z",
+  "trainedAt": "2026-08-20T05:53:47.496385+00:00",
+  "mode": "three_layer_global_industry_client",
+  "sampleWeights": {
+    "half_life_days": 90.0,
+    "weight_distributed": 1.0,
+    "weight_undistributed": 0.4,
+    "min_weight": 0.05,
+    "as_of": "2026-08-19T00:00:00+00:00",
+    "formula": "w = max(min_weight, exp(-ln2/half_life * age_days) * w_distributed)"
+  },
+  "layers": {
+    "global": "global/ (segment_prior + name_neighbors + segment_names)",
+    "industry": "industries/{slug}/popularity.json",
+    "client": "clients/{slug}/ (private CF + embeddings + catalog)"
+  },
+  "serving": {
+    "default": "mix(global, industry, client, name) ∩ client.segment_catalog",
+    "expandBeyondCatalog": "optional; allow industry/global/name candidates outside catalog",
+    "nameSimilarity": "global/name_neighbors.json via sentence-transformers (MiniLM)"
+  },
+  "industries": [
+    {
+      "industry": "CPG",
+      "industrySlug": "CPG",
+      "path": "industries/CPG",
+      "segmentCount": 50
+    }
+  ],
+  "clientCount": 1,
+  "clients": [
+    {
+      "clientName": "Hack CPG Demo",
+      "clientSlug": "Hack_CPG_Demo",
+      "path": "clients/Hack_CPG_Demo",
+      "segmentCount": 420,
+      "audienceCount": 2000
+    }
+  ]
+}

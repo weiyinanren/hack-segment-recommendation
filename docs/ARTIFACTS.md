@@ -80,6 +80,28 @@ score =
 
 ---
 
+## industry 缺省时的推断
+
+请求里不传 `industry` 时，服务端会从该 client 的 `popularity.json` 推断「主行业」——
+取各行业下 `count` 之和最大的那个，同分按名称字典序。
+
+**为什么用 `count` 而不是 `score`：** `score` 是在**每个行业内部**做 min-max 归一的
+（见 `training/src/popularity.py`），所以每个行业的头部 segment 都是 `1.0`，跨行业比较没有意义。
+`count` 是绝对选择次数，才能反映租户的业务重心。
+
+响应体回传实际使用的行业和来源：
+
+| `industrySource` | 含义 |
+|------------------|------|
+| `request` | 调用方显式传了 `industry` |
+| `client_primary` | 由该 client 的 popularity 推断 |
+| `none` | 该 client 没有任何 popularity 数据，行业通道为空 |
+
+一个 client 可以跨多个行业（`popularity.json` 就是按行业分组的 map），
+所以调用方明确知道行业时仍应显式传，推断只是缺省兜底。
+
+---
+
 ## 多选 Segment（S1 + S2 → 能否推 S3？）
 
 **可以，现有逻辑已支持。**

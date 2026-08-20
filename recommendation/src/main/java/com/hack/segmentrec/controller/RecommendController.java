@@ -1,5 +1,7 @@
 package com.hack.segmentrec.controller;
 
+import com.hack.segmentrec.model.AgentAskRequest;
+import com.hack.segmentrec.model.AgentAskResponse;
 import com.hack.segmentrec.model.ChatRecommendRequest;
 import com.hack.segmentrec.model.ChatRecommendResponse;
 import com.hack.segmentrec.model.RecommendRequest;
@@ -7,6 +9,8 @@ import com.hack.segmentrec.model.RecommendResponse;
 import com.hack.segmentrec.service.ArtifactStore;
 import com.hack.segmentrec.service.ConversationalRecommendationService;
 import com.hack.segmentrec.service.RankingService;
+import com.hack.segmentrec.service.agent.SegmentToolRouter;
+import com.hack.segmentrec.service.agent.tools.ServiceHealthTool;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ExceptionHandler;
@@ -27,15 +31,21 @@ public class RecommendController {
 
     private final RankingService rankingService;
     private final ConversationalRecommendationService conversationalRecommendationService;
+    private final SegmentToolRouter segmentToolRouter;
+    private final ServiceHealthTool serviceHealthTool;
     private final ArtifactStore artifactStore;
 
     public RecommendController(
             RankingService rankingService,
             ConversationalRecommendationService conversationalRecommendationService,
+            SegmentToolRouter segmentToolRouter,
+            ServiceHealthTool serviceHealthTool,
             ArtifactStore artifactStore
     ) {
         this.rankingService = rankingService;
         this.conversationalRecommendationService = conversationalRecommendationService;
+        this.segmentToolRouter = segmentToolRouter;
+        this.serviceHealthTool = serviceHealthTool;
         this.artifactStore = artifactStore;
     }
 
@@ -66,14 +76,19 @@ public class RecommendController {
         return conversationalRecommendationService.recommend(request);
     }
 
+    /**
+     * Natural-language entry point: Gemini decides which capability of this service
+     * answers the query, invokes it, and summarizes the result.
+     */
+    @PostMapping("/agent/ask")
+    public AgentAskResponse ask(@RequestBody AgentAskRequest request) {
+        return segmentToolRouter.ask(request);
+    }
+
     @GetMapping("/health")
     public Map<String, Object> health() {
-        Map<String, Object> body = new HashMap<>();
-        body.put("status", "UP");
-        body.put("indexVersion", artifactStore.getIndexVersion());
-        body.put("clients", new TreeSet<>(artifactStore.listClientNames()));
-        body.put("industries", new TreeSet<>(artifactStore.listIndustries()));
-        body.put("globalNameNeighborEntries", artifactStore.nameNeighborEntryCount());
+        Map<String, Object> body = serviceHealthTool.snapshot();
+        body.put("agentTools", segmentToolRouter.availableToolNames());
         return body;
     }
 

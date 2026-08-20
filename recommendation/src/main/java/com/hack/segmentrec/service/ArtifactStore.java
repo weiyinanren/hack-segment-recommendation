@@ -371,6 +371,33 @@ public class ArtifactStore {
             return list != null ? list : Collections.emptyList();
         }
 
+        /** Industries this client has popularity data for; a tenant may span several. */
+        public Set<String> getIndustries() {
+            return Collections.unmodifiableSet(popularityByIndustry.keySet());
+        }
+
+        /**
+         * Where this client's activity concentrates, used when the caller does not pass an
+         * industry. Compares absolute selection counts rather than popularity scores, because
+         * scores are min-max normalized within each industry and so are not comparable across
+         * them. Returns null when the client has no popularity data.
+         */
+        public String primaryIndustry() {
+            String best = null;
+            long bestCount = -1;
+            for (Map.Entry<String, List<ScoredSegment>> entry : popularityByIndustry.entrySet()) {
+                long total = 0;
+                for (ScoredSegment segment : entry.getValue()) {
+                    total += segment.getCount() != null ? segment.getCount() : 1;
+                }
+                if (total > bestCount || (total == bestCount && entry.getKey().compareTo(best) < 0)) {
+                    best = entry.getKey();
+                    bestCount = total;
+                }
+            }
+            return best;
+        }
+
         public List<ScoredSegment> similarTo(String segmentId) {
             return similarity.getOrDefault(segmentId, Collections.emptyList());
         }

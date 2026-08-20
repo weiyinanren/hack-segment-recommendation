@@ -4,8 +4,9 @@ server:
 segment-rec:
   artifacts-path: ${SEGMENT_REC_ARTIFACTS:../artifacts}
   query-understanding:
-    # OpenAI Chat Completions. Set OPENAI_API_KEY before starting.
-    provider: ${SEGMENT_QUERY_LLM_PROVIDER:openai}
+    # gemini | openai | rule
+    provider: ${SEGMENT_QUERY_LLM_PROVIDER:gemini}
+    # OpenAI Chat Completions settings, used when provider=openai.
     api-key: ${OPENAI_API_KEY:${SEGMENT_QUERY_LLM_API_KEY:}}
     base-url: ${SEGMENT_QUERY_LLM_BASE_URL:https://api.openai.com/v1}
     model: ${SEGMENT_QUERY_LLM_MODEL:gpt-4o-mini}
@@ -13,6 +14,26 @@ segment-rec:
     timeout-seconds: 30
     json-response: true
     fallback-to-rule: true
+  gemini:
+    # Vertex AI via Application Default Credentials; no API key.
+    # Grant the ADC principal roles/aiplatform.user on this project.
+    project-id: ${GOOGLE_CLOUD_PROJECT:${GCLOUD_PROJECT:}}
+    location: ${GOOGLE_CLOUD_LOCATION:global}
+    endpoint: ${VERTEX_AI_ENDPOINT:}
+    model: ${GEMINI_MODEL:gemini-3.5-flash}
+    # MINIMAL | LOW | MEDIUM | HIGH. The model default is MEDIUM; routing and field extraction
+    # gain nothing from the reasoning pass but pay for it in latency (~11.5s -> ~2.9s per ask).
+    # MINIMAL is not offered by every Gemini 3 model — 3.1 Pro starts at LOW.
+    thinking-level: ${GEMINI_THINKING_LEVEL:MINIMAL}
+    # temperature is intentionally unset: Gemini 3 models are tuned for their default of 1.0.
+    # Only set it when pointing `model` at an older 2.x model.
+    # temperature: 0
+    timeout-seconds: 30
+  agent:
+    enabled: ${SEGMENT_AGENT_ENABLED:true}
+    summarize-result: ${SEGMENT_AGENT_SUMMARIZE:true}
+    allow-admin-tools: ${SEGMENT_AGENT_ALLOW_ADMIN:false}
+    fallback-tool: chat_recommend
   query-embedding:
     python-path: ${SEGMENT_QUERY_EMBED_PYTHON:../training/.venv/bin/python}
     script-path: ${SEGMENT_QUERY_EMBED_SCRIPT:../training/scripts/embed_texts.py}

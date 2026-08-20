@@ -10,6 +10,8 @@ public class SegmentRecProperties {
     private String artifactsPath = "../artifacts";
     private QueryUnderstanding queryUnderstanding = new QueryUnderstanding();
     private QueryEmbedding queryEmbedding = new QueryEmbedding();
+    private Gemini gemini = new Gemini();
+    private Agent agent = new Agent();
     private Weights weights = new Weights();
 
     public String getArtifactsPath() {
@@ -42,6 +44,22 @@ public class SegmentRecProperties {
 
     public void setQueryEmbedding(QueryEmbedding queryEmbedding) {
         this.queryEmbedding = queryEmbedding;
+    }
+
+    public Gemini getGemini() {
+        return gemini;
+    }
+
+    public void setGemini(Gemini gemini) {
+        this.gemini = gemini;
+    }
+
+    public Agent getAgent() {
+        return agent;
+    }
+
+    public void setAgent(Agent agent) {
+        this.agent = agent;
     }
 
     /**
@@ -184,12 +202,156 @@ public class SegmentRecProperties {
         }
     }
 
+    /**
+     * Google Gemini access, shared by query understanding and the tool router.
+     *
+     * <p>Calls Vertex AI {@code generateContent} and authenticates with Application Default
+     * Credentials, so access is granted through IAM (the caller needs {@code roles/aiplatform.user}
+     * on the project) rather than a shared API key.
+     */
+    public static class Gemini {
+        /** Falls back to the ADC service account's own project when left blank. */
+        private String projectId = "";
+
+        /** {@code global} uses aiplatform.googleapis.com; any region uses REGION-aiplatform.googleapis.com. */
+        private String location = "global";
+
+        /** Overrides the derived host, e.g. for Private Service Connect endpoints. */
+        private String endpoint = "";
+
+        private String model = "gemini-3.5-flash";
+
+        /**
+         * Reasoning depth for Gemini 3 models: MINIMAL, LOW, MEDIUM or HIGH. The model default is
+         * MEDIUM, whose reasoning pass dominates request latency; routing and extraction do not
+         * benefit from it. Blank omits the field, which restores the model default. Note that
+         * MINIMAL is unavailable on some Gemini 3 models, where LOW is the floor.
+         */
+        private String thinkingLevel = "MINIMAL";
+
+        public String getThinkingLevel() {
+            return thinkingLevel;
+        }
+
+        public void setThinkingLevel(String thinkingLevel) {
+            this.thinkingLevel = thinkingLevel;
+        }
+
+        /**
+         * Left unset on purpose: Gemini 3 models are tuned for their default temperature of 1.0
+         * and can loop or reason worse when it is forced lower. Only set this for older models.
+         */
+        private Double temperature;
+        private int timeoutSeconds = 30;
+
+        public String getProjectId() {
+            return projectId;
+        }
+
+        public void setProjectId(String projectId) {
+            this.projectId = projectId;
+        }
+
+        public String getLocation() {
+            return location;
+        }
+
+        public void setLocation(String location) {
+            this.location = location;
+        }
+
+        public String getEndpoint() {
+            return endpoint;
+        }
+
+        public void setEndpoint(String endpoint) {
+            this.endpoint = endpoint;
+        }
+
+        public String getModel() {
+            return model;
+        }
+
+        public void setModel(String model) {
+            this.model = model;
+        }
+
+        public Double getTemperature() {
+            return temperature;
+        }
+
+        public void setTemperature(Double temperature) {
+            this.temperature = temperature;
+        }
+
+        public int getTimeoutSeconds() {
+            return timeoutSeconds;
+        }
+
+        public void setTimeoutSeconds(int timeoutSeconds) {
+            this.timeoutSeconds = timeoutSeconds;
+        }
+    }
+
+    /**
+     * Gemini-driven routing over the tools exposed by this service.
+     */
+    public static class Agent {
+        private boolean enabled = true;
+        private boolean summarizeResult = true;
+        private boolean allowAdminTools = false;
+        private String fallbackTool = "chat_recommend";
+
+        public boolean isEnabled() {
+            return enabled;
+        }
+
+        public void setEnabled(boolean enabled) {
+            this.enabled = enabled;
+        }
+
+        public boolean isSummarizeResult() {
+            return summarizeResult;
+        }
+
+        public void setSummarizeResult(boolean summarizeResult) {
+            this.summarizeResult = summarizeResult;
+        }
+
+        /** Admin tools mutate server state, so an LLM may only reach them when explicitly opted in. */
+        public boolean isAllowAdminTools() {
+            return allowAdminTools;
+        }
+
+        public void setAllowAdminTools(boolean allowAdminTools) {
+            this.allowAdminTools = allowAdminTools;
+        }
+
+        public String getFallbackTool() {
+            return fallbackTool;
+        }
+
+        public void setFallbackTool(String fallbackTool) {
+            this.fallbackTool = fallbackTool;
+        }
+    }
+
     public static class QueryEmbedding {
         private String pythonPath = "../training/.venv/bin/python";
         private String scriptPath = "../training/scripts/embed_texts.py";
         private String model = "sentence-transformers/all-MiniLM-L6-v2";
         private int topK = 8;
         private double minScore = 0.25;
+        /** Covers the worker's one-off model load on the first request, not just an encode. */
+        private int timeoutSeconds = 60;
+
+        public int getTimeoutSeconds() {
+            return timeoutSeconds;
+        }
+
+        public void setTimeoutSeconds(int timeoutSeconds) {
+            this.timeoutSeconds = timeoutSeconds;
+        }
 
         public String getPythonPath() {
             return pythonPath;

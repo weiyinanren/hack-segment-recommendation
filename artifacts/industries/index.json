@@ -1,23 +1,11 @@
 {
-  "version": "20260813T083324Z",
+  "version": "20260820T055342Z",
   "industries": [
     {
-      "industry": "Auto",
-      "industrySlug": "Auto",
-      "path": "industries/Auto",
-      "segmentCount": 7
-    },
-    {
-      "industry": "Finance",
-      "industrySlug": "Finance",
-      "path": "industries/Finance",
-      "segmentCount": 4
-    },
-    {
-      "industry": "Retail",
-      "industrySlug": "Retail",
-      "path": "industries/Retail",
-      "segmentCount": 4
+      "industry": "CPG",
+      "industrySlug": "CPG",
+      "path": "industries/CPG",
+      "segmentCount": 50
     }
   ]
 }

@@ -1,0 +1,42 @@
+{
+  "layer": "global",
+  "version": "20260820T055342Z",
+  "trainedAt": "2026-08-20T05:53:47.224681+00:00",
+  "inputRows": 12329,
+  "clientCount": 1,
+  "segmentCount": 420,
+  "namedSegmentCount": 420,
+  "topN": 50,
+  "topKName": 20,
+  "segmentNameEmbeddings": {
+    "backendRequested": "embedding",
+    "backendUsed": "sentence_transformers",
+    "vectorDim": 384
+  },
+  "nameSimilarity": {
+    "backendRequested": "embedding",
+    "aliasBoost": false,
+    "minScore": 0.25,
+    "topK": 20,
+    "backendUsed": "sentence_transformers",
+    "vectorDim": 384,
+    "pairCount": 8312
+  },
+  "sampleWeights": {
+    "half_life_days": 90.0,
+    "weight_distributed": 1.0,
+    "weight_undistributed": 0.4,
+    "min_weight": 0.05,
+    "as_of": "2026-08-19T00:00:00+00:00",
+    "formula": "w = max(min_weight, exp(-ln2/half_life * age_days) * w_distributed)"
+  },
+  "contents": "segment_prior + segment_names + segment_name_embeddings + name_neighbors",
+  "excludes": "industry split, co-occurrence, embeddings",
+  "artifacts": [
+    "segment_prior.json",
+    "segment_names.json",
+    "segment_name_embeddings.json",
+    "name_neighbors.json",
+    "meta.json"
+  ]
+}

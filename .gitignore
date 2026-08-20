@@ -1,5 +1,7 @@
 .venv/
 __pycache__/
+# Raw tenant taxonomy export; the flattened segments_*.csv is what the pipeline consumes.
+training/data/segment mapping.txt
 *.pyc
 .DS_Store
 target/

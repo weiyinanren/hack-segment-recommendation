@@ -1,0 +1,302 @@
+[
+  {
+    "segmentId": "626558140458402433",
+    "count": 200,
+    "weightSum": 44.597902,
+    "score": 1.0
+  },
+  {
+    "segmentId": "626558140458402439",
+    "count": 141,
+    "weightSum": 32.378115,
+    "score": 0.583192
+  },
+  {
+    "segmentId": "626558140458406358",
+    "count": 136,
+    "weightSum": 31.973521,
+    "score": 0.569391
+  },
+  {
+    "segmentId": "626558140458403896",
+    "count": 110,
+    "weightSum": 27.934664,
+    "score": 0.431629
+  },
+  {
+    "segmentId": "626558140458408051",
+    "count": 120,
+    "weightSum": 27.029167,
+    "score": 0.400743
+  },
+  {
+    "segmentId": "626558140458406021",
+    "count": 91,
+    "weightSum": 24.41981,
+    "score": 0.31174
+  },
+  {
+    "segmentId": "626558140458408015",
+    "count": 105,
+    "weightSum": 24.343281,
+    "score": 0.309129
+  },
+  {
+    "segmentId": "626558140458401824",
+    "count": 97,
+    "weightSum": 24.068771,
+    "score": 0.299766
+  },
+  {
+    "segmentId": "626558140458408047",
+    "count": 107,
+    "weightSum": 23.814148,
+    "score": 0.291081
+  },
+  {
+    "segmentId": "626558140458402540",
+    "count": 87,
+    "weightSum": 23.208078,
+    "score": 0.270408
+  },
+  {
+    "segmentId": "626558140458403980",
+    "count": 91,
+    "weightSum": 22.466457,
+    "score": 0.245112
+  },
+  {
+    "segmentId": "626558140458402537",
+    "count": 86,
+    "weightSum": 21.855203,
+    "score": 0.224263
+  },
+  {
+    "segmentId": "626558140458402442",
+    "count": 93,
+    "weightSum": 21.678391,
+    "score": 0.218232
+  },
+  {
+    "segmentId": "626558140458402434",
+    "count": 90,
+    "weightSum": 21.644877,
+    "score": 0.217089
+  },
+  {
+    "segmentId": "626558140458408027",
+    "count": 87,
+    "weightSum": 21.491983,
+    "score": 0.211874
+  },
+  {
+    "segmentId": "626558140458402403",
+    "count": 95,
+    "weightSum": 21.247071,
+    "score": 0.20352
+  },
+  {
+    "segmentId": "626558140458407969",
+    "count": 101,
+    "weightSum": 21.168541,
+    "score": 0.200841
+  },
+  {
+    "segmentId": "626558140458406040",
+    "count": 70,
+    "weightSum": 20.830679,
+    "score": 0.189317
+  },
+  {
+    "segmentId": "626558140458401916",
+    "count": 94,
+    "weightSum": 20.777,
+    "score": 0.187486
+  },
+  {
+    "segmentId": "626558140458408043",
+    "count": 89,
+    "weightSum": 20.539635,
+    "score": 0.17939
+  },
+  {
+    "segmentId": "626558140458402432",
+    "count": 86,
+    "weightSum": 20.455226,
+    "score": 0.176511
+  },
+  {
+    "segmentId": "626558140458403894",
+    "count": 81,
+    "weightSum": 20.423911,
+    "score": 0.175442
+  },
+  {
+    "segmentId": "626558140458406127",
+    "count": 91,
+    "weightSum": 20.337321,
+    "score": 0.172489
+  },
+  {
+    "segmentId": "626558140458402542",
+    "count": 77,
+    "weightSum": 20.271496,
+    "score": 0.170244
+  },
+  {
+    "segmentId": "626558140458408135",
+    "count": 82,
+    "weightSum": 20.236388,
+    "score": 0.169046
+  },
+  {
+    "segmentId": "626558140458402526",
+    "count": 85,
+    "weightSum": 20.040857,
+    "score": 0.162377
+  },
+  {
+    "segmentId": "626558140458402449",
+    "count": 69,
+    "weightSum": 19.889709,
+    "score": 0.157221
+  },
+  {
+    "segmentId": "626558140458402401",
+    "count": 77,
+    "weightSum": 19.58944,
+    "score": 0.146979
+  },
+  {
+    "segmentId": "626558140458402502",
+    "count": 73,
+    "weightSum": 19.020885,
+    "score": 0.127586
+  },
+  {
+    "segmentId": "626558140458401923",
+    "count": 77,
+    "weightSum": 18.757948,
+    "score": 0.118618
+  },
+  {
+    "segmentId": "626558140458401878",
+    "count": 69,
+    "weightSum": 18.694769,
+    "score": 0.116463
+  },
+  {
+    "segmentId": "626558140458402496",
+    "count": 74,
+    "weightSum": 18.567148,
+    "score": 0.11211
+  },
+  {
+    "segmentId": "626558140458402402",
+    "count": 87,
+    "weightSum": 18.342887,
+    "score": 0.10446
+  },
+  {
+    "segmentId": "626558140458406042",
+    "count": 78,
+    "weightSum": 18.292277,
+    "score": 0.102734
+  },
+  {
+    "segmentId": "626558140458401877",
+    "count": 85,
+    "weightSum": 18.157782,
+    "score": 0.098146
+  },
+  {
+    "segmentId": "626558140458401954",
+    "count": 77,
+    "weightSum": 17.941164,
+    "score": 0.090758
+  },
+  {
+    "segmentId": "626558140458406000",
+    "count": 77,
+    "weightSum": 17.941164,
+    "score": 0.090758
+  },
+  {
+    "segmentId": "626558140458404224",
+    "count": 77,
+    "weightSum": 17.916966,
+    "score": 0.089932
+  },
+  {
+    "segmentId": "626558140458401911",
+    "count": 69,
+    "weightSum": 17.723844,
+    "score": 0.083345
+  },
+  {
+    "segmentId": "626558140458406295",
+    "count": 57,
+    "weightSum": 17.43233,
+    "score": 0.073402
+  },
+  {
+    "segmentId": "626558140458406075",
+    "count": 79,
+    "weightSum": 17.004751,
+    "score": 0.058817
+  },
+  {
+    "segmentId": "626558140458407950",
+    "count": 87,
+    "weightSum": 16.390696,
+    "score": 0.037872
+  },
+  {
+    "segmentId": "626558140458406049",
+    "count": 73,
+    "weightSum": 16.316613,
+    "score": 0.035345
+  },
+  {
+    "segmentId": "626558140458404017",
+    "count": 58,
+    "weightSum": 16.08299,
+    "score": 0.027377
+  },
+  {
+    "segmentId": "626558140458403895",
+    "count": 85,
+    "weightSum": 16.027708,
+    "score": 0.025491
+  },
+  {
+    "segmentId": "626558140458402447",
+    "count": 72,
+    "weightSum": 15.78959,
+    "score": 0.017369
+  },
+  {
+    "segmentId": "626558140458402539",
+    "count": 63,
+    "weightSum": 15.759065,
+    "score": 0.016328
+  },
+  {
+    "segmentId": "626558140458401918",
+    "count": 71,
+    "weightSum": 15.627022,
+    "score": 0.011824
+  },
+  {
+    "segmentId": "626558140458406109",
+    "count": 67,
+    "weightSum": 15.618038,
+    "score": 0.011518
+  },
+  {
+    "segmentId": "626558140458402443",
+    "count": 63,
+    "weightSum": 15.280372,
+    "score": 0.0
+  }
+]

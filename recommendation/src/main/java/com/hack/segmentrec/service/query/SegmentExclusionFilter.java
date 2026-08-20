@@ -4,6 +4,7 @@ import com.hack.segmentrec.service.ArtifactStore;
 import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Locale;
@@ -94,7 +95,7 @@ public class SegmentExclusionFilter {
         if (target.equals(needle)) {
             return true;
         }
-        Set<String> targetTokens = Set.of(target.split(" "));
+        Set<String> targetTokens = new HashSet<>(Arrays.asList(target.split(" ")));
         if (targetTokens.contains(needle)) {
             return true;
         }

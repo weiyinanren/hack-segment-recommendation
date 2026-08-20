@@ -1,0 +1,23 @@
+{
+  "layer": "industry",
+  "industry": "CPG",
+  "industrySlug": "CPG",
+  "version": "20260820T055342Z",
+  "trainedAt": "2026-08-20T05:53:47.233971+00:00",
+  "segmentCount": 50,
+  "topN": 50,
+  "sampleWeights": {
+    "half_life_days": 90.0,
+    "weight_distributed": 1.0,
+    "weight_undistributed": 0.4,
+    "min_weight": 0.05,
+    "as_of": "2026-08-19T00:00:00+00:00",
+    "formula": "w = max(min_weight, exp(-ln2/half_life * age_days) * w_distributed)"
+  },
+  "contents": "industry popularity (aggregates only)",
+  "excludes": "co-occurrence, embeddings, audience baskets",
+  "artifacts": [
+    "popularity.json",
+    "meta.json"
+  ]
+}

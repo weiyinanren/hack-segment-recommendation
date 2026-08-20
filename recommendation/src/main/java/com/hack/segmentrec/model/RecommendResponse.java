@@ -8,6 +8,13 @@ public class RecommendResponse {
     private String clientName;
     private String version;
     private String strategy;
+
+    /** The industry actually used for ranking, which may have been inferred from the tenant. */
+    private String industry;
+
+    /** {@code request}, {@code client_primary}, or {@code none}. */
+    private String industrySource;
+
     private boolean expandBeyondCatalog;
     private List<RecommendedItem> items = new ArrayList<>();
 
@@ -17,6 +24,22 @@ public class RecommendResponse {
 
     public void setClientName(String clientName) {
         this.clientName = clientName;
+    }
+
+    public String getIndustry() {
+        return industry;
+    }
+
+    public void setIndustry(String industry) {
+        this.industry = industry;
+    }
+
+    public String getIndustrySource() {
+        return industrySource;
+    }
+
+    public void setIndustrySource(String industrySource) {
+        this.industrySource = industrySource;
     }
 
     public String getVersion() {
@@ -53,6 +76,10 @@ public class RecommendResponse {
 
     public static class RecommendedItem {
         private String segmentId;
+
+        /** Display name from {@code global/segment_names.json}; null when unknown. */
+        private String segmentName;
+
         private double score;
         /** Whether this segment is in the requesting client's catalog. */
         private boolean inCatalog;
@@ -69,6 +96,14 @@ public class RecommendResponse {
 
         public void setSegmentId(String segmentId) {
             this.segmentId = segmentId;
+        }
+
+        public String getSegmentName() {
+            return segmentName;
+        }
+
+        public void setSegmentName(String segmentName) {
+            this.segmentName = segmentName;
         }
 
         public double getScore() {

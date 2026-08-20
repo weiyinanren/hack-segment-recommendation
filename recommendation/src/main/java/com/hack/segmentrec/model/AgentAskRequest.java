@@ -3,18 +3,17 @@ package com.hack.segmentrec.model;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ChatRecommendRequest {
+public class AgentAskRequest {
 
+    /** Required tenant key. Never inferred by the LLM. */
     private String clientName;
     private String query;
     private String industry;
     /**
-     * Search concept, already extracted from {@link #query}. Optional: when the agent router
-     * has parsed the request it fills this in so the LLM is not asked to read the same
-     * sentence twice. Left empty by direct API callers, who get the usual parse step.
+     * Segments the user already picked in the UI. Supplied by the caller rather than the
+     * LLM, which has no way to know segment ids, and used as lookalike seeds.
      */
-    private String concept;
-    private List<String> excludeConcepts = new ArrayList<>();
+    private List<String> selectedSegmentIds = new ArrayList<>();
     private int topN = 10;
     private boolean expandBeyondCatalog = false;
 
@@ -42,20 +41,12 @@ public class ChatRecommendRequest {
         this.industry = industry;
     }
 
-    public String getConcept() {
-        return concept;
+    public List<String> getSelectedSegmentIds() {
+        return selectedSegmentIds;
     }
 
-    public void setConcept(String concept) {
-        this.concept = concept;
-    }
-
-    public List<String> getExcludeConcepts() {
-        return excludeConcepts;
-    }
-
-    public void setExcludeConcepts(List<String> excludeConcepts) {
-        this.excludeConcepts = excludeConcepts == null ? new ArrayList<>() : excludeConcepts;
+    public void setSelectedSegmentIds(List<String> selectedSegmentIds) {
+        this.selectedSegmentIds = selectedSegmentIds == null ? new ArrayList<>() : selectedSegmentIds;
     }
 
     public int getTopN() {
