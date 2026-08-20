@@ -1,0 +1,41 @@
+client_name,industry,audience_id,audience_name,segment_id,segment_name,created_at,distributed
+AcmeAuto,Auto,A1,Summer Auto Shoppers,S1,miss,2026-07-20,true
+AcmeAuto,Auto,A1,Summer Auto Shoppers,S3,SUV buyers,2026-07-20,true
+AcmeAuto,Auto,A1,Summer Auto Shoppers,S5,luxury,2026-07-20,true
+AcmeAuto,Auto,A2,SUV Focus,S1,miss,2026-06-01,true
+AcmeAuto,Auto,A2,SUV Focus,S7,new car intenders,2026-06-01,true
+AcmeAuto,Auto,A3,Women Drivers Bundle,S1,miss,2026-08-01,true
+AcmeAuto,Auto,A3,Women Drivers Bundle,S3,SUV buyers,2026-08-01,true
+AcmeAuto,Auto,A3,Women Drivers Bundle,S5,luxury,2026-08-01,true
+AcmeAuto,Auto,A4,Legacy Mix,S1,miss,2025-12-15,false
+AcmeAuto,Auto,A4,Legacy Mix,S3,SUV buyers,2025-12-15,false
+AcmeAuto,Auto,A4,Legacy Mix,S6,EV intenders,2025-12-15,false
+AcmeAuto,Auto,A5,Miss Only Test,S1,miss,2026-07-01,true
+AcmeAuto,Auto,A5b,Female Only Test,S14,female,2026-07-10,true
+AcmeAuto,Auto,A5c,Ms Only Test,S15,Ms.,2026-07-12,true
+AcmeAuto,Auto,A6,Spring Campaign,S3,SUV buyers,2026-03-10,false
+AcmeAuto,Auto,A6,Spring Campaign,S5,luxury,2026-03-10,false
+AcmeAuto,Auto,A6,Spring Campaign,S7,new car intenders,2026-03-10,false
+RetailCo,Retail,A7,Beauty Core,S2,beauty shoppers,2026-07-15,true
+RetailCo,Retail,A7,Beauty Core,S8,skincare,2026-07-15,true
+RetailCo,Retail,A8,Promo Week,S2,beauty shoppers,2026-08-05,true
+RetailCo,Retail,A8,Promo Week,S8,skincare,2026-08-05,true
+RetailCo,Retail,A8,Promo Week,S4,cosmetics,2026-08-05,true
+RetailCo,Retail,A9,Old Retail,S2,beauty shoppers,2025-11-01,false
+RetailCo,Retail,A9,Old Retail,S4,cosmetics,2025-11-01,false
+RetailCo,Retail,A10,Women Fashion,S8,skincare,2026-06-20,true
+RetailCo,Retail,A10,Women Fashion,S4,cosmetics,2026-06-20,true
+RetailCo,Retail,A10,Women Fashion,S9,women fashion,2026-06-20,true
+RetailCo,Retail,A11,Fashion Light,S2,beauty shoppers,2026-04-01,false
+RetailCo,Retail,A11,Fashion Light,S8,skincare,2026-04-01,false
+RetailCo,Retail,A11,Fashion Light,S9,women fashion,2026-04-01,false
+FinanceOne,Finance,A12,Affluent,S10,affluent,2026-07-28,true
+FinanceOne,Finance,A12,Affluent,S11,investors,2026-07-28,true
+FinanceOne,Finance,A13,Credit Builders,S10,affluent,2026-05-01,false
+FinanceOne,Finance,A13,Credit Builders,S12,credit card,2026-05-01,false
+FinanceOne,Finance,A14,Wealth Bundle,S10,affluent,2026-08-08,true
+FinanceOne,Finance,A14,Wealth Bundle,S11,investors,2026-08-08,true
+FinanceOne,Finance,A14,Wealth Bundle,S12,credit card,2026-08-08,true
+FinanceOne,Finance,A15,Women Affluent,S11,investors,2026-01-20,false
+FinanceOne,Finance,A15,Women Affluent,S12,credit card,2026-01-20,false
+FinanceOne,Finance,A15,Women Affluent,S13,female,2026-01-20,false

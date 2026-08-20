@@ -1,0 +1,19 @@
+{
+  "clientName": "SuperMart",
+  "segmentIds": [
+    "RTL_BEAUTY",
+    "RTL_COSM",
+    "RTL_FASH",
+    "RTL_GROC",
+    "RTL_HOME",
+    "RTL_KIDS",
+    "RTL_MALL",
+    "RTL_ONLINE",
+    "RTL_PROMO",
+    "RTL_SKIN",
+    "RTL_SPORT",
+    "RTL_VIP",
+    "SG_MADAM",
+    "SG_MISS"
+  ]
+}

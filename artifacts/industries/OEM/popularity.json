@@ -1,0 +1,98 @@
+[
+  {
+    "segmentId": "OEM_SUV",
+    "count": 2382,
+    "weightSum": 546.348835,
+    "score": 1.0
+  },
+  {
+    "segmentId": "OEM_NEW",
+    "count": 2182,
+    "weightSum": 502.768295,
+    "score": 0.914535
+  },
+  {
+    "segmentId": "OEM_EV",
+    "count": 1360,
+    "weightSum": 315.75837,
+    "score": 0.547795
+  },
+  {
+    "segmentId": "OEM_SAFE",
+    "count": 1301,
+    "weightSum": 303.918035,
+    "score": 0.524575
+  },
+  {
+    "segmentId": "OEM_DEAL",
+    "count": 1255,
+    "weightSum": 295.106078,
+    "score": 0.507294
+  },
+  {
+    "segmentId": "OEM_LUX",
+    "count": 1269,
+    "weightSum": 291.938122,
+    "score": 0.501081
+  },
+  {
+    "segmentId": "OEM_TRUCK",
+    "count": 1295,
+    "weightSum": 289.548966,
+    "score": 0.496396
+  },
+  {
+    "segmentId": "OEM_USED",
+    "count": 1225,
+    "weightSum": 289.491331,
+    "score": 0.496283
+  },
+  {
+    "segmentId": "OEM_FLEET",
+    "count": 1289,
+    "weightSum": 287.814331,
+    "score": 0.492994
+  },
+  {
+    "segmentId": "SG_MISS",
+    "count": 1029,
+    "weightSum": 239.984639,
+    "score": 0.399197
+  },
+  {
+    "segmentId": "OEM_TECH",
+    "count": 1021,
+    "weightSum": 237.960505,
+    "score": 0.395227
+  },
+  {
+    "segmentId": "OEM_LEASE",
+    "count": 960,
+    "weightSum": 227.037475,
+    "score": 0.373806
+  },
+  {
+    "segmentId": "OEM_PARTS",
+    "count": 1000,
+    "weightSum": 223.261225,
+    "score": 0.366401
+  },
+  {
+    "segmentId": "SG_MS",
+    "count": 175,
+    "weightSum": 41.796937,
+    "score": 0.010535
+  },
+  {
+    "segmentId": "SG_FEMALE",
+    "count": 176,
+    "weightSum": 40.228008,
+    "score": 0.007459
+  },
+  {
+    "segmentId": "SG_MADAM",
+    "count": 179,
+    "weightSum": 36.424675,
+    "score": 0.0
+  }
+]

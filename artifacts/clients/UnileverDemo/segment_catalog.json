@@ -1,0 +1,18 @@
+{
+  "clientName": "UnileverDemo",
+  "segmentIds": [
+    "CPG_BABY",
+    "CPG_BEAUTY",
+    "CPG_BRAND",
+    "CPG_CLEAN",
+    "CPG_HEALTH",
+    "CPG_MOM",
+    "CPG_ORG",
+    "CPG_PET",
+    "CPG_PREM",
+    "CPG_SKIN",
+    "CPG_SNACK",
+    "CPG_VALUE",
+    "SG_FEMALE"
+  ]
+}

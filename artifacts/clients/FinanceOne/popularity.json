@@ -1,0 +1,28 @@
+{
+  "Finance": [
+    {
+      "segmentId": "S10",
+      "count": 3,
+      "weightSum": 2.041508,
+      "score": 1.0
+    },
+    {
+      "segmentId": "S11",
+      "count": 3,
+      "weightSum": 1.943686,
+      "score": 0.95005
+    },
+    {
+      "segmentId": "S12",
+      "count": 3,
+      "weightSum": 1.233733,
+      "score": 0.58753
+    },
+    {
+      "segmentId": "S13",
+      "count": 1,
+      "weightSum": 0.083124,
+      "score": 0.0
+    }
+  ]
+}

@@ -1,0 +1,94 @@
+{
+  "S1": [
+    {
+      "segmentId": "S3",
+      "score": 0.739713,
+      "coOccurrence": 1.819432
+    },
+    {
+      "segmentId": "S5",
+      "score": 0.725981,
+      "coOccurrence": 1.756436
+    },
+    {
+      "segmentId": "S7",
+      "score": 0.390036,
+      "coOccurrence": 0.574349
+    },
+    {
+      "segmentId": "S6",
+      "score": 0.142154,
+      "coOccurrence": 0.062996
+    }
+  ],
+  "S3": [
+    {
+      "segmentId": "S5",
+      "score": 0.983636,
+      "coOccurrence": 1.877669
+    },
+    {
+      "segmentId": "S1",
+      "score": 0.739713,
+      "coOccurrence": 1.819432
+    },
+    {
+      "segmentId": "S6",
+      "score": 0.180169,
+      "coOccurrence": 0.062996
+    },
+    {
+      "segmentId": "S7",
+      "score": 0.104345,
+      "coOccurrence": 0.121233
+    }
+  ],
+  "S5": [
+    {
+      "segmentId": "S3",
+      "score": 0.983636,
+      "coOccurrence": 1.877669
+    },
+    {
+      "segmentId": "S1",
+      "score": 0.725981,
+      "coOccurrence": 1.756436
+    },
+    {
+      "segmentId": "S7",
+      "score": 0.106081,
+      "coOccurrence": 0.121233
+    }
+  ],
+  "S7": [
+    {
+      "segmentId": "S1",
+      "score": 0.390036,
+      "coOccurrence": 0.574349
+    },
+    {
+      "segmentId": "S5",
+      "score": 0.106081,
+      "coOccurrence": 0.121233
+    },
+    {
+      "segmentId": "S3",
+      "score": 0.104345,
+      "coOccurrence": 0.121233
+    }
+  ],
+  "S6": [
+    {
+      "segmentId": "S3",
+      "score": 0.180169,
+      "coOccurrence": 0.062996
+    },
+    {
+      "segmentId": "S1",
+      "score": 0.142154,
+      "coOccurrence": 0.062996
+    }
+  ],
+  "S14": [],
+  "S15": []
+}

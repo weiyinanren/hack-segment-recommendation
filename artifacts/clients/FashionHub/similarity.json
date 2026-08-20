@@ -1,0 +1,940 @@
+{
+  "RTL_MALL": [
+    {
+      "segmentId": "RTL_ONLINE",
+      "score": 0.614927,
+      "coOccurrence": 69.635495
+    },
+    {
+      "segmentId": "RTL_PROMO",
+      "score": 0.566128,
+      "coOccurrence": 98.154273
+    },
+    {
+      "segmentId": "RTL_HOME",
+      "score": 0.541844,
+      "coOccurrence": 67.545519
+    },
+    {
+      "segmentId": "RTL_VIP",
+      "score": 0.419988,
+      "coOccurrence": 68.102543
+    },
+    {
+      "segmentId": "SG_MS",
+      "score": 0.245446,
+      "coOccurrence": 24.08773
+    },
+    {
+      "segmentId": "RTL_SPORT",
+      "score": 0.107789,
+      "coOccurrence": 5.016373
+    },
+    {
+      "segmentId": "RTL_COSM",
+      "score": 0.070259,
+      "coOccurrence": 7.423906
+    },
+    {
+      "segmentId": "RTL_KIDS",
+      "score": 0.06883,
+      "coOccurrence": 7.870747
+    },
+    {
+      "segmentId": "RTL_GROC",
+      "score": 0.061878,
+      "coOccurrence": 7.811909
+    },
+    {
+      "segmentId": "RTL_SKIN",
+      "score": 0.053267,
+      "coOccurrence": 6.599776
+    },
+    {
+      "segmentId": "RTL_FASH",
+      "score": 0.049402,
+      "coOccurrence": 6.293757
+    },
+    {
+      "segmentId": "RTL_BEAUTY",
+      "score": 0.049205,
+      "coOccurrence": 6.179271
+    },
+    {
+      "segmentId": "SG_MADAM",
+      "score": 0.022228,
+      "coOccurrence": 2.690613
+    }
+  ],
+  "RTL_ONLINE": [
+    {
+      "segmentId": "RTL_MALL",
+      "score": 0.614927,
+      "coOccurrence": 69.635495
+    },
+    {
+      "segmentId": "RTL_PROMO",
+      "score": 0.581719,
+      "coOccurrence": 70.721737
+    },
+    {
+      "segmentId": "SG_MS",
+      "score": 0.188332,
+      "coOccurrence": 12.960109
+    },
+    {
+      "segmentId": "RTL_SPORT",
+      "score": 0.114307,
+      "coOccurrence": 3.730226
+    },
+    {
+      "segmentId": "RTL_HOME",
+      "score": 0.09223,
+      "coOccurrence": 8.061966
+    },
+    {
+      "segmentId": "RTL_VIP",
+      "score": 0.077297,
+      "coOccurrence": 8.788855
+    },
+    {
+      "segmentId": "RTL_GROC",
+      "score": 0.076005,
+      "coOccurrence": 6.728292
+    },
+    {
+      "segmentId": "RTL_KIDS",
+      "score": 0.072687,
+      "coOccurrence": 5.828227
+    },
+    {
+      "segmentId": "RTL_FASH",
+      "score": 0.06345,
+      "coOccurrence": 5.668212
+    },
+    {
+      "segmentId": "RTL_COSM",
+      "score": 0.054763,
+      "coOccurrence": 4.057555
+    },
+    {
+      "segmentId": "RTL_SKIN",
+      "score": 0.052522,
+      "coOccurrence": 4.563117
+    },
+    {
+      "segmentId": "RTL_BEAUTY",
+      "score": 0.048843,
+      "coOccurrence": 4.301087
+    },
+    {
+      "segmentId": "SG_MADAM",
+      "score": 0.041626,
+      "coOccurrence": 3.533164
+    }
+  ],
+  "RTL_PROMO": [
+    {
+      "segmentId": "RTL_GROC",
+      "score": 0.681024,
+      "coOccurrence": 92.302462
+    },
+    {
+      "segmentId": "RTL_ONLINE",
+      "score": 0.581719,
+      "coOccurrence": 70.721737
+    },
+    {
+      "segmentId": "RTL_KIDS",
+      "score": 0.577309,
+      "coOccurrence": 70.872265
+    },
+    {
+      "segmentId": "RTL_MALL",
+      "score": 0.566128,
+      "coOccurrence": 98.154273
+    },
+    {
+      "segmentId": "SG_MS",
+      "score": 0.243293,
+      "coOccurrence": 25.633115
+    },
+    {
+      "segmentId": "RTL_SPORT",
+      "score": 0.13434,
+      "coOccurrence": 6.712025
+    },
+    {
+      "segmentId": "RTL_HOME",
+      "score": 0.078079,
+      "coOccurrence": 10.44938
+    },
+    {
+      "segmentId": "RTL_VIP",
+      "score": 0.072884,
+      "coOccurrence": 12.687879
+    },
+    {
+      "segmentId": "RTL_BEAUTY",
+      "score": 0.057261,
+      "coOccurrence": 7.720074
+    },
+    {
+      "segmentId": "RTL_SKIN",
+      "score": 0.056193,
+      "coOccurrence": 7.474618
+    },
+    {
+      "segmentId": "RTL_COSM",
+      "score": 0.050683,
+      "coOccurrence": 5.749488
+    },
+    {
+      "segmentId": "RTL_FASH",
+      "score": 0.045349,
+      "coOccurrence": 6.202448
+    },
+    {
+      "segmentId": "SG_MADAM",
+      "score": 0.010533,
+      "coOccurrence": 1.368772
+    }
+  ],
+  "SG_MS": [
+    {
+      "segmentId": "RTL_VIP",
+      "score": 0.268207,
+      "coOccurrence": 26.428578
+    },
+    {
+      "segmentId": "RTL_MALL",
+      "score": 0.245446,
+      "coOccurrence": 24.08773
+    },
+    {
+      "segmentId": "RTL_PROMO",
+      "score": 0.243293,
+      "coOccurrence": 25.633115
+    },
+    {
+      "segmentId": "RTL_KIDS",
+      "score": 0.203647,
+      "coOccurrence": 14.151102
+    },
+    {
+      "segmentId": "RTL_ONLINE",
+      "score": 0.188332,
+      "coOccurrence": 12.960109
+    },
+    {
+      "segmentId": "SG_MADAM",
+      "score": 0.185067,
+      "coOccurrence": 13.613207
+    },
+    {
+      "segmentId": "RTL_GROC",
+      "score": 0.183141,
+      "coOccurrence": 14.050157
+    },
+    {
+      "segmentId": "RTL_COSM",
+      "score": 0.176546,
+      "coOccurrence": 11.336144
+    },
+    {
+      "segmentId": "RTL_FASH",
+      "score": 0.176485,
+      "coOccurrence": 13.663207
+    },
+    {
+      "segmentId": "RTL_HOME",
+      "score": 0.157013,
+      "coOccurrence": 11.894196
+    },
+    {
+      "segmentId": "RTL_SKIN",
+      "score": 0.14531,
+      "coOccurrence": 10.940758
+    },
+    {
+      "segmentId": "RTL_BEAUTY",
+      "score": 0.133699,
+      "coOccurrence": 10.203128
+    },
+    {
+      "segmentId": "RTL_SPORT",
+      "score": 0.080818,
+      "coOccurrence": 2.285617
+    }
+  ],
+  "RTL_HOME": [
+    {
+      "segmentId": "RTL_VIP",
+      "score": 0.703841,
+      "coOccurrence": 88.09691
+    },
+    {
+      "segmentId": "RTL_MALL",
+      "score": 0.541844,
+      "coOccurrence": 67.545519
+    },
+    {
+      "segmentId": "SG_MS",
+      "score": 0.157013,
+      "coOccurrence": 11.894196
+    },
+    {
+      "segmentId": "RTL_ONLINE",
+      "score": 0.09223,
+      "coOccurrence": 8.061966
+    },
+    {
+      "segmentId": "RTL_PROMO",
+      "score": 0.078079,
+      "coOccurrence": 10.44938
+    },
+    {
+      "segmentId": "RTL_SPORT",
+      "score": 0.073286,
+      "coOccurrence": 2.632682
+    },
+    {
+      "segmentId": "RTL_COSM",
+      "score": 0.072716,
+      "coOccurrence": 5.930917
+    },
+    {
+      "segmentId": "RTL_FASH",
+      "score": 0.061306,
+      "coOccurrence": 6.0288
+    },
+    {
+      "segmentId": "RTL_BEAUTY",
+      "score": 0.057847,
+      "coOccurrence": 5.607543
+    },
+    {
+      "segmentId": "RTL_SKIN",
+      "score": 0.056035,
+      "coOccurrence": 5.359083
+    },
+    {
+      "segmentId": "SG_MADAM",
+      "score": 0.048276,
+      "coOccurrence": 4.510704
+    },
+    {
+      "segmentId": "RTL_KIDS",
+      "score": 0.045024,
+      "coOccurrence": 3.974099
+    },
+    {
+      "segmentId": "RTL_GROC",
+      "score": 0.028087,
+      "coOccurrence": 2.737014
+    }
+  ],
+  "RTL_VIP": [
+    {
+      "segmentId": "RTL_HOME",
+      "score": 0.703841,
+      "coOccurrence": 88.09691
+    },
+    {
+      "segmentId": "SG_MADAM",
+      "score": 0.578629,
+      "coOccurrence": 70.326495
+    },
+    {
+      "segmentId": "RTL_FASH",
+      "score": 0.565994,
+      "coOccurrence": 72.400754
+    },
+    {
+      "segmentId": "RTL_MALL",
+      "score": 0.419988,
+      "coOccurrence": 68.102543
+    },
+    {
+      "segmentId": "SG_MS",
+      "score": 0.268207,
+      "coOccurrence": 26.428578
+    },
+    {
+      "segmentId": "RTL_SPORT",
+      "score": 0.10549,
+      "coOccurrence": 4.92939
+    },
+    {
+      "segmentId": "RTL_KIDS",
+      "score": 0.102538,
+      "coOccurrence": 11.772873
+    },
+    {
+      "segmentId": "RTL_GROC",
+      "score": 0.080639,
+      "coOccurrence": 10.22179
+    },
+    {
+      "segmentId": "RTL_ONLINE",
+      "score": 0.077297,
+      "coOccurrence": 8.788855
+    },
+    {
+      "segmentId": "RTL_PROMO",
+      "score": 0.072884,
+      "coOccurrence": 12.687879
+    },
+    {
+      "segmentId": "RTL_BEAUTY",
+      "score": 0.071887,
+      "coOccurrence": 9.064449
+    },
+    {
+      "segmentId": "RTL_COSM",
+      "score": 0.068734,
+      "coOccurrence": 7.292376
+    },
+    {
+      "segmentId": "RTL_SKIN",
+      "score": 0.047548,
+      "coOccurrence": 5.915203
+    }
+  ],
+  "RTL_FASH": [
+    {
+      "segmentId": "SG_MADAM",
+      "score": 0.950139,
+      "coOccurrence": 90.729021
+    },
+    {
+      "segmentId": "RTL_VIP",
+      "score": 0.565994,
+      "coOccurrence": 72.400754
+    },
+    {
+      "segmentId": "SG_MS",
+      "score": 0.176485,
+      "coOccurrence": 13.663207
+    },
+    {
+      "segmentId": "RTL_KIDS",
+      "score": 0.089319,
+      "coOccurrence": 8.057176
+    },
+    {
+      "segmentId": "RTL_SPORT",
+      "score": 0.07658,
+      "coOccurrence": 2.811489
+    },
+    {
+      "segmentId": "RTL_BEAUTY",
+      "score": 0.076226,
+      "coOccurrence": 7.551613
+    },
+    {
+      "segmentId": "RTL_GROC",
+      "score": 0.070085,
+      "coOccurrence": 6.979907
+    },
+    {
+      "segmentId": "RTL_ONLINE",
+      "score": 0.06345,
+      "coOccurrence": 5.668212
+    },
+    {
+      "segmentId": "RTL_COSM",
+      "score": 0.062539,
+      "coOccurrence": 5.212942
+    },
+    {
+      "segmentId": "RTL_HOME",
+      "score": 0.061306,
+      "coOccurrence": 6.0288
+    },
+    {
+      "segmentId": "RTL_SKIN",
+      "score": 0.053384,
+      "coOccurrence": 5.217815
+    },
+    {
+      "segmentId": "RTL_MALL",
+      "score": 0.049402,
+      "coOccurrence": 6.293757
+    },
+    {
+      "segmentId": "RTL_PROMO",
+      "score": 0.045349,
+      "coOccurrence": 6.202448
+    }
+  ],
+  "RTL_KIDS": [
+    {
+      "segmentId": "RTL_GROC",
+      "score": 0.778757,
+      "coOccurrence": 69.613538
+    },
+    {
+      "segmentId": "RTL_PROMO",
+      "score": 0.577309,
+      "coOccurrence": 70.872265
+    },
+    {
+      "segmentId": "SG_MS",
+      "score": 0.203647,
+      "coOccurrence": 14.151102
+    },
+    {
+      "segmentId": "RTL_SPORT",
+      "score": 0.114055,
+      "coOccurrence": 3.758415
+    },
+    {
+      "segmentId": "RTL_VIP",
+      "score": 0.102538,
+      "coOccurrence": 11.772873
+    },
+    {
+      "segmentId": "RTL_FASH",
+      "score": 0.089319,
+      "coOccurrence": 8.057176
+    },
+    {
+      "segmentId": "RTL_BEAUTY",
+      "score": 0.082612,
+      "coOccurrence": 7.345867
+    },
+    {
+      "segmentId": "RTL_ONLINE",
+      "score": 0.072687,
+      "coOccurrence": 5.828227
+    },
+    {
+      "segmentId": "RTL_SKIN",
+      "score": 0.070651,
+      "coOccurrence": 6.198189
+    },
+    {
+      "segmentId": "RTL_MALL",
+      "score": 0.06883,
+      "coOccurrence": 7.870747
+    },
+    {
+      "segmentId": "SG_MADAM",
+      "score": 0.065203,
+      "coOccurrence": 5.588455
+    },
+    {
+      "segmentId": "RTL_COSM",
+      "score": 0.063657,
+      "coOccurrence": 4.762653
+    },
+    {
+      "segmentId": "RTL_HOME",
+      "score": 0.045024,
+      "coOccurrence": 3.974099
+    }
+  ],
+  "SG_MADAM": [
+    {
+      "segmentId": "RTL_FASH",
+      "score": 0.950139,
+      "coOccurrence": 90.729021
+    },
+    {
+      "segmentId": "RTL_VIP",
+      "score": 0.578629,
+      "coOccurrence": 70.326495
+    },
+    {
+      "segmentId": "SG_MS",
+      "score": 0.185067,
+      "coOccurrence": 13.613207
+    },
+    {
+      "segmentId": "RTL_SPORT",
+      "score": 0.078901,
+      "coOccurrence": 2.752269
+    },
+    {
+      "segmentId": "RTL_KIDS",
+      "score": 0.065203,
+      "coOccurrence": 5.588455
+    },
+    {
+      "segmentId": "RTL_HOME",
+      "score": 0.048276,
+      "coOccurrence": 4.510704
+    },
+    {
+      "segmentId": "RTL_GROC",
+      "score": 0.048202,
+      "coOccurrence": 4.561186
+    },
+    {
+      "segmentId": "RTL_ONLINE",
+      "score": 0.041626,
+      "coOccurrence": 3.533164
+    },
+    {
+      "segmentId": "RTL_BEAUTY",
+      "score": 0.036841,
+      "coOccurrence": 3.46781
+    },
+    {
+      "segmentId": "RTL_MALL",
+      "score": 0.022228,
+      "coOccurrence": 2.690613
+    },
+    {
+      "segmentId": "RTL_COSM",
+      "score": 0.018465,
+      "coOccurrence": 1.462397
+    },
+    {
+      "segmentId": "RTL_SKIN",
+      "score": 0.015236,
+      "coOccurrence": 1.414916
+    },
+    {
+      "segmentId": "RTL_PROMO",
+      "score": 0.010533,
+      "coOccurrence": 1.368772
+    }
+  ],
+  "RTL_BEAUTY": [
+    {
+      "segmentId": "RTL_SKIN",
+      "score": 0.894305,
+      "coOccurrence": 86.164142
+    },
+    {
+      "segmentId": "RTL_COSM",
+      "score": 0.741435,
+      "coOccurrence": 60.921405
+    },
+    {
+      "segmentId": "SG_MS",
+      "score": 0.133699,
+      "coOccurrence": 10.203128
+    },
+    {
+      "segmentId": "RTL_SPORT",
+      "score": 0.083078,
+      "coOccurrence": 3.006539
+    },
+    {
+      "segmentId": "RTL_KIDS",
+      "score": 0.082612,
+      "coOccurrence": 7.345867
+    },
+    {
+      "segmentId": "RTL_FASH",
+      "score": 0.076226,
+      "coOccurrence": 7.551613
+    },
+    {
+      "segmentId": "RTL_VIP",
+      "score": 0.071887,
+      "coOccurrence": 9.064449
+    },
+    {
+      "segmentId": "RTL_GROC",
+      "score": 0.058343,
+      "coOccurrence": 5.727652
+    },
+    {
+      "segmentId": "RTL_HOME",
+      "score": 0.057847,
+      "coOccurrence": 5.607543
+    },
+    {
+      "segmentId": "RTL_PROMO",
+      "score": 0.057261,
+      "coOccurrence": 7.720074
+    },
+    {
+      "segmentId": "RTL_MALL",
+      "score": 0.049205,
+      "coOccurrence": 6.179271
+    },
+    {
+      "segmentId": "RTL_ONLINE",
+      "score": 0.048843,
+      "coOccurrence": 4.301087
+    },
+    {
+      "segmentId": "SG_MADAM",
+      "score": 0.036841,
+      "coOccurrence": 3.46781
+    }
+  ],
+  "RTL_COSM": [
+    {
+      "segmentId": "RTL_SKIN",
+      "score": 0.764511,
+      "coOccurrence": 61.976346
+    },
+    {
+      "segmentId": "RTL_BEAUTY",
+      "score": 0.741435,
+      "coOccurrence": 60.921405
+    },
+    {
+      "segmentId": "SG_MS",
+      "score": 0.176546,
+      "coOccurrence": 11.336144
+    },
+    {
+      "segmentId": "RTL_SPORT",
+      "score": 0.075515,
+      "coOccurrence": 2.299432
+    },
+    {
+      "segmentId": "RTL_HOME",
+      "score": 0.072716,
+      "coOccurrence": 5.930917
+    },
+    {
+      "segmentId": "RTL_MALL",
+      "score": 0.070259,
+      "coOccurrence": 7.423906
+    },
+    {
+      "segmentId": "RTL_VIP",
+      "score": 0.068734,
+      "coOccurrence": 7.292376
+    },
+    {
+      "segmentId": "RTL_KIDS",
+      "score": 0.063657,
+      "coOccurrence": 4.762653
+    },
+    {
+      "segmentId": "RTL_FASH",
+      "score": 0.062539,
+      "coOccurrence": 5.212942
+    },
+    {
+      "segmentId": "RTL_ONLINE",
+      "score": 0.054763,
+      "coOccurrence": 4.057555
+    },
+    {
+      "segmentId": "RTL_GROC",
+      "score": 0.05106,
+      "coOccurrence": 4.217644
+    },
+    {
+      "segmentId": "RTL_PROMO",
+      "score": 0.050683,
+      "coOccurrence": 5.749488
+    },
+    {
+      "segmentId": "SG_MADAM",
+      "score": 0.018465,
+      "coOccurrence": 1.462397
+    }
+  ],
+  "RTL_SKIN": [
+    {
+      "segmentId": "RTL_BEAUTY",
+      "score": 0.894305,
+      "coOccurrence": 86.164142
+    },
+    {
+      "segmentId": "RTL_COSM",
+      "score": 0.764511,
+      "coOccurrence": 61.976346
+    },
+    {
+      "segmentId": "SG_MS",
+      "score": 0.14531,
+      "coOccurrence": 10.940758
+    },
+    {
+      "segmentId": "RTL_KIDS",
+      "score": 0.070651,
+      "coOccurrence": 6.198189
+    },
+    {
+      "segmentId": "RTL_SPORT",
+      "score": 0.067984,
+      "coOccurrence": 2.427354
+    },
+    {
+      "segmentId": "RTL_PROMO",
+      "score": 0.056193,
+      "coOccurrence": 7.474618
+    },
+    {
+      "segmentId": "RTL_HOME",
+      "score": 0.056035,
+      "coOccurrence": 5.359083
+    },
+    {
+      "segmentId": "RTL_FASH",
+      "score": 0.053384,
+      "coOccurrence": 5.217815
+    },
+    {
+      "segmentId": "RTL_MALL",
+      "score": 0.053267,
+      "coOccurrence": 6.599776
+    },
+    {
+      "segmentId": "RTL_ONLINE",
+      "score": 0.052522,
+      "coOccurrence": 4.563117
+    },
+    {
+      "segmentId": "RTL_GROC",
+      "score": 0.049799,
+      "coOccurrence": 4.823353
+    },
+    {
+      "segmentId": "RTL_VIP",
+      "score": 0.047548,
+      "coOccurrence": 5.915203
+    },
+    {
+      "segmentId": "SG_MADAM",
+      "score": 0.015236,
+      "coOccurrence": 1.414916
+    }
+  ],
+  "RTL_GROC": [
+    {
+      "segmentId": "RTL_KIDS",
+      "score": 0.778757,
+      "coOccurrence": 69.613538
+    },
+    {
+      "segmentId": "RTL_PROMO",
+      "score": 0.681024,
+      "coOccurrence": 92.302462
+    },
+    {
+      "segmentId": "SG_MS",
+      "score": 0.183141,
+      "coOccurrence": 14.050157
+    },
+    {
+      "segmentId": "RTL_SPORT",
+      "score": 0.108436,
+      "coOccurrence": 3.944998
+    },
+    {
+      "segmentId": "RTL_VIP",
+      "score": 0.080639,
+      "coOccurrence": 10.22179
+    },
+    {
+      "segmentId": "RTL_ONLINE",
+      "score": 0.076005,
+      "coOccurrence": 6.728292
+    },
+    {
+      "segmentId": "RTL_FASH",
+      "score": 0.070085,
+      "coOccurrence": 6.979907
+    },
+    {
+      "segmentId": "RTL_MALL",
+      "score": 0.061878,
+      "coOccurrence": 7.811909
+    },
+    {
+      "segmentId": "RTL_BEAUTY",
+      "score": 0.058343,
+      "coOccurrence": 5.727652
+    },
+    {
+      "segmentId": "RTL_COSM",
+      "score": 0.05106,
+      "coOccurrence": 4.217644
+    },
+    {
+      "segmentId": "RTL_SKIN",
+      "score": 0.049799,
+      "coOccurrence": 4.823353
+    },
+    {
+      "segmentId": "SG_MADAM",
+      "score": 0.048202,
+      "coOccurrence": 4.561186
+    },
+    {
+      "segmentId": "RTL_HOME",
+      "score": 0.028087,
+      "coOccurrence": 2.737014
+    }
+  ],
+  "RTL_SPORT": [
+    {
+      "segmentId": "RTL_PROMO",
+      "score": 0.13434,
+      "coOccurrence": 6.712025
+    },
+    {
+      "segmentId": "RTL_ONLINE",
+      "score": 0.114307,
+      "coOccurrence": 3.730226
+    },
+    {
+      "segmentId": "RTL_KIDS",
+      "score": 0.114055,
+      "coOccurrence": 3.758415
+    },
+    {
+      "segmentId": "RTL_GROC",
+      "score": 0.108436,
+      "coOccurrence": 3.944998
+    },
+    {
+      "segmentId": "RTL_MALL",
+      "score": 0.107789,
+      "coOccurrence": 5.016373
+    },
+    {
+      "segmentId": "RTL_VIP",
+      "score": 0.10549,
+      "coOccurrence": 4.92939
+    },
+    {
+      "segmentId": "RTL_BEAUTY",
+      "score": 0.083078,
+      "coOccurrence": 3.006539
+    },
+    {
+      "segmentId": "SG_MS",
+      "score": 0.080818,
+      "coOccurrence": 2.285617
+    },
+    {
+      "segmentId": "SG_MADAM",
+      "score": 0.078901,
+      "coOccurrence": 2.752269
+    },
+    {
+      "segmentId": "RTL_FASH",
+      "score": 0.07658,
+      "coOccurrence": 2.811489
+    },
+    {
+      "segmentId": "RTL_COSM",
+      "score": 0.075515,
+      "coOccurrence": 2.299432
+    },
+    {
+      "segmentId": "RTL_HOME",
+      "score": 0.073286,
+      "coOccurrence": 2.632682
+    },
+    {
+      "segmentId": "RTL_SKIN",
+      "score": 0.067984,
+      "coOccurrence": 2.427354
+    }
+  ]
+}

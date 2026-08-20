@@ -94,12 +94,22 @@ public class SegmentExclusionFilter {
         if (target.equals(needle)) {
             return true;
         }
-        Set<String> targetTokens = Set.of(target.split(" "));
+        Set<String> targetTokens = tokenSet(target);
         if (targetTokens.contains(needle)) {
             return true;
         }
         boolean cjk = needle.chars().anyMatch(ch -> ch >= 0x4E00 && ch <= 0x9FFF);
         return (cjk || needle.length() >= 4) && target.contains(needle);
+    }
+
+    private static Set<String> tokenSet(String text) {
+        Set<String> tokens = new HashSet<>();
+        for (String token : text.split(" ")) {
+            if (!token.isBlank()) {
+                tokens.add(token);
+            }
+        }
+        return tokens;
     }
 
     static String normalize(String text) {

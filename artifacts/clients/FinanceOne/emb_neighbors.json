@@ -1,0 +1,58 @@
+{
+  "S10": [
+    {
+      "segmentId": "S13",
+      "score": 0.906734
+    },
+    {
+      "segmentId": "S12",
+      "score": 0.308029
+    },
+    {
+      "segmentId": "S11",
+      "score": 0.188645
+    }
+  ],
+  "S11": [
+    {
+      "segmentId": "S12",
+      "score": 0.770886
+    },
+    {
+      "segmentId": "S13",
+      "score": 0.336783
+    },
+    {
+      "segmentId": "S10",
+      "score": 0.188645
+    }
+  ],
+  "S12": [
+    {
+      "segmentId": "S11",
+      "score": 0.770886
+    },
+    {
+      "segmentId": "S10",
+      "score": 0.308029
+    },
+    {
+      "segmentId": "S13",
+      "score": 0.164087
+    }
+  ],
+  "S13": [
+    {
+      "segmentId": "S10",
+      "score": 0.906734
+    },
+    {
+      "segmentId": "S11",
+      "score": 0.336783
+    },
+    {
+      "segmentId": "S12",
+      "score": 0.164087
+    }
+  ]
+}

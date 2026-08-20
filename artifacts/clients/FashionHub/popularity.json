@@ -1,0 +1,88 @@
+{
+  "Retail": [
+    {
+      "segmentId": "RTL_PROMO",
+      "count": 814,
+      "weightSum": 186.13451,
+      "score": 1.0
+    },
+    {
+      "segmentId": "RTL_VIP",
+      "count": 680,
+      "weightSum": 162.813594,
+      "score": 0.864981
+    },
+    {
+      "segmentId": "RTL_MALL",
+      "count": 701,
+      "weightSum": 161.495995,
+      "score": 0.857353
+    },
+    {
+      "segmentId": "RTL_FASH",
+      "count": 427,
+      "weightSum": 100.501431,
+      "score": 0.504218
+    },
+    {
+      "segmentId": "RTL_GROC",
+      "count": 433,
+      "weightSum": 98.690418,
+      "score": 0.493733
+    },
+    {
+      "segmentId": "RTL_BEAUTY",
+      "count": 418,
+      "weightSum": 97.655227,
+      "score": 0.487739
+    },
+    {
+      "segmentId": "RTL_HOME",
+      "count": 405,
+      "weightSum": 96.223693,
+      "score": 0.479451
+    },
+    {
+      "segmentId": "RTL_SKIN",
+      "count": 409,
+      "weightSum": 95.057467,
+      "score": 0.472699
+    },
+    {
+      "segmentId": "SG_MADAM",
+      "count": 376,
+      "weightSum": 90.729021,
+      "score": 0.447639
+    },
+    {
+      "segmentId": "RTL_KIDS",
+      "count": 342,
+      "weightSum": 80.967136,
+      "score": 0.391122
+    },
+    {
+      "segmentId": "RTL_ONLINE",
+      "count": 339,
+      "weightSum": 79.405812,
+      "score": 0.382082
+    },
+    {
+      "segmentId": "RTL_COSM",
+      "count": 306,
+      "weightSum": 69.135047,
+      "score": 0.322619
+    },
+    {
+      "segmentId": "SG_MS",
+      "count": 243,
+      "weightSum": 59.637207,
+      "score": 0.26763
+    },
+    {
+      "segmentId": "RTL_SPORT",
+      "count": 57,
+      "weightSum": 13.411303,
+      "score": 0.0
+    }
+  ]
+}

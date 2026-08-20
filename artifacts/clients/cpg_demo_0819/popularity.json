@@ -1,0 +1,304 @@
+{
+  "CPG": [
+    {
+      "segmentId": "626558140458401911",
+      "count": 1,
+      "weightSum": 1.0,
+      "score": 1.0
+    },
+    {
+      "segmentId": "626558140458401912",
+      "count": 1,
+      "weightSum": 1.0,
+      "score": 1.0
+    },
+    {
+      "segmentId": "626558140458401971",
+      "count": 1,
+      "weightSum": 0.984715,
+      "score": 0.330779
+    },
+    {
+      "segmentId": "626558140458401972",
+      "count": 1,
+      "weightSum": 0.984715,
+      "score": 0.330779
+    },
+    {
+      "segmentId": "626558140458401974",
+      "count": 1,
+      "weightSum": 0.984715,
+      "score": 0.330779
+    },
+    {
+      "segmentId": "626558140458402573",
+      "count": 1,
+      "weightSum": 0.97716,
+      "score": 0.0
+    },
+    {
+      "segmentId": "626558140458402574",
+      "count": 1,
+      "weightSum": 0.97716,
+      "score": 0.0
+    },
+    {
+      "segmentId": "626558140458402575",
+      "count": 1,
+      "weightSum": 0.97716,
+      "score": 0.0
+    },
+    {
+      "segmentId": "626558140458402576",
+      "count": 1,
+      "weightSum": 0.97716,
+      "score": 0.0
+    },
+    {
+      "segmentId": "626558140458402577",
+      "count": 1,
+      "weightSum": 0.97716,
+      "score": 0.0
+    },
+    {
+      "segmentId": "626558140458402580",
+      "count": 1,
+      "weightSum": 0.97716,
+      "score": 0.0
+    },
+    {
+      "segmentId": "626558140458402581",
+      "count": 1,
+      "weightSum": 0.97716,
+      "score": 0.0
+    },
+    {
+      "segmentId": "626558140458402582",
+      "count": 1,
+      "weightSum": 0.97716,
+      "score": 0.0
+    },
+    {
+      "segmentId": "626558140458402583",
+      "count": 1,
+      "weightSum": 0.97716,
+      "score": 0.0
+    },
+    {
+      "segmentId": "626558140458402589",
+      "count": 1,
+      "weightSum": 0.97716,
+      "score": 0.0
+    },
+    {
+      "segmentId": "626558140458402590",
+      "count": 1,
+      "weightSum": 0.97716,
+      "score": 0.0
+    },
+    {
+      "segmentId": "626558140458402591",
+      "count": 1,
+      "weightSum": 0.97716,
+      "score": 0.0
+    },
+    {
+      "segmentId": "626558140458402594",
+      "count": 1,
+      "weightSum": 0.97716,
+      "score": 0.0
+    },
+    {
+      "segmentId": "626558140458402595",
+      "count": 1,
+      "weightSum": 0.97716,
+      "score": 0.0
+    },
+    {
+      "segmentId": "626558140458402597",
+      "count": 1,
+      "weightSum": 0.97716,
+      "score": 0.0
+    },
+    {
+      "segmentId": "626558140458402598",
+      "count": 1,
+      "weightSum": 0.97716,
+      "score": 0.0
+    },
+    {
+      "segmentId": "626558140458402599",
+      "count": 1,
+      "weightSum": 0.97716,
+      "score": 0.0
+    },
+    {
+      "segmentId": "626558140458402601",
+      "count": 1,
+      "weightSum": 0.97716,
+      "score": 0.0
+    },
+    {
+      "segmentId": "626558140458402602",
+      "count": 1,
+      "weightSum": 0.97716,
+      "score": 0.0
+    },
+    {
+      "segmentId": "626558140458402603",
+      "count": 1,
+      "weightSum": 0.97716,
+      "score": 0.0
+    },
+    {
+      "segmentId": "626558140458402604",
+      "count": 1,
+      "weightSum": 0.97716,
+      "score": 0.0
+    },
+    {
+      "segmentId": "626558140458402605",
+      "count": 1,
+      "weightSum": 0.97716,
+      "score": 0.0
+    },
+    {
+      "segmentId": "626558140458402608",
+      "count": 1,
+      "weightSum": 0.97716,
+      "score": 0.0
+    },
+    {
+      "segmentId": "626558140458402609",
+      "count": 1,
+      "weightSum": 0.97716,
+      "score": 0.0
+    },
+    {
+      "segmentId": "626558140458402610",
+      "count": 1,
+      "weightSum": 0.97716,
+      "score": 0.0
+    },
+    {
+      "segmentId": "626558140458402611",
+      "count": 1,
+      "weightSum": 0.97716,
+      "score": 0.0
+    },
+    {
+      "segmentId": "626558140458403840",
+      "count": 1,
+      "weightSum": 0.97716,
+      "score": 0.0
+    },
+    {
+      "segmentId": "626558140458403841",
+      "count": 1,
+      "weightSum": 0.97716,
+      "score": 0.0
+    },
+    {
+      "segmentId": "626558140458403842",
+      "count": 1,
+      "weightSum": 0.97716,
+      "score": 0.0
+    },
+    {
+      "segmentId": "626558140458403843",
+      "count": 1,
+      "weightSum": 0.97716,
+      "score": 0.0
+    },
+    {
+      "segmentId": "626558140458403844",
+      "count": 1,
+      "weightSum": 0.97716,
+      "score": 0.0
+    },
+    {
+      "segmentId": "626558140458403845",
+      "count": 1,
+      "weightSum": 0.97716,
+      "score": 0.0
+    },
+    {
+      "segmentId": "626558140458403847",
+      "count": 1,
+      "weightSum": 0.97716,
+      "score": 0.0
+    },
+    {
+      "segmentId": "626558140458403848",
+      "count": 1,
+      "weightSum": 0.97716,
+      "score": 0.0
+    },
+    {
+      "segmentId": "626558140458403849",
+      "count": 1,
+      "weightSum": 0.97716,
+      "score": 0.0
+    },
+    {
+      "segmentId": "626558140458403851",
+      "count": 1,
+      "weightSum": 0.97716,
+      "score": 0.0
+    },
+    {
+      "segmentId": "626558140458403854",
+      "count": 1,
+      "weightSum": 0.97716,
+      "score": 0.0
+    },
+    {
+      "segmentId": "626558140458403855",
+      "count": 1,
+      "weightSum": 0.97716,
+      "score": 0.0
+    },
+    {
+      "segmentId": "626558140458403856",
+      "count": 1,
+      "weightSum": 0.97716,
+      "score": 0.0
+    },
+    {
+      "segmentId": "626558140458403859",
+      "count": 1,
+      "weightSum": 0.97716,
+      "score": 0.0
+    },
+    {
+      "segmentId": "626558140458403860",
+      "count": 1,
+      "weightSum": 0.97716,
+      "score": 0.0
+    },
+    {
+      "segmentId": "626558140458403862",
+      "count": 1,
+      "weightSum": 0.97716,
+      "score": 0.0
+    },
+    {
+      "segmentId": "626558140458403863",
+      "count": 1,
+      "weightSum": 0.97716,
+      "score": 0.0
+    },
+    {
+      "segmentId": "626558140458404198",
+      "count": 1,
+      "weightSum": 0.97716,
+      "score": 0.0
+    },
+    {
+      "segmentId": "626558140458404199",
+      "count": 1,
+      "weightSum": 0.97716,
+      "score": 0.0
+    }
+  ]
+}

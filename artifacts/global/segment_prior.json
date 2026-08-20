@@ -1,0 +1,252 @@
+[
+  {
+    "segmentId": "RTL_PROMO",
+    "weightSum": 774.981924,
+    "score": 1.0
+  },
+  {
+    "segmentId": "CPG_VALUE",
+    "weightSum": 697.892211,
+    "score": 0.844556
+  },
+  {
+    "segmentId": "RTL_MALL",
+    "weightSum": 661.170332,
+    "score": 0.77051
+  },
+  {
+    "segmentId": "RTL_VIP",
+    "weightSum": 648.750193,
+    "score": 0.745465
+  },
+  {
+    "segmentId": "CPG_ORG",
+    "weightSum": 620.674389,
+    "score": 0.688853
+  },
+  {
+    "segmentId": "CPG_MOM",
+    "weightSum": 601.300043,
+    "score": 0.649787
+  },
+  {
+    "segmentId": "SG_MADAM",
+    "weightSum": 570.41724,
+    "score": 0.587514
+  },
+  {
+    "segmentId": "HC_ANNUAL",
+    "weightSum": 560.285822,
+    "score": 0.567085
+  },
+  {
+    "segmentId": "OEM_SUV",
+    "weightSum": 546.348835,
+    "score": 0.538983
+  },
+  {
+    "segmentId": "FD_QSR",
+    "weightSum": 539.912893,
+    "score": 0.526005
+  },
+  {
+    "segmentId": "FD_FINE",
+    "weightSum": 539.181882,
+    "score": 0.524531
+  },
+  {
+    "segmentId": "HC_FAMILY",
+    "weightSum": 510.129664,
+    "score": 0.46595
+  },
+  {
+    "segmentId": "OEM_NEW",
+    "weightSum": 502.768295,
+    "score": 0.451107
+  },
+  {
+    "segmentId": "FD_FAMILY",
+    "weightSum": 468.349614,
+    "score": 0.381705
+  },
+  {
+    "segmentId": "FD_DELIV",
+    "weightSum": 466.539319,
+    "score": 0.378054
+  },
+  {
+    "segmentId": "SG_FEMALE",
+    "weightSum": 464.309439,
+    "score": 0.373558
+  },
+  {
+    "segmentId": "SG_MISS",
+    "weightSum": 453.880433,
+    "score": 0.352529
+  },
+  {
+    "segmentId": "RTL_GROC",
+    "weightSum": 423.244755,
+    "score": 0.290755
+  },
+  {
+    "segmentId": "HC_CARDIO",
+    "weightSum": 406.126138,
+    "score": 0.256237
+  },
+  {
+    "segmentId": "RTL_HOME",
+    "weightSum": 397.959809,
+    "score": 0.23977
+  },
+  {
+    "segmentId": "RTL_SKIN",
+    "weightSum": 391.734525,
+    "score": 0.227217
+  },
+  {
+    "segmentId": "RTL_FASH",
+    "weightSum": 390.636727,
+    "score": 0.225004
+  },
+  {
+    "segmentId": "CPG_SNACK",
+    "weightSum": 389.168358,
+    "score": 0.222043
+  },
+  {
+    "segmentId": "RTL_BEAUTY",
+    "weightSum": 387.778168,
+    "score": 0.21924
+  },
+  {
+    "segmentId": "CPG_BABY",
+    "weightSum": 374.555121,
+    "score": 0.192577
+  },
+  {
+    "segmentId": "CPG_SKIN",
+    "weightSum": 367.986108,
+    "score": 0.179331
+  },
+  {
+    "segmentId": "CPG_BEAUTY",
+    "weightSum": 367.960948,
+    "score": 0.17928
+  },
+  {
+    "segmentId": "CPG_PREM",
+    "weightSum": 364.424555,
+    "score": 0.172149
+  },
+  {
+    "segmentId": "CPG_CLEAN",
+    "weightSum": 360.189242,
+    "score": 0.163609
+  },
+  {
+    "segmentId": "RTL_KIDS",
+    "weightSum": 335.385047,
+    "score": 0.113594
+  },
+  {
+    "segmentId": "RTL_ONLINE",
+    "weightSum": 326.489017,
+    "score": 0.095656
+  },
+  {
+    "segmentId": "OEM_EV",
+    "weightSum": 315.75837,
+    "score": 0.074019
+  },
+  {
+    "segmentId": "OEM_SAFE",
+    "weightSum": 303.918035,
+    "score": 0.050144
+  },
+  {
+    "segmentId": "RTL_COSM",
+    "weightSum": 303.70583,
+    "score": 0.049716
+  },
+  {
+    "segmentId": "FD_TEA",
+    "weightSum": 296.764175,
+    "score": 0.035719
+  },
+  {
+    "segmentId": "OEM_DEAL",
+    "weightSum": 295.106078,
+    "score": 0.032375
+  },
+  {
+    "segmentId": "CPG_BRAND",
+    "weightSum": 294.503088,
+    "score": 0.031159
+  },
+  {
+    "segmentId": "FD_NIGHT",
+    "weightSum": 293.175454,
+    "score": 0.028482
+  },
+  {
+    "segmentId": "HC_EXEC",
+    "weightSum": 292.593534,
+    "score": 0.027309
+  },
+  {
+    "segmentId": "OEM_LUX",
+    "weightSum": 291.938122,
+    "score": 0.025987
+  },
+  {
+    "segmentId": "HC_ELDER",
+    "weightSum": 290.266597,
+    "score": 0.022617
+  },
+  {
+    "segmentId": "OEM_TRUCK",
+    "weightSum": 289.548966,
+    "score": 0.02117
+  },
+  {
+    "segmentId": "OEM_USED",
+    "weightSum": 289.491331,
+    "score": 0.021054
+  },
+  {
+    "segmentId": "HC_CANCER",
+    "weightSum": 289.391842,
+    "score": 0.020853
+  },
+  {
+    "segmentId": "HC_MATERN",
+    "weightSum": 289.325446,
+    "score": 0.020719
+  },
+  {
+    "segmentId": "FD_CAFE",
+    "weightSum": 288.63293,
+    "score": 0.019323
+  },
+  {
+    "segmentId": "OEM_FLEET",
+    "weightSum": 287.814331,
+    "score": 0.017672
+  },
+  {
+    "segmentId": "HC_PREM",
+    "weightSum": 285.19574,
+    "score": 0.012392
+  },
+  {
+    "segmentId": "CPG_HEALTH",
+    "weightSum": 282.16103,
+    "score": 0.006273
+  },
+  {
+    "segmentId": "HC_CORP",
+    "weightSum": 279.050228,
+    "score": 0.0
+  }
+]

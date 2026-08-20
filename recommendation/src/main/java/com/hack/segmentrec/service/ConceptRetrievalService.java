@@ -234,8 +234,8 @@ public class ConceptRetrievalService {
             return 0.95;
         }
 
-        Set<String> conceptTokens = Set.of(concept.split(" "));
-        Set<String> targetTokens = Set.of(target.split(" "));
+        Set<String> conceptTokens = tokenSet(concept);
+        Set<String> targetTokens = tokenSet(target);
         long overlap = conceptTokens.stream().filter(targetTokens::contains).count();
         double tokenScore = overlap == 0 ? 0.0 : overlap / (double) Math.max(conceptTokens.size(), targetTokens.size());
 
@@ -286,6 +286,16 @@ public class ConceptRetrievalService {
             out.add(s.substring(i, end));
         }
         return out;
+    }
+
+    private static Set<String> tokenSet(String text) {
+        java.util.LinkedHashSet<String> tokens = new java.util.LinkedHashSet<>();
+        for (String token : text.split(" ")) {
+            if (!token.isBlank()) {
+                tokens.add(token);
+            }
+        }
+        return tokens;
     }
 
     private static String normalize(String text) {

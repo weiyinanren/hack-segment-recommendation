@@ -1,0 +1,19 @@
+{
+  "clientName": "CafeGroup",
+  "segmentIds": [
+    "FD_BUFFET",
+    "FD_CAFE",
+    "FD_DELIV",
+    "FD_FAMILY",
+    "FD_FINE",
+    "FD_LOYAL",
+    "FD_LUNCH",
+    "FD_NIGHT",
+    "FD_QSR",
+    "FD_SPICY",
+    "FD_TEA",
+    "FD_VEG",
+    "SG_LADY",
+    "SG_MISS"
+  ]
+}

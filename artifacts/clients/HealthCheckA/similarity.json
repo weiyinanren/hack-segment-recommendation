@@ -1,0 +1,940 @@
+{
+  "HC_FAMILY": [
+    {
+      "segmentId": "HC_ONLINE",
+      "score": 0.603373,
+      "coOccurrence": 51.930562
+    },
+    {
+      "segmentId": "HC_ANNUAL",
+      "score": 0.573249,
+      "coOccurrence": 79.419942
+    },
+    {
+      "segmentId": "SG_WOMEN",
+      "score": 0.536918,
+      "coOccurrence": 50.527509
+    },
+    {
+      "segmentId": "HC_MATERN",
+      "score": 0.533365,
+      "coOccurrence": 52.833102
+    },
+    {
+      "segmentId": "SG_FEMALE",
+      "score": 0.224796,
+      "coOccurrence": 16.568138
+    },
+    {
+      "segmentId": "HC_REPEAT",
+      "score": 0.107356,
+      "coOccurrence": 3.333512
+    },
+    {
+      "segmentId": "HC_ELDER",
+      "score": 0.083123,
+      "coOccurrence": 8.120804
+    },
+    {
+      "segmentId": "HC_CORP",
+      "score": 0.08242,
+      "coOccurrence": 7.984242
+    },
+    {
+      "segmentId": "HC_DIAB",
+      "score": 0.070243,
+      "coOccurrence": 6.081201
+    },
+    {
+      "segmentId": "HC_CANCER",
+      "score": 0.063175,
+      "coOccurrence": 6.289184
+    },
+    {
+      "segmentId": "HC_PREM",
+      "score": 0.060417,
+      "coOccurrence": 6.306554
+    },
+    {
+      "segmentId": "HC_EXEC",
+      "score": 0.050217,
+      "coOccurrence": 5.223686
+    },
+    {
+      "segmentId": "HC_CARDIO",
+      "score": 0.04768,
+      "coOccurrence": 5.579475
+    }
+  ],
+  "HC_MATERN": [
+    {
+      "segmentId": "SG_WOMEN",
+      "score": 0.950034,
+      "coOccurrence": 67.280944
+    },
+    {
+      "segmentId": "HC_FAMILY",
+      "score": 0.533365,
+      "coOccurrence": 52.833102
+    },
+    {
+      "segmentId": "SG_FEMALE",
+      "score": 0.169962,
+      "coOccurrence": 9.426956
+    },
+    {
+      "segmentId": "HC_REPEAT",
+      "score": 0.096079,
+      "coOccurrence": 2.245121
+    },
+    {
+      "segmentId": "HC_CORP",
+      "score": 0.082605,
+      "coOccurrence": 6.022014
+    },
+    {
+      "segmentId": "HC_ELDER",
+      "score": 0.067939,
+      "coOccurrence": 4.994972
+    },
+    {
+      "segmentId": "HC_CARDIO",
+      "score": 0.06664,
+      "coOccurrence": 5.868421
+    },
+    {
+      "segmentId": "HC_EXEC",
+      "score": 0.059989,
+      "coOccurrence": 4.696041
+    },
+    {
+      "segmentId": "HC_PREM",
+      "score": 0.056605,
+      "coOccurrence": 4.446524
+    },
+    {
+      "segmentId": "HC_CANCER",
+      "score": 0.048876,
+      "coOccurrence": 3.661712
+    },
+    {
+      "segmentId": "HC_DIAB",
+      "score": 0.047152,
+      "coOccurrence": 3.072021
+    },
+    {
+      "segmentId": "HC_ANNUAL",
+      "score": 0.043815,
+      "coOccurrence": 4.56822
+    },
+    {
+      "segmentId": "HC_ONLINE",
+      "score": 0.038652,
+      "coOccurrence": 2.503468
+    }
+  ],
+  "SG_WOMEN": [
+    {
+      "segmentId": "HC_MATERN",
+      "score": 0.950034,
+      "coOccurrence": 67.280944
+    },
+    {
+      "segmentId": "HC_FAMILY",
+      "score": 0.536918,
+      "coOccurrence": 50.527509
+    },
+    {
+      "segmentId": "SG_FEMALE",
+      "score": 0.164198,
+      "coOccurrence": 8.652199
+    },
+    {
+      "segmentId": "HC_REPEAT",
+      "score": 0.086273,
+      "coOccurrence": 1.915244
+    },
+    {
+      "segmentId": "HC_CORP",
+      "score": 0.06079,
+      "coOccurrence": 4.21026
+    },
+    {
+      "segmentId": "HC_ELDER",
+      "score": 0.043487,
+      "coOccurrence": 3.037473
+    },
+    {
+      "segmentId": "HC_EXEC",
+      "score": 0.028657,
+      "coOccurrence": 2.131212
+    },
+    {
+      "segmentId": "HC_PREM",
+      "score": 0.025884,
+      "coOccurrence": 1.931695
+    },
+    {
+      "segmentId": "HC_ONLINE",
+      "score": 0.020592,
+      "coOccurrence": 1.267067
+    },
+    {
+      "segmentId": "HC_ANNUAL",
+      "score": 0.017064,
+      "coOccurrence": 1.690198
+    },
+    {
+      "segmentId": "HC_CANCER",
+      "score": 0.016638,
+      "coOccurrence": 1.184221
+    },
+    {
+      "segmentId": "HC_DIAB",
+      "score": 0.016395,
+      "coOccurrence": 1.014781
+    },
+    {
+      "segmentId": "HC_CARDIO",
+      "score": 0.015236,
+      "coOccurrence": 1.274682
+    }
+  ],
+  "HC_ANNUAL": [
+    {
+      "segmentId": "HC_CORP",
+      "score": 0.637873,
+      "coOccurrence": 65.039194
+    },
+    {
+      "segmentId": "HC_DIAB",
+      "score": 0.585661,
+      "coOccurrence": 53.367061
+    },
+    {
+      "segmentId": "HC_FAMILY",
+      "score": 0.573249,
+      "coOccurrence": 79.419942
+    },
+    {
+      "segmentId": "HC_ONLINE",
+      "score": 0.572474,
+      "coOccurrence": 51.859837
+    },
+    {
+      "segmentId": "SG_FEMALE",
+      "score": 0.247039,
+      "coOccurrence": 19.16414
+    },
+    {
+      "segmentId": "HC_REPEAT",
+      "score": 0.112168,
+      "coOccurrence": 3.665922
+    },
+    {
+      "segmentId": "HC_CANCER",
+      "score": 0.103623,
+      "coOccurrence": 10.857906
+    },
+    {
+      "segmentId": "HC_PREM",
+      "score": 0.072156,
+      "coOccurrence": 7.927554
+    },
+    {
+      "segmentId": "HC_CARDIO",
+      "score": 0.064083,
+      "coOccurrence": 7.892821
+    },
+    {
+      "segmentId": "HC_ELDER",
+      "score": 0.063459,
+      "coOccurrence": 6.52549
+    },
+    {
+      "segmentId": "HC_EXEC",
+      "score": 0.057466,
+      "coOccurrence": 6.29181
+    },
+    {
+      "segmentId": "HC_MATERN",
+      "score": 0.043815,
+      "coOccurrence": 4.56822
+    },
+    {
+      "segmentId": "SG_WOMEN",
+      "score": 0.017064,
+      "coOccurrence": 1.690198
+    }
+  ],
+  "HC_ONLINE": [
+    {
+      "segmentId": "HC_FAMILY",
+      "score": 0.603373,
+      "coOccurrence": 51.930562
+    },
+    {
+      "segmentId": "HC_ANNUAL",
+      "score": 0.572474,
+      "coOccurrence": 51.859837
+    },
+    {
+      "segmentId": "SG_FEMALE",
+      "score": 0.182847,
+      "coOccurrence": 8.811739
+    },
+    {
+      "segmentId": "HC_DIAB",
+      "score": 0.069384,
+      "coOccurrence": 3.927683
+    },
+    {
+      "segmentId": "HC_ELDER",
+      "score": 0.068622,
+      "coOccurrence": 4.383588
+    },
+    {
+      "segmentId": "HC_REPEAT",
+      "score": 0.067392,
+      "coOccurrence": 1.368268
+    },
+    {
+      "segmentId": "HC_PREM",
+      "score": 0.067326,
+      "coOccurrence": 4.595211
+    },
+    {
+      "segmentId": "HC_CANCER",
+      "score": 0.059776,
+      "coOccurrence": 3.891034
+    },
+    {
+      "segmentId": "HC_CARDIO",
+      "score": 0.052449,
+      "coOccurrence": 4.013089
+    },
+    {
+      "segmentId": "HC_EXEC",
+      "score": 0.050817,
+      "coOccurrence": 3.456417
+    },
+    {
+      "segmentId": "HC_MATERN",
+      "score": 0.038652,
+      "coOccurrence": 2.503468
+    },
+    {
+      "segmentId": "HC_CORP",
+      "score": 0.035456,
+      "coOccurrence": 2.245883
+    },
+    {
+      "segmentId": "SG_WOMEN",
+      "score": 0.020592,
+      "coOccurrence": 1.267067
+    }
+  ],
+  "HC_PREM": [
+    {
+      "segmentId": "HC_EXEC",
+      "score": 0.897148,
+      "coOccurrence": 74.007091
+    },
+    {
+      "segmentId": "HC_CARDIO",
+      "score": 0.629816,
+      "coOccurrence": 58.445389
+    },
+    {
+      "segmentId": "SG_FEMALE",
+      "score": 0.126815,
+      "coOccurrence": 7.412067
+    },
+    {
+      "segmentId": "HC_ANNUAL",
+      "score": 0.072156,
+      "coOccurrence": 7.927554
+    },
+    {
+      "segmentId": "HC_CANCER",
+      "score": 0.071054,
+      "coOccurrence": 5.609497
+    },
+    {
+      "segmentId": "HC_ONLINE",
+      "score": 0.067326,
+      "coOccurrence": 4.595211
+    },
+    {
+      "segmentId": "HC_ELDER",
+      "score": 0.066511,
+      "coOccurrence": 5.152928
+    },
+    {
+      "segmentId": "HC_FAMILY",
+      "score": 0.060417,
+      "coOccurrence": 6.306554
+    },
+    {
+      "segmentId": "HC_MATERN",
+      "score": 0.056605,
+      "coOccurrence": 4.446524
+    },
+    {
+      "segmentId": "HC_DIAB",
+      "score": 0.053274,
+      "coOccurrence": 3.657548
+    },
+    {
+      "segmentId": "HC_CORP",
+      "score": 0.043251,
+      "coOccurrence": 3.322594
+    },
+    {
+      "segmentId": "HC_REPEAT",
+      "score": 0.036885,
+      "coOccurrence": 0.908269
+    },
+    {
+      "segmentId": "SG_WOMEN",
+      "score": 0.025884,
+      "coOccurrence": 1.931695
+    }
+  ],
+  "HC_CARDIO": [
+    {
+      "segmentId": "HC_EXEC",
+      "score": 0.640415,
+      "coOccurrence": 59.223443
+    },
+    {
+      "segmentId": "HC_PREM",
+      "score": 0.629816,
+      "coOccurrence": 58.445389
+    },
+    {
+      "segmentId": "HC_CANCER",
+      "score": 0.539861,
+      "coOccurrence": 47.77929
+    },
+    {
+      "segmentId": "HC_ELDER",
+      "score": 0.533991,
+      "coOccurrence": 46.378819
+    },
+    {
+      "segmentId": "SG_FEMALE",
+      "score": 0.209864,
+      "coOccurrence": 13.750884
+    },
+    {
+      "segmentId": "HC_REPEAT",
+      "score": 0.071822,
+      "coOccurrence": 1.982633
+    },
+    {
+      "segmentId": "HC_MATERN",
+      "score": 0.06664,
+      "coOccurrence": 5.868421
+    },
+    {
+      "segmentId": "HC_ANNUAL",
+      "score": 0.064083,
+      "coOccurrence": 7.892821
+    },
+    {
+      "segmentId": "HC_DIAB",
+      "score": 0.053164,
+      "coOccurrence": 4.091805
+    },
+    {
+      "segmentId": "HC_ONLINE",
+      "score": 0.052449,
+      "coOccurrence": 4.013089
+    },
+    {
+      "segmentId": "HC_CORP",
+      "score": 0.049521,
+      "coOccurrence": 4.264757
+    },
+    {
+      "segmentId": "HC_FAMILY",
+      "score": 0.04768,
+      "coOccurrence": 5.579475
+    },
+    {
+      "segmentId": "SG_WOMEN",
+      "score": 0.015236,
+      "coOccurrence": 1.274682
+    }
+  ],
+  "HC_EXEC": [
+    {
+      "segmentId": "HC_PREM",
+      "score": 0.897148,
+      "coOccurrence": 74.007091
+    },
+    {
+      "segmentId": "HC_CARDIO",
+      "score": 0.640415,
+      "coOccurrence": 59.223443
+    },
+    {
+      "segmentId": "SG_FEMALE",
+      "score": 0.134965,
+      "coOccurrence": 7.861112
+    },
+    {
+      "segmentId": "HC_ELDER",
+      "score": 0.08225,
+      "coOccurrence": 6.350257
+    },
+    {
+      "segmentId": "HC_CANCER",
+      "score": 0.07929,
+      "coOccurrence": 6.238047
+    },
+    {
+      "segmentId": "HC_MATERN",
+      "score": 0.059989,
+      "coOccurrence": 4.696041
+    },
+    {
+      "segmentId": "HC_ANNUAL",
+      "score": 0.057466,
+      "coOccurrence": 6.29181
+    },
+    {
+      "segmentId": "HC_DIAB",
+      "score": 0.056791,
+      "coOccurrence": 3.885482
+    },
+    {
+      "segmentId": "HC_ONLINE",
+      "score": 0.050817,
+      "coOccurrence": 3.456417
+    },
+    {
+      "segmentId": "HC_FAMILY",
+      "score": 0.050217,
+      "coOccurrence": 5.223686
+    },
+    {
+      "segmentId": "HC_CORP",
+      "score": 0.039282,
+      "coOccurrence": 3.007293
+    },
+    {
+      "segmentId": "HC_REPEAT",
+      "score": 0.033245,
+      "coOccurrence": 0.815783
+    },
+    {
+      "segmentId": "SG_WOMEN",
+      "score": 0.028657,
+      "coOccurrence": 2.131212
+    }
+  ],
+  "HC_CANCER": [
+    {
+      "segmentId": "HC_ELDER",
+      "score": 0.858288,
+      "coOccurrence": 63.418541
+    },
+    {
+      "segmentId": "HC_CARDIO",
+      "score": 0.539861,
+      "coOccurrence": 47.77929
+    },
+    {
+      "segmentId": "SG_FEMALE",
+      "score": 0.116453,
+      "coOccurrence": 6.491433
+    },
+    {
+      "segmentId": "HC_DIAB",
+      "score": 0.105489,
+      "coOccurrence": 6.907149
+    },
+    {
+      "segmentId": "HC_ANNUAL",
+      "score": 0.103623,
+      "coOccurrence": 10.857906
+    },
+    {
+      "segmentId": "HC_CORP",
+      "score": 0.08799,
+      "coOccurrence": 6.446704
+    },
+    {
+      "segmentId": "HC_EXEC",
+      "score": 0.07929,
+      "coOccurrence": 6.238047
+    },
+    {
+      "segmentId": "HC_PREM",
+      "score": 0.071054,
+      "coOccurrence": 5.609497
+    },
+    {
+      "segmentId": "HC_FAMILY",
+      "score": 0.063175,
+      "coOccurrence": 6.289184
+    },
+    {
+      "segmentId": "HC_ONLINE",
+      "score": 0.059776,
+      "coOccurrence": 3.891034
+    },
+    {
+      "segmentId": "HC_REPEAT",
+      "score": 0.051815,
+      "coOccurrence": 1.21685
+    },
+    {
+      "segmentId": "HC_MATERN",
+      "score": 0.048876,
+      "coOccurrence": 3.661712
+    },
+    {
+      "segmentId": "SG_WOMEN",
+      "score": 0.016638,
+      "coOccurrence": 1.184221
+    }
+  ],
+  "HC_ELDER": [
+    {
+      "segmentId": "HC_CANCER",
+      "score": 0.858288,
+      "coOccurrence": 63.418541
+    },
+    {
+      "segmentId": "HC_CARDIO",
+      "score": 0.533991,
+      "coOccurrence": 46.378819
+    },
+    {
+      "segmentId": "SG_FEMALE",
+      "score": 0.135387,
+      "coOccurrence": 7.406158
+    },
+    {
+      "segmentId": "HC_REPEAT",
+      "score": 0.085259,
+      "coOccurrence": 1.964927
+    },
+    {
+      "segmentId": "HC_FAMILY",
+      "score": 0.083123,
+      "coOccurrence": 8.120804
+    },
+    {
+      "segmentId": "HC_EXEC",
+      "score": 0.08225,
+      "coOccurrence": 6.350257
+    },
+    {
+      "segmentId": "HC_ONLINE",
+      "score": 0.068622,
+      "coOccurrence": 4.383588
+    },
+    {
+      "segmentId": "HC_MATERN",
+      "score": 0.067939,
+      "coOccurrence": 4.994972
+    },
+    {
+      "segmentId": "HC_PREM",
+      "score": 0.066511,
+      "coOccurrence": 5.152928
+    },
+    {
+      "segmentId": "HC_ANNUAL",
+      "score": 0.063459,
+      "coOccurrence": 6.52549
+    },
+    {
+      "segmentId": "SG_WOMEN",
+      "score": 0.043487,
+      "coOccurrence": 3.037473
+    },
+    {
+      "segmentId": "HC_CORP",
+      "score": 0.035043,
+      "coOccurrence": 2.519617
+    },
+    {
+      "segmentId": "HC_DIAB",
+      "score": 0.030538,
+      "coOccurrence": 1.962303
+    }
+  ],
+  "HC_CORP": [
+    {
+      "segmentId": "HC_DIAB",
+      "score": 0.79874,
+      "coOccurrence": 50.891935
+    },
+    {
+      "segmentId": "HC_ANNUAL",
+      "score": 0.637873,
+      "coOccurrence": 65.039194
+    },
+    {
+      "segmentId": "SG_FEMALE",
+      "score": 0.214055,
+      "coOccurrence": 11.610887
+    },
+    {
+      "segmentId": "HC_REPEAT",
+      "score": 0.090092,
+      "coOccurrence": 2.058806
+    },
+    {
+      "segmentId": "HC_CANCER",
+      "score": 0.08799,
+      "coOccurrence": 6.446704
+    },
+    {
+      "segmentId": "HC_MATERN",
+      "score": 0.082605,
+      "coOccurrence": 6.022014
+    },
+    {
+      "segmentId": "HC_FAMILY",
+      "score": 0.08242,
+      "coOccurrence": 7.984242
+    },
+    {
+      "segmentId": "SG_WOMEN",
+      "score": 0.06079,
+      "coOccurrence": 4.21026
+    },
+    {
+      "segmentId": "HC_CARDIO",
+      "score": 0.049521,
+      "coOccurrence": 4.264757
+    },
+    {
+      "segmentId": "HC_PREM",
+      "score": 0.043251,
+      "coOccurrence": 3.322594
+    },
+    {
+      "segmentId": "HC_EXEC",
+      "score": 0.039282,
+      "coOccurrence": 3.007293
+    },
+    {
+      "segmentId": "HC_ONLINE",
+      "score": 0.035456,
+      "coOccurrence": 2.245883
+    },
+    {
+      "segmentId": "HC_ELDER",
+      "score": 0.035043,
+      "coOccurrence": 2.519617
+    }
+  ],
+  "HC_DIAB": [
+    {
+      "segmentId": "HC_CORP",
+      "score": 0.79874,
+      "coOccurrence": 50.891935
+    },
+    {
+      "segmentId": "HC_ANNUAL",
+      "score": 0.585661,
+      "coOccurrence": 53.367061
+    },
+    {
+      "segmentId": "SG_FEMALE",
+      "score": 0.253008,
+      "coOccurrence": 12.26481
+    },
+    {
+      "segmentId": "HC_CANCER",
+      "score": 0.105489,
+      "coOccurrence": 6.907149
+    },
+    {
+      "segmentId": "HC_REPEAT",
+      "score": 0.100809,
+      "coOccurrence": 2.058806
+    },
+    {
+      "segmentId": "HC_FAMILY",
+      "score": 0.070243,
+      "coOccurrence": 6.081201
+    },
+    {
+      "segmentId": "HC_ONLINE",
+      "score": 0.069384,
+      "coOccurrence": 3.927683
+    },
+    {
+      "segmentId": "HC_EXEC",
+      "score": 0.056791,
+      "coOccurrence": 3.885482
+    },
+    {
+      "segmentId": "HC_PREM",
+      "score": 0.053274,
+      "coOccurrence": 3.657548
+    },
+    {
+      "segmentId": "HC_CARDIO",
+      "score": 0.053164,
+      "coOccurrence": 4.091805
+    },
+    {
+      "segmentId": "HC_MATERN",
+      "score": 0.047152,
+      "coOccurrence": 3.072021
+    },
+    {
+      "segmentId": "HC_ELDER",
+      "score": 0.030538,
+      "coOccurrence": 1.962303
+    },
+    {
+      "segmentId": "SG_WOMEN",
+      "score": 0.016395,
+      "coOccurrence": 1.014781
+    }
+  ],
+  "SG_FEMALE": [
+    {
+      "segmentId": "HC_DIAB",
+      "score": 0.253008,
+      "coOccurrence": 12.26481
+    },
+    {
+      "segmentId": "HC_ANNUAL",
+      "score": 0.247039,
+      "coOccurrence": 19.16414
+    },
+    {
+      "segmentId": "HC_FAMILY",
+      "score": 0.224796,
+      "coOccurrence": 16.568138
+    },
+    {
+      "segmentId": "HC_CORP",
+      "score": 0.214055,
+      "coOccurrence": 11.610887
+    },
+    {
+      "segmentId": "HC_CARDIO",
+      "score": 0.209864,
+      "coOccurrence": 13.750884
+    },
+    {
+      "segmentId": "HC_ONLINE",
+      "score": 0.182847,
+      "coOccurrence": 8.811739
+    },
+    {
+      "segmentId": "HC_MATERN",
+      "score": 0.169962,
+      "coOccurrence": 9.426956
+    },
+    {
+      "segmentId": "SG_WOMEN",
+      "score": 0.164198,
+      "coOccurrence": 8.652199
+    },
+    {
+      "segmentId": "HC_ELDER",
+      "score": 0.135387,
+      "coOccurrence": 7.406158
+    },
+    {
+      "segmentId": "HC_EXEC",
+      "score": 0.134965,
+      "coOccurrence": 7.861112
+    },
+    {
+      "segmentId": "HC_PREM",
+      "score": 0.126815,
+      "coOccurrence": 7.412067
+    },
+    {
+      "segmentId": "HC_CANCER",
+      "score": 0.116453,
+      "coOccurrence": 6.491433
+    },
+    {
+      "segmentId": "HC_REPEAT",
+      "score": 0.042975,
+      "coOccurrence": 0.74718
+    }
+  ],
+  "HC_REPEAT": [
+    {
+      "segmentId": "HC_ANNUAL",
+      "score": 0.112168,
+      "coOccurrence": 3.665922
+    },
+    {
+      "segmentId": "HC_FAMILY",
+      "score": 0.107356,
+      "coOccurrence": 3.333512
+    },
+    {
+      "segmentId": "HC_DIAB",
+      "score": 0.100809,
+      "coOccurrence": 2.058806
+    },
+    {
+      "segmentId": "HC_MATERN",
+      "score": 0.096079,
+      "coOccurrence": 2.245121
+    },
+    {
+      "segmentId": "HC_CORP",
+      "score": 0.090092,
+      "coOccurrence": 2.058806
+    },
+    {
+      "segmentId": "SG_WOMEN",
+      "score": 0.086273,
+      "coOccurrence": 1.915244
+    },
+    {
+      "segmentId": "HC_ELDER",
+      "score": 0.085259,
+      "coOccurrence": 1.964927
+    },
+    {
+      "segmentId": "HC_CARDIO",
+      "score": 0.071822,
+      "coOccurrence": 1.982633
+    },
+    {
+      "segmentId": "HC_ONLINE",
+      "score": 0.067392,
+      "coOccurrence": 1.368268
+    },
+    {
+      "segmentId": "HC_CANCER",
+      "score": 0.051815,
+      "coOccurrence": 1.21685
+    },
+    {
+      "segmentId": "SG_FEMALE",
+      "score": 0.042975,
+      "coOccurrence": 0.74718
+    },
+    {
+      "segmentId": "HC_PREM",
+      "score": 0.036885,
+      "coOccurrence": 0.908269
+    },
+    {
+      "segmentId": "HC_EXEC",
+      "score": 0.033245,
+      "coOccurrence": 0.815783
+    }
+  ]
+}

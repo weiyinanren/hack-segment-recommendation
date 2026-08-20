@@ -1,0 +1,60 @@
+{
+  "S10": [
+    {
+      "segmentId": "S11",
+      "score": 0.934019,
+      "coOccurrence": 1.860562
+    },
+    {
+      "segmentId": "S12",
+      "score": 0.725006,
+      "coOccurrence": 1.150609
+    }
+  ],
+  "S11": [
+    {
+      "segmentId": "S10",
+      "score": 0.934019,
+      "coOccurrence": 1.860562
+    },
+    {
+      "segmentId": "S12",
+      "score": 0.679856,
+      "coOccurrence": 1.052787
+    },
+    {
+      "segmentId": "S13",
+      "score": 0.2068,
+      "coOccurrence": 0.083124
+    }
+  ],
+  "S12": [
+    {
+      "segmentId": "S10",
+      "score": 0.725006,
+      "coOccurrence": 1.150609
+    },
+    {
+      "segmentId": "S11",
+      "score": 0.679856,
+      "coOccurrence": 1.052787
+    },
+    {
+      "segmentId": "S13",
+      "score": 0.259569,
+      "coOccurrence": 0.083124
+    }
+  ],
+  "S13": [
+    {
+      "segmentId": "S12",
+      "score": 0.259569,
+      "coOccurrence": 0.083124
+    },
+    {
+      "segmentId": "S11",
+      "score": 0.2068,
+      "coOccurrence": 0.083124
+    }
+  ]
+}

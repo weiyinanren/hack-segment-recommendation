@@ -1,0 +1,34 @@
+{
+  "layer": "client",
+  "version": "20260820T024805Z",
+  "clientName": "FashionHub",
+  "clientSlug": "FashionHub",
+  "trainedAt": "2026-08-20T02:48:33.339173+00:00",
+  "inputRows": 5950,
+  "audienceCount": 1873,
+  "segmentCount": 14,
+  "industries": [
+    "Retail"
+  ],
+  "topNPopularity": 50,
+  "topKSimilarity": 20,
+  "vectorSize": 128,
+  "hasEmbeddings": true,
+  "sampleWeights": {
+    "half_life_days": 90.0,
+    "weight_distributed": 1.0,
+    "weight_undistributed": 0.4,
+    "min_weight": 0.05,
+    "as_of": "2026-08-19T00:00:00+00:00",
+    "formula": "w = max(min_weight, exp(-ln2/half_life * age_days) * w_distributed)"
+  },
+  "isolation": "client_private_behavior",
+  "artifacts": [
+    "popularity.json",
+    "similarity.json",
+    "segment_catalog.json",
+    "embeddings.json",
+    "emb_neighbors.json",
+    "meta.json"
+  ]
+}

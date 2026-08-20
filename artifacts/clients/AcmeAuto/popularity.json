@@ -1,0 +1,46 @@
+{
+  "Auto": [
+    {
+      "segmentId": "S1",
+      "count": 5,
+      "weightSum": 3.117416,
+      "score": 1.0
+    },
+    {
+      "segmentId": "S3",
+      "count": 4,
+      "weightSum": 1.940665,
+      "score": 0.614738
+    },
+    {
+      "segmentId": "S5",
+      "count": 3,
+      "weightSum": 1.877669,
+      "score": 0.594114
+    },
+    {
+      "segmentId": "S15",
+      "count": 1,
+      "weightSum": 0.787611,
+      "score": 0.237235
+    },
+    {
+      "segmentId": "S14",
+      "count": 1,
+      "weightSum": 0.775572,
+      "score": 0.233293
+    },
+    {
+      "segmentId": "S7",
+      "count": 2,
+      "weightSum": 0.695582,
+      "score": 0.207105
+    },
+    {
+      "segmentId": "S6",
+      "count": 1,
+      "weightSum": 0.062996,
+      "score": 0.0
+    }
+  ]
+}

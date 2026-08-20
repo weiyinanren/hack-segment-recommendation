@@ -1,0 +1,808 @@
+{
+  "OEM_LUX": [
+    {
+      "segmentId": "OEM_SUV",
+      "score": 0.672284,
+      "coOccurrence": 73.16275
+    },
+    {
+      "segmentId": "SG_MISS",
+      "score": 0.651432,
+      "coOccurrence": 56.765045
+    },
+    {
+      "segmentId": "OEM_SAFE",
+      "score": 0.070641,
+      "coOccurrence": 5.726154
+    },
+    {
+      "segmentId": "OEM_FLEET",
+      "score": 0.064337,
+      "coOccurrence": 4.827276
+    },
+    {
+      "segmentId": "OEM_LEASE",
+      "score": 0.062865,
+      "coOccurrence": 4.367924
+    },
+    {
+      "segmentId": "OEM_NEW",
+      "score": 0.062019,
+      "coOccurrence": 6.260791
+    },
+    {
+      "segmentId": "OEM_PARTS",
+      "score": 0.06198,
+      "coOccurrence": 3.897219
+    },
+    {
+      "segmentId": "OEM_TRUCK",
+      "score": 0.051736,
+      "coOccurrence": 3.852651
+    },
+    {
+      "segmentId": "OEM_DEAL",
+      "score": 0.049493,
+      "coOccurrence": 3.8275
+    },
+    {
+      "segmentId": "OEM_USED",
+      "score": 0.048589,
+      "coOccurrence": 3.759529
+    },
+    {
+      "segmentId": "OEM_TECH",
+      "score": 0.037864,
+      "coOccurrence": 2.476589
+    },
+    {
+      "segmentId": "OEM_EV",
+      "score": 0.030081,
+      "coOccurrence": 2.273869
+    }
+  ],
+  "OEM_SAFE": [
+    {
+      "segmentId": "OEM_SUV",
+      "score": 0.693225,
+      "coOccurrence": 80.715383
+    },
+    {
+      "segmentId": "OEM_NEW",
+      "score": 0.580498,
+      "coOccurrence": 62.697585
+    },
+    {
+      "segmentId": "SG_MISS",
+      "score": 0.239524,
+      "coOccurrence": 22.330881
+    },
+    {
+      "segmentId": "OEM_LEASE",
+      "score": 0.089696,
+      "coOccurrence": 6.667784
+    },
+    {
+      "segmentId": "OEM_DEAL",
+      "score": 0.0805,
+      "coOccurrence": 6.660676
+    },
+    {
+      "segmentId": "OEM_LUX",
+      "score": 0.070641,
+      "coOccurrence": 5.726154
+    },
+    {
+      "segmentId": "OEM_USED",
+      "score": 0.068838,
+      "coOccurrence": 5.698602
+    },
+    {
+      "segmentId": "OEM_EV",
+      "score": 0.06424,
+      "coOccurrence": 5.195428
+    },
+    {
+      "segmentId": "OEM_TECH",
+      "score": 0.058265,
+      "coOccurrence": 4.077319
+    },
+    {
+      "segmentId": "OEM_TRUCK",
+      "score": 0.041957,
+      "coOccurrence": 3.342803
+    },
+    {
+      "segmentId": "OEM_PARTS",
+      "score": 0.037598,
+      "coOccurrence": 2.529393
+    },
+    {
+      "segmentId": "OEM_FLEET",
+      "score": 0.021293,
+      "coOccurrence": 1.709336
+    }
+  ],
+  "OEM_SUV": [
+    {
+      "segmentId": "OEM_SAFE",
+      "score": 0.693225,
+      "coOccurrence": 80.715383
+    },
+    {
+      "segmentId": "OEM_LUX",
+      "score": 0.672284,
+      "coOccurrence": 73.16275
+    },
+    {
+      "segmentId": "SG_MISS",
+      "score": 0.589178,
+      "coOccurrence": 73.745673
+    },
+    {
+      "segmentId": "OEM_NEW",
+      "score": 0.461828,
+      "coOccurrence": 66.967375
+    },
+    {
+      "segmentId": "OEM_LEASE",
+      "score": 0.096249,
+      "coOccurrence": 9.60594
+    },
+    {
+      "segmentId": "OEM_DEAL",
+      "score": 0.088325,
+      "coOccurrence": 9.811537
+    },
+    {
+      "segmentId": "OEM_TECH",
+      "score": 0.081225,
+      "coOccurrence": 7.631156
+    },
+    {
+      "segmentId": "OEM_USED",
+      "score": 0.078933,
+      "coOccurrence": 8.772668
+    },
+    {
+      "segmentId": "OEM_EV",
+      "score": 0.068639,
+      "coOccurrence": 7.452854
+    },
+    {
+      "segmentId": "OEM_PARTS",
+      "score": 0.066809,
+      "coOccurrence": 6.034084
+    },
+    {
+      "segmentId": "OEM_TRUCK",
+      "score": 0.061245,
+      "coOccurrence": 6.551048
+    },
+    {
+      "segmentId": "OEM_FLEET",
+      "score": 0.054514,
+      "coOccurrence": 5.875227
+    }
+  ],
+  "SG_MISS": [
+    {
+      "segmentId": "OEM_LUX",
+      "score": 0.651432,
+      "coOccurrence": 56.765045
+    },
+    {
+      "segmentId": "OEM_SUV",
+      "score": 0.589178,
+      "coOccurrence": 73.745673
+    },
+    {
+      "segmentId": "OEM_NEW",
+      "score": 0.262437,
+      "coOccurrence": 30.470663
+    },
+    {
+      "segmentId": "OEM_SAFE",
+      "score": 0.239524,
+      "coOccurrence": 22.330881
+    },
+    {
+      "segmentId": "OEM_LEASE",
+      "score": 0.195375,
+      "coOccurrence": 15.613034
+    },
+    {
+      "segmentId": "OEM_DEAL",
+      "score": 0.166502,
+      "coOccurrence": 14.809774
+    },
+    {
+      "segmentId": "OEM_USED",
+      "score": 0.163627,
+      "coOccurrence": 14.561409
+    },
+    {
+      "segmentId": "OEM_TECH",
+      "score": 0.155911,
+      "coOccurrence": 11.728764
+    },
+    {
+      "segmentId": "OEM_PARTS",
+      "score": 0.148421,
+      "coOccurrence": 10.733665
+    },
+    {
+      "segmentId": "OEM_FLEET",
+      "score": 0.138681,
+      "coOccurrence": 11.967672
+    },
+    {
+      "segmentId": "OEM_TRUCK",
+      "score": 0.116879,
+      "coOccurrence": 10.010426
+    },
+    {
+      "segmentId": "OEM_EV",
+      "score": 0.115519,
+      "coOccurrence": 10.043345
+    }
+  ],
+  "OEM_FLEET": [
+    {
+      "segmentId": "OEM_TRUCK",
+      "score": 0.922994,
+      "coOccurrence": 68.06788
+    },
+    {
+      "segmentId": "OEM_PARTS",
+      "score": 0.758798,
+      "coOccurrence": 47.250666
+    },
+    {
+      "segmentId": "SG_MISS",
+      "score": 0.138681,
+      "coOccurrence": 11.967672
+    },
+    {
+      "segmentId": "OEM_LUX",
+      "score": 0.064337,
+      "coOccurrence": 4.827276
+    },
+    {
+      "segmentId": "OEM_TECH",
+      "score": 0.056909,
+      "coOccurrence": 3.686209
+    },
+    {
+      "segmentId": "OEM_SUV",
+      "score": 0.054514,
+      "coOccurrence": 5.875227
+    },
+    {
+      "segmentId": "OEM_EV",
+      "score": 0.052985,
+      "coOccurrence": 3.966516
+    },
+    {
+      "segmentId": "OEM_NEW",
+      "score": 0.042636,
+      "coOccurrence": 4.262501
+    },
+    {
+      "segmentId": "OEM_LEASE",
+      "score": 0.042114,
+      "coOccurrence": 2.897809
+    },
+    {
+      "segmentId": "OEM_USED",
+      "score": 0.032151,
+      "coOccurrence": 2.463643
+    },
+    {
+      "segmentId": "OEM_DEAL",
+      "score": 0.02596,
+      "coOccurrence": 1.988185
+    },
+    {
+      "segmentId": "OEM_SAFE",
+      "score": 0.021293,
+      "coOccurrence": 1.709336
+    }
+  ],
+  "OEM_PARTS": [
+    {
+      "segmentId": "OEM_TRUCK",
+      "score": 0.770035,
+      "coOccurrence": 47.59002
+    },
+    {
+      "segmentId": "OEM_FLEET",
+      "score": 0.758798,
+      "coOccurrence": 47.250666
+    },
+    {
+      "segmentId": "SG_MISS",
+      "score": 0.148421,
+      "coOccurrence": 10.733665
+    },
+    {
+      "segmentId": "OEM_SUV",
+      "score": 0.066809,
+      "coOccurrence": 6.034084
+    },
+    {
+      "segmentId": "OEM_LUX",
+      "score": 0.06198,
+      "coOccurrence": 3.897219
+    },
+    {
+      "segmentId": "OEM_EV",
+      "score": 0.050762,
+      "coOccurrence": 3.18459
+    },
+    {
+      "segmentId": "OEM_NEW",
+      "score": 0.049764,
+      "coOccurrence": 4.16925
+    },
+    {
+      "segmentId": "OEM_TECH",
+      "score": 0.04901,
+      "coOccurrence": 2.660396
+    },
+    {
+      "segmentId": "OEM_LEASE",
+      "score": 0.044918,
+      "coOccurrence": 2.590171
+    },
+    {
+      "segmentId": "OEM_SAFE",
+      "score": 0.037598,
+      "coOccurrence": 2.529393
+    },
+    {
+      "segmentId": "OEM_USED",
+      "score": 0.035132,
+      "coOccurrence": 2.256005
+    },
+    {
+      "segmentId": "OEM_DEAL",
+      "score": 0.026184,
+      "coOccurrence": 1.680547
+    }
+  ],
+  "OEM_TRUCK": [
+    {
+      "segmentId": "OEM_FLEET",
+      "score": 0.922994,
+      "coOccurrence": 68.06788
+    },
+    {
+      "segmentId": "OEM_PARTS",
+      "score": 0.770035,
+      "coOccurrence": 47.59002
+    },
+    {
+      "segmentId": "SG_MISS",
+      "score": 0.116879,
+      "coOccurrence": 10.010426
+    },
+    {
+      "segmentId": "OEM_SUV",
+      "score": 0.061245,
+      "coOccurrence": 6.551048
+    },
+    {
+      "segmentId": "OEM_LUX",
+      "score": 0.051736,
+      "coOccurrence": 3.852651
+    },
+    {
+      "segmentId": "OEM_NEW",
+      "score": 0.051208,
+      "coOccurrence": 5.080997
+    },
+    {
+      "segmentId": "OEM_EV",
+      "score": 0.045071,
+      "coOccurrence": 3.348693
+    },
+    {
+      "segmentId": "OEM_SAFE",
+      "score": 0.041957,
+      "coOccurrence": 3.342803
+    },
+    {
+      "segmentId": "OEM_TECH",
+      "score": 0.041363,
+      "coOccurrence": 2.65912
+    },
+    {
+      "segmentId": "OEM_LEASE",
+      "score": 0.033525,
+      "coOccurrence": 2.289463
+    },
+    {
+      "segmentId": "OEM_DEAL",
+      "score": 0.022934,
+      "coOccurrence": 1.743226
+    },
+    {
+      "segmentId": "OEM_USED",
+      "score": 0.022382,
+      "coOccurrence": 1.702168
+    }
+  ],
+  "OEM_EV": [
+    {
+      "segmentId": "OEM_TECH",
+      "score": 0.751843,
+      "coOccurrence": 49.063895
+    },
+    {
+      "segmentId": "OEM_NEW",
+      "score": 0.688712,
+      "coOccurrence": 69.367365
+    },
+    {
+      "segmentId": "SG_MISS",
+      "score": 0.115519,
+      "coOccurrence": 10.043345
+    },
+    {
+      "segmentId": "OEM_LEASE",
+      "score": 0.072565,
+      "coOccurrence": 5.030406
+    },
+    {
+      "segmentId": "OEM_SUV",
+      "score": 0.068639,
+      "coOccurrence": 7.452854
+    },
+    {
+      "segmentId": "OEM_SAFE",
+      "score": 0.06424,
+      "coOccurrence": 5.195428
+    },
+    {
+      "segmentId": "OEM_FLEET",
+      "score": 0.052985,
+      "coOccurrence": 3.966516
+    },
+    {
+      "segmentId": "OEM_PARTS",
+      "score": 0.050762,
+      "coOccurrence": 3.18459
+    },
+    {
+      "segmentId": "OEM_USED",
+      "score": 0.050692,
+      "coOccurrence": 3.913391
+    },
+    {
+      "segmentId": "OEM_TRUCK",
+      "score": 0.045071,
+      "coOccurrence": 3.348693
+    },
+    {
+      "segmentId": "OEM_DEAL",
+      "score": 0.043967,
+      "coOccurrence": 3.392475
+    },
+    {
+      "segmentId": "OEM_LUX",
+      "score": 0.030081,
+      "coOccurrence": 2.273869
+    }
+  ],
+  "OEM_NEW": [
+    {
+      "segmentId": "OEM_EV",
+      "score": 0.688712,
+      "coOccurrence": 69.367365
+    },
+    {
+      "segmentId": "OEM_SAFE",
+      "score": 0.580498,
+      "coOccurrence": 62.697585
+    },
+    {
+      "segmentId": "OEM_TECH",
+      "score": 0.574967,
+      "coOccurrence": 50.108436
+    },
+    {
+      "segmentId": "OEM_SUV",
+      "score": 0.461828,
+      "coOccurrence": 66.967375
+    },
+    {
+      "segmentId": "SG_MISS",
+      "score": 0.262437,
+      "coOccurrence": 30.470663
+    },
+    {
+      "segmentId": "OEM_LEASE",
+      "score": 0.062532,
+      "coOccurrence": 5.789151
+    },
+    {
+      "segmentId": "OEM_LUX",
+      "score": 0.062019,
+      "coOccurrence": 6.260791
+    },
+    {
+      "segmentId": "OEM_USED",
+      "score": 0.057407,
+      "coOccurrence": 5.918402
+    },
+    {
+      "segmentId": "OEM_DEAL",
+      "score": 0.054948,
+      "coOccurrence": 5.662055
+    },
+    {
+      "segmentId": "OEM_TRUCK",
+      "score": 0.051208,
+      "coOccurrence": 5.080997
+    },
+    {
+      "segmentId": "OEM_PARTS",
+      "score": 0.049764,
+      "coOccurrence": 4.16925
+    },
+    {
+      "segmentId": "OEM_FLEET",
+      "score": 0.042636,
+      "coOccurrence": 4.262501
+    }
+  ],
+  "OEM_LEASE": [
+    {
+      "segmentId": "OEM_DEAL",
+      "score": 0.774346,
+      "coOccurrence": 54.918197
+    },
+    {
+      "segmentId": "OEM_USED",
+      "score": 0.767894,
+      "coOccurrence": 54.488441
+    },
+    {
+      "segmentId": "SG_MISS",
+      "score": 0.195375,
+      "coOccurrence": 15.613034
+    },
+    {
+      "segmentId": "OEM_SUV",
+      "score": 0.096249,
+      "coOccurrence": 9.60594
+    },
+    {
+      "segmentId": "OEM_SAFE",
+      "score": 0.089696,
+      "coOccurrence": 6.667784
+    },
+    {
+      "segmentId": "OEM_TECH",
+      "score": 0.079259,
+      "coOccurrence": 4.754167
+    },
+    {
+      "segmentId": "OEM_EV",
+      "score": 0.072565,
+      "coOccurrence": 5.030406
+    },
+    {
+      "segmentId": "OEM_LUX",
+      "score": 0.062865,
+      "coOccurrence": 4.367924
+    },
+    {
+      "segmentId": "OEM_NEW",
+      "score": 0.062532,
+      "coOccurrence": 5.789151
+    },
+    {
+      "segmentId": "OEM_PARTS",
+      "score": 0.044918,
+      "coOccurrence": 2.590171
+    },
+    {
+      "segmentId": "OEM_FLEET",
+      "score": 0.042114,
+      "coOccurrence": 2.897809
+    },
+    {
+      "segmentId": "OEM_TRUCK",
+      "score": 0.033525,
+      "coOccurrence": 2.289463
+    }
+  ],
+  "OEM_DEAL": [
+    {
+      "segmentId": "OEM_USED",
+      "score": 0.906884,
+      "coOccurrence": 71.624925
+    },
+    {
+      "segmentId": "OEM_LEASE",
+      "score": 0.774346,
+      "coOccurrence": 54.918197
+    },
+    {
+      "segmentId": "SG_MISS",
+      "score": 0.166502,
+      "coOccurrence": 14.809774
+    },
+    {
+      "segmentId": "OEM_SUV",
+      "score": 0.088325,
+      "coOccurrence": 9.811537
+    },
+    {
+      "segmentId": "OEM_SAFE",
+      "score": 0.0805,
+      "coOccurrence": 6.660676
+    },
+    {
+      "segmentId": "OEM_TECH",
+      "score": 0.058628,
+      "coOccurrence": 3.914181
+    },
+    {
+      "segmentId": "OEM_NEW",
+      "score": 0.054948,
+      "coOccurrence": 5.662055
+    },
+    {
+      "segmentId": "OEM_LUX",
+      "score": 0.049493,
+      "coOccurrence": 3.8275
+    },
+    {
+      "segmentId": "OEM_EV",
+      "score": 0.043967,
+      "coOccurrence": 3.392475
+    },
+    {
+      "segmentId": "OEM_PARTS",
+      "score": 0.026184,
+      "coOccurrence": 1.680547
+    },
+    {
+      "segmentId": "OEM_FLEET",
+      "score": 0.02596,
+      "coOccurrence": 1.988185
+    },
+    {
+      "segmentId": "OEM_TRUCK",
+      "score": 0.022934,
+      "coOccurrence": 1.743226
+    }
+  ],
+  "OEM_USED": [
+    {
+      "segmentId": "OEM_DEAL",
+      "score": 0.906884,
+      "coOccurrence": 71.624925
+    },
+    {
+      "segmentId": "OEM_LEASE",
+      "score": 0.767894,
+      "coOccurrence": 54.488441
+    },
+    {
+      "segmentId": "SG_MISS",
+      "score": 0.163627,
+      "coOccurrence": 14.561409
+    },
+    {
+      "segmentId": "OEM_SUV",
+      "score": 0.078933,
+      "coOccurrence": 8.772668
+    },
+    {
+      "segmentId": "OEM_SAFE",
+      "score": 0.068838,
+      "coOccurrence": 5.698602
+    },
+    {
+      "segmentId": "OEM_TECH",
+      "score": 0.068133,
+      "coOccurrence": 4.551123
+    },
+    {
+      "segmentId": "OEM_NEW",
+      "score": 0.057407,
+      "coOccurrence": 5.918402
+    },
+    {
+      "segmentId": "OEM_EV",
+      "score": 0.050692,
+      "coOccurrence": 3.913391
+    },
+    {
+      "segmentId": "OEM_LUX",
+      "score": 0.048589,
+      "coOccurrence": 3.759529
+    },
+    {
+      "segmentId": "OEM_PARTS",
+      "score": 0.035132,
+      "coOccurrence": 2.256005
+    },
+    {
+      "segmentId": "OEM_FLEET",
+      "score": 0.032151,
+      "coOccurrence": 2.463643
+    },
+    {
+      "segmentId": "OEM_TRUCK",
+      "score": 0.022382,
+      "coOccurrence": 1.702168
+    }
+  ],
+  "OEM_TECH": [
+    {
+      "segmentId": "OEM_EV",
+      "score": 0.751843,
+      "coOccurrence": 49.063895
+    },
+    {
+      "segmentId": "OEM_NEW",
+      "score": 0.574967,
+      "coOccurrence": 50.108436
+    },
+    {
+      "segmentId": "SG_MISS",
+      "score": 0.155911,
+      "coOccurrence": 11.728764
+    },
+    {
+      "segmentId": "OEM_SUV",
+      "score": 0.081225,
+      "coOccurrence": 7.631156
+    },
+    {
+      "segmentId": "OEM_LEASE",
+      "score": 0.079259,
+      "coOccurrence": 4.754167
+    },
+    {
+      "segmentId": "OEM_USED",
+      "score": 0.068133,
+      "coOccurrence": 4.551123
+    },
+    {
+      "segmentId": "OEM_DEAL",
+      "score": 0.058628,
+      "coOccurrence": 3.914181
+    },
+    {
+      "segmentId": "OEM_SAFE",
+      "score": 0.058265,
+      "coOccurrence": 4.077319
+    },
+    {
+      "segmentId": "OEM_FLEET",
+      "score": 0.056909,
+      "coOccurrence": 3.686209
+    },
+    {
+      "segmentId": "OEM_PARTS",
+      "score": 0.04901,
+      "coOccurrence": 2.660396
+    },
+    {
+      "segmentId": "OEM_TRUCK",
+      "score": 0.041363,
+      "coOccurrence": 2.65912
+    },
+    {
+      "segmentId": "OEM_LUX",
+      "score": 0.037864,
+      "coOccurrence": 2.476589
+    }
+  ]
+}

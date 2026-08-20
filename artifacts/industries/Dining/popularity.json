@@ -1,0 +1,104 @@
+[
+  {
+    "segmentId": "FD_QSR",
+    "count": 2411,
+    "weightSum": 539.912893,
+    "score": 1.0
+  },
+  {
+    "segmentId": "FD_FINE",
+    "count": 2374,
+    "weightSum": 539.181882,
+    "score": 0.998544
+  },
+  {
+    "segmentId": "FD_FAMILY",
+    "count": 2091,
+    "weightSum": 468.349614,
+    "score": 0.85744
+  },
+  {
+    "segmentId": "FD_DELIV",
+    "count": 2121,
+    "weightSum": 466.539319,
+    "score": 0.853834
+  },
+  {
+    "segmentId": "FD_TEA",
+    "count": 1243,
+    "weightSum": 296.764175,
+    "score": 0.515627
+  },
+  {
+    "segmentId": "FD_NIGHT",
+    "count": 1283,
+    "weightSum": 293.175454,
+    "score": 0.508478
+  },
+  {
+    "segmentId": "FD_CAFE",
+    "count": 1213,
+    "weightSum": 288.63293,
+    "score": 0.499429
+  },
+  {
+    "segmentId": "FD_VEG",
+    "count": 1244,
+    "weightSum": 277.856253,
+    "score": 0.477961
+  },
+  {
+    "segmentId": "FD_LOYAL",
+    "count": 948,
+    "weightSum": 228.86939,
+    "score": 0.380375
+  },
+  {
+    "segmentId": "FD_LUNCH",
+    "count": 999,
+    "weightSum": 221.485375,
+    "score": 0.365666
+  },
+  {
+    "segmentId": "SG_LADY",
+    "count": 867,
+    "weightSum": 199.750126,
+    "score": 0.322367
+  },
+  {
+    "segmentId": "SG_MS",
+    "count": 201,
+    "weightSum": 46.671316,
+    "score": 0.017421
+  },
+  {
+    "segmentId": "SG_MISS",
+    "count": 205,
+    "weightSum": 45.777674,
+    "score": 0.015641
+  },
+  {
+    "segmentId": "FD_BUFFET",
+    "count": 186,
+    "weightSum": 43.844942,
+    "score": 0.011791
+  },
+  {
+    "segmentId": "FD_SPICY",
+    "count": 169,
+    "weightSum": 39.569127,
+    "score": 0.003273
+  },
+  {
+    "segmentId": "SG_MADAM",
+    "count": 178,
+    "weightSum": 38.399964,
+    "score": 0.000944
+  },
+  {
+    "segmentId": "SG_FEMALE",
+    "count": 160,
+    "weightSum": 37.926124,
+    "score": 0.0
+  }
+]

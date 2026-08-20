@@ -1,0 +1,302 @@
+[
+  {
+    "segmentId": "CPG_VALUE",
+    "count": 2993,
+    "weightSum": 697.892211,
+    "score": 1.0
+  },
+  {
+    "segmentId": "CPG_ORG",
+    "count": 2583,
+    "weightSum": 620.674389,
+    "score": 0.889201
+  },
+  {
+    "segmentId": "CPG_MOM",
+    "count": 2631,
+    "weightSum": 601.300043,
+    "score": 0.8614
+  },
+  {
+    "segmentId": "CPG_SNACK",
+    "count": 1629,
+    "weightSum": 389.168358,
+    "score": 0.557014
+  },
+  {
+    "segmentId": "CPG_BABY",
+    "count": 1606,
+    "weightSum": 374.555121,
+    "score": 0.536045
+  },
+  {
+    "segmentId": "CPG_SKIN",
+    "count": 1555,
+    "weightSum": 367.986108,
+    "score": 0.526619
+  },
+  {
+    "segmentId": "CPG_BEAUTY",
+    "count": 1566,
+    "weightSum": 367.960948,
+    "score": 0.526583
+  },
+  {
+    "segmentId": "CPG_PREM",
+    "count": 1539,
+    "weightSum": 364.424555,
+    "score": 0.521509
+  },
+  {
+    "segmentId": "CPG_CLEAN",
+    "count": 1586,
+    "weightSum": 360.189242,
+    "score": 0.515432
+  },
+  {
+    "segmentId": "CPG_BRAND",
+    "count": 1258,
+    "weightSum": 294.503088,
+    "score": 0.421179
+  },
+  {
+    "segmentId": "CPG_HEALTH",
+    "count": 1190,
+    "weightSum": 282.16103,
+    "score": 0.403469
+  },
+  {
+    "segmentId": "SG_FEMALE",
+    "count": 1219,
+    "weightSum": 280.082875,
+    "score": 0.400487
+  },
+  {
+    "segmentId": "SG_MISS",
+    "count": 234,
+    "weightSum": 61.17327,
+    "score": 0.086375
+  },
+  {
+    "segmentId": "SG_MS",
+    "count": 230,
+    "weightSum": 55.681878,
+    "score": 0.078496
+  },
+  {
+    "segmentId": "SG_MADAM",
+    "count": 223,
+    "weightSum": 53.435346,
+    "score": 0.075272
+  },
+  {
+    "segmentId": "CPG_PET",
+    "count": 222,
+    "weightSum": 48.950739,
+    "score": 0.068837
+  },
+  {
+    "segmentId": "626558140458401911",
+    "count": 1,
+    "weightSum": 1.0,
+    "score": 3.3e-05
+  },
+  {
+    "segmentId": "626558140458401912",
+    "count": 1,
+    "weightSum": 1.0,
+    "score": 3.3e-05
+  },
+  {
+    "segmentId": "626558140458401971",
+    "count": 1,
+    "weightSum": 0.984715,
+    "score": 1.1e-05
+  },
+  {
+    "segmentId": "626558140458401972",
+    "count": 1,
+    "weightSum": 0.984715,
+    "score": 1.1e-05
+  },
+  {
+    "segmentId": "626558140458401974",
+    "count": 1,
+    "weightSum": 0.984715,
+    "score": 1.1e-05
+  },
+  {
+    "segmentId": "626558140458402573",
+    "count": 1,
+    "weightSum": 0.97716,
+    "score": 0.0
+  },
+  {
+    "segmentId": "626558140458402574",
+    "count": 1,
+    "weightSum": 0.97716,
+    "score": 0.0
+  },
+  {
+    "segmentId": "626558140458402575",
+    "count": 1,
+    "weightSum": 0.97716,
+    "score": 0.0
+  },
+  {
+    "segmentId": "626558140458402576",
+    "count": 1,
+    "weightSum": 0.97716,
+    "score": 0.0
+  },
+  {
+    "segmentId": "626558140458402577",
+    "count": 1,
+    "weightSum": 0.97716,
+    "score": 0.0
+  },
+  {
+    "segmentId": "626558140458402580",
+    "count": 1,
+    "weightSum": 0.97716,
+    "score": 0.0
+  },
+  {
+    "segmentId": "626558140458402581",
+    "count": 1,
+    "weightSum": 0.97716,
+    "score": 0.0
+  },
+  {
+    "segmentId": "626558140458402582",
+    "count": 1,
+    "weightSum": 0.97716,
+    "score": 0.0
+  },
+  {
+    "segmentId": "626558140458402583",
+    "count": 1,
+    "weightSum": 0.97716,
+    "score": 0.0
+  },
+  {
+    "segmentId": "626558140458402589",
+    "count": 1,
+    "weightSum": 0.97716,
+    "score": 0.0
+  },
+  {
+    "segmentId": "626558140458402590",
+    "count": 1,
+    "weightSum": 0.97716,
+    "score": 0.0
+  },
+  {
+    "segmentId": "626558140458402591",
+    "count": 1,
+    "weightSum": 0.97716,
+    "score": 0.0
+  },
+  {
+    "segmentId": "626558140458402594",
+    "count": 1,
+    "weightSum": 0.97716,
+    "score": 0.0
+  },
+  {
+    "segmentId": "626558140458402595",
+    "count": 1,
+    "weightSum": 0.97716,
+    "score": 0.0
+  },
+  {
+    "segmentId": "626558140458402597",
+    "count": 1,
+    "weightSum": 0.97716,
+    "score": 0.0
+  },
+  {
+    "segmentId": "626558140458402598",
+    "count": 1,
+    "weightSum": 0.97716,
+    "score": 0.0
+  },
+  {
+    "segmentId": "626558140458402599",
+    "count": 1,
+    "weightSum": 0.97716,
+    "score": 0.0
+  },
+  {
+    "segmentId": "626558140458402601",
+    "count": 1,
+    "weightSum": 0.97716,
+    "score": 0.0
+  },
+  {
+    "segmentId": "626558140458402602",
+    "count": 1,
+    "weightSum": 0.97716,
+    "score": 0.0
+  },
+  {
+    "segmentId": "626558140458402603",
+    "count": 1,
+    "weightSum": 0.97716,
+    "score": 0.0
+  },
+  {
+    "segmentId": "626558140458402604",
+    "count": 1,
+    "weightSum": 0.97716,
+    "score": 0.0
+  },
+  {
+    "segmentId": "626558140458402605",
+    "count": 1,
+    "weightSum": 0.97716,
+    "score": 0.0
+  },
+  {
+    "segmentId": "626558140458402608",
+    "count": 1,
+    "weightSum": 0.97716,
+    "score": 0.0
+  },
+  {
+    "segmentId": "626558140458402609",
+    "count": 1,
+    "weightSum": 0.97716,
+    "score": 0.0
+  },
+  {
+    "segmentId": "626558140458402610",
+    "count": 1,
+    "weightSum": 0.97716,
+    "score": 0.0
+  },
+  {
+    "segmentId": "626558140458402611",
+    "count": 1,
+    "weightSum": 0.97716,
+    "score": 0.0
+  },
+  {
+    "segmentId": "626558140458403840",
+    "count": 1,
+    "weightSum": 0.97716,
+    "score": 0.0
+  },
+  {
+    "segmentId": "626558140458403841",
+    "count": 1,
+    "weightSum": 0.97716,
+    "score": 0.0
+  },
+  {
+    "segmentId": "626558140458403842",
+    "count": 1,
+    "weightSum": 0.97716,
+    "score": 0.0
+  }
+]

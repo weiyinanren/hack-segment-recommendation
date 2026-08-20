@@ -1,23 +1,35 @@
 {
-  "version": "20260813T083324Z",
+  "version": "20260820T024805Z",
   "industries": [
     {
-      "industry": "Auto",
-      "industrySlug": "Auto",
-      "path": "industries/Auto",
-      "segmentCount": 7
+      "industry": "CPG",
+      "industrySlug": "CPG",
+      "path": "industries/CPG",
+      "segmentCount": 50
     },
     {
-      "industry": "Finance",
-      "industrySlug": "Finance",
-      "path": "industries/Finance",
-      "segmentCount": 4
+      "industry": "Dining",
+      "industrySlug": "Dining",
+      "path": "industries/Dining",
+      "segmentCount": 17
+    },
+    {
+      "industry": "HealthCheck",
+      "industrySlug": "HealthCheck",
+      "path": "industries/HealthCheck",
+      "segmentCount": 17
+    },
+    {
+      "industry": "OEM",
+      "industrySlug": "OEM",
+      "path": "industries/OEM",
+      "segmentCount": 16
     },
     {
       "industry": "Retail",
       "industrySlug": "Retail",
       "path": "industries/Retail",
-      "segmentCount": 4
+      "segmentCount": 16
     }
   ]
 }

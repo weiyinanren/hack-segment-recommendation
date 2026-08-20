@@ -1,0 +1,18 @@
+{
+  "clientName": "PartsMaker",
+  "segmentIds": [
+    "OEM_DEAL",
+    "OEM_EV",
+    "OEM_FLEET",
+    "OEM_LEASE",
+    "OEM_LUX",
+    "OEM_NEW",
+    "OEM_PARTS",
+    "OEM_SAFE",
+    "OEM_SUV",
+    "OEM_TECH",
+    "OEM_TRUCK",
+    "OEM_USED",
+    "SG_MISS"
+  ]
+}

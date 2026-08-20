@@ -1,0 +1,758 @@
+{
+  "CPG_BABY": [
+    {
+      "segmentId": "CPG_CLEAN",
+      "score": 0.473069
+    },
+    {
+      "segmentId": "CPG_PREM",
+      "score": 0.405202
+    },
+    {
+      "segmentId": "CPG_HEALTH",
+      "score": 0.372797
+    },
+    {
+      "segmentId": "SG_MS",
+      "score": 0.29476
+    },
+    {
+      "segmentId": "CPG_ORG",
+      "score": 0.219971
+    },
+    {
+      "segmentId": "CPG_MOM",
+      "score": 0.210151
+    },
+    {
+      "segmentId": "CPG_PET",
+      "score": 0.150557
+    },
+    {
+      "segmentId": "CPG_VALUE",
+      "score": 0.141037
+    },
+    {
+      "segmentId": "SG_FEMALE",
+      "score": 0.027938
+    },
+    {
+      "segmentId": "CPG_SKIN",
+      "score": 0.024079
+    },
+    {
+      "segmentId": "CPG_BEAUTY",
+      "score": 0.020787
+    },
+    {
+      "segmentId": "CPG_BRAND",
+      "score": 0.00239
+    },
+    {
+      "segmentId": "CPG_SNACK",
+      "score": -0.0
+    }
+  ],
+  "CPG_BEAUTY": [
+    {
+      "segmentId": "SG_MS",
+      "score": 0.718934
+    },
+    {
+      "segmentId": "CPG_PET",
+      "score": 0.653802
+    },
+    {
+      "segmentId": "CPG_SKIN",
+      "score": 0.523557
+    },
+    {
+      "segmentId": "SG_FEMALE",
+      "score": 0.511483
+    },
+    {
+      "segmentId": "CPG_HEALTH",
+      "score": 0.040432
+    },
+    {
+      "segmentId": "CPG_BABY",
+      "score": 0.020787
+    },
+    {
+      "segmentId": "CPG_ORG",
+      "score": 0.017088
+    },
+    {
+      "segmentId": "CPG_BRAND",
+      "score": 0.002417
+    },
+    {
+      "segmentId": "CPG_MOM",
+      "score": 0.001701
+    },
+    {
+      "segmentId": "CPG_VALUE",
+      "score": 0.000859
+    },
+    {
+      "segmentId": "CPG_PREM",
+      "score": 0.000558
+    },
+    {
+      "segmentId": "CPG_CLEAN",
+      "score": -0.0
+    },
+    {
+      "segmentId": "CPG_SNACK",
+      "score": -0.0
+    }
+  ],
+  "CPG_BRAND": [
+    {
+      "segmentId": "CPG_VALUE",
+      "score": 0.5012
+    },
+    {
+      "segmentId": "CPG_CLEAN",
+      "score": 0.43474
+    },
+    {
+      "segmentId": "CPG_SNACK",
+      "score": 0.344941
+    },
+    {
+      "segmentId": "CPG_MOM",
+      "score": 0.130026
+    },
+    {
+      "segmentId": "SG_MS",
+      "score": 0.071504
+    },
+    {
+      "segmentId": "SG_FEMALE",
+      "score": 0.006851
+    },
+    {
+      "segmentId": "CPG_HEALTH",
+      "score": 0.004525
+    },
+    {
+      "segmentId": "CPG_SKIN",
+      "score": 0.003462
+    },
+    {
+      "segmentId": "CPG_ORG",
+      "score": 0.002723
+    },
+    {
+      "segmentId": "CPG_BEAUTY",
+      "score": 0.002417
+    },
+    {
+      "segmentId": "CPG_BABY",
+      "score": 0.00239
+    },
+    {
+      "segmentId": "CPG_PET",
+      "score": 0.0
+    },
+    {
+      "segmentId": "CPG_PREM",
+      "score": -0.0
+    }
+  ],
+  "CPG_CLEAN": [
+    {
+      "segmentId": "CPG_SNACK",
+      "score": 0.482306
+    },
+    {
+      "segmentId": "CPG_BABY",
+      "score": 0.473069
+    },
+    {
+      "segmentId": "CPG_BRAND",
+      "score": 0.43474
+    },
+    {
+      "segmentId": "SG_MS",
+      "score": 0.229626
+    },
+    {
+      "segmentId": "CPG_MOM",
+      "score": 0.177405
+    },
+    {
+      "segmentId": "CPG_ORG",
+      "score": 0.169004
+    },
+    {
+      "segmentId": "CPG_VALUE",
+      "score": 0.116204
+    },
+    {
+      "segmentId": "CPG_PET",
+      "score": 0.0
+    },
+    {
+      "segmentId": "CPG_HEALTH",
+      "score": 0.0
+    },
+    {
+      "segmentId": "CPG_BEAUTY",
+      "score": -0.0
+    },
+    {
+      "segmentId": "CPG_PREM",
+      "score": -0.0
+    },
+    {
+      "segmentId": "SG_FEMALE",
+      "score": -0.0
+    },
+    {
+      "segmentId": "CPG_SKIN",
+      "score": -0.0
+    }
+  ],
+  "CPG_HEALTH": [
+    {
+      "segmentId": "CPG_ORG",
+      "score": 0.544954
+    },
+    {
+      "segmentId": "CPG_BABY",
+      "score": 0.372797
+    },
+    {
+      "segmentId": "CPG_PREM",
+      "score": 0.331668
+    },
+    {
+      "segmentId": "CPG_MOM",
+      "score": 0.173516
+    },
+    {
+      "segmentId": "CPG_PET",
+      "score": 0.12985
+    },
+    {
+      "segmentId": "SG_MS",
+      "score": 0.113041
+    },
+    {
+      "segmentId": "SG_FEMALE",
+      "score": 0.054234
+    },
+    {
+      "segmentId": "CPG_SKIN",
+      "score": 0.046815
+    },
+    {
+      "segmentId": "CPG_BEAUTY",
+      "score": 0.040432
+    },
+    {
+      "segmentId": "CPG_BRAND",
+      "score": 0.004525
+    },
+    {
+      "segmentId": "CPG_VALUE",
+      "score": 0.001608
+    },
+    {
+      "segmentId": "CPG_CLEAN",
+      "score": 0.0
+    },
+    {
+      "segmentId": "CPG_SNACK",
+      "score": 0.0
+    }
+  ],
+  "CPG_MOM": [
+    {
+      "segmentId": "CPG_ORG",
+      "score": 0.364729
+    },
+    {
+      "segmentId": "CPG_VALUE",
+      "score": 0.329344
+    },
+    {
+      "segmentId": "CPG_PET",
+      "score": 0.243034
+    },
+    {
+      "segmentId": "CPG_BABY",
+      "score": 0.210151
+    },
+    {
+      "segmentId": "SG_MS",
+      "score": 0.207055
+    },
+    {
+      "segmentId": "CPG_PREM",
+      "score": 0.205889
+    },
+    {
+      "segmentId": "CPG_CLEAN",
+      "score": 0.177405
+    },
+    {
+      "segmentId": "CPG_HEALTH",
+      "score": 0.173516
+    },
+    {
+      "segmentId": "CPG_SNACK",
+      "score": 0.14076
+    },
+    {
+      "segmentId": "CPG_BRAND",
+      "score": 0.130026
+    },
+    {
+      "segmentId": "SG_FEMALE",
+      "score": 0.00482
+    },
+    {
+      "segmentId": "CPG_SKIN",
+      "score": 0.002436
+    },
+    {
+      "segmentId": "CPG_BEAUTY",
+      "score": 0.001701
+    }
+  ],
+  "CPG_ORG": [
+    {
+      "segmentId": "CPG_HEALTH",
+      "score": 0.544954
+    },
+    {
+      "segmentId": "CPG_PET",
+      "score": 0.400798
+    },
+    {
+      "segmentId": "CPG_PREM",
+      "score": 0.39139
+    },
+    {
+      "segmentId": "CPG_MOM",
+      "score": 0.364729
+    },
+    {
+      "segmentId": "SG_MS",
+      "score": 0.306172
+    },
+    {
+      "segmentId": "CPG_BABY",
+      "score": 0.219971
+    },
+    {
+      "segmentId": "CPG_CLEAN",
+      "score": 0.169004
+    },
+    {
+      "segmentId": "CPG_VALUE",
+      "score": 0.05105
+    },
+    {
+      "segmentId": "SG_FEMALE",
+      "score": 0.023617
+    },
+    {
+      "segmentId": "CPG_SKIN",
+      "score": 0.019913
+    },
+    {
+      "segmentId": "CPG_BEAUTY",
+      "score": 0.017088
+    },
+    {
+      "segmentId": "CPG_BRAND",
+      "score": 0.002723
+    },
+    {
+      "segmentId": "CPG_SNACK",
+      "score": 0.0
+    }
+  ],
+  "CPG_PET": [
+    {
+      "segmentId": "SG_MS",
+      "score": 0.854981
+    },
+    {
+      "segmentId": "CPG_BEAUTY",
+      "score": 0.653802
+    },
+    {
+      "segmentId": "CPG_SKIN",
+      "score": 0.611559
+    },
+    {
+      "segmentId": "CPG_PREM",
+      "score": 0.576395
+    },
+    {
+      "segmentId": "SG_FEMALE",
+      "score": 0.57325
+    },
+    {
+      "segmentId": "CPG_ORG",
+      "score": 0.400798
+    },
+    {
+      "segmentId": "CPG_MOM",
+      "score": 0.243034
+    },
+    {
+      "segmentId": "CPG_BABY",
+      "score": 0.150557
+    },
+    {
+      "segmentId": "CPG_HEALTH",
+      "score": 0.12985
+    },
+    {
+      "segmentId": "CPG_BRAND",
+      "score": 0.0
+    },
+    {
+      "segmentId": "CPG_CLEAN",
+      "score": 0.0
+    },
+    {
+      "segmentId": "CPG_VALUE",
+      "score": -0.0
+    },
+    {
+      "segmentId": "CPG_SNACK",
+      "score": -1e-06
+    }
+  ],
+  "CPG_PREM": [
+    {
+      "segmentId": "CPG_PET",
+      "score": 0.576395
+    },
+    {
+      "segmentId": "CPG_BABY",
+      "score": 0.405202
+    },
+    {
+      "segmentId": "SG_MS",
+      "score": 0.405059
+    },
+    {
+      "segmentId": "CPG_ORG",
+      "score": 0.39139
+    },
+    {
+      "segmentId": "CPG_HEALTH",
+      "score": 0.331668
+    },
+    {
+      "segmentId": "CPG_MOM",
+      "score": 0.205889
+    },
+    {
+      "segmentId": "SG_FEMALE",
+      "score": 0.000695
+    },
+    {
+      "segmentId": "CPG_SKIN",
+      "score": 0.000637
+    },
+    {
+      "segmentId": "CPG_BEAUTY",
+      "score": 0.000558
+    },
+    {
+      "segmentId": "CPG_SNACK",
+      "score": 0.0
+    },
+    {
+      "segmentId": "CPG_CLEAN",
+      "score": -0.0
+    },
+    {
+      "segmentId": "CPG_VALUE",
+      "score": -0.0
+    },
+    {
+      "segmentId": "CPG_BRAND",
+      "score": -0.0
+    }
+  ],
+  "CPG_SKIN": [
+    {
+      "segmentId": "SG_MS",
+      "score": 0.645212
+    },
+    {
+      "segmentId": "CPG_PET",
+      "score": 0.611559
+    },
+    {
+      "segmentId": "CPG_BEAUTY",
+      "score": 0.523557
+    },
+    {
+      "segmentId": "SG_FEMALE",
+      "score": 0.507715
+    },
+    {
+      "segmentId": "CPG_HEALTH",
+      "score": 0.046815
+    },
+    {
+      "segmentId": "CPG_BABY",
+      "score": 0.024079
+    },
+    {
+      "segmentId": "CPG_ORG",
+      "score": 0.019913
+    },
+    {
+      "segmentId": "CPG_BRAND",
+      "score": 0.003462
+    },
+    {
+      "segmentId": "CPG_MOM",
+      "score": 0.002436
+    },
+    {
+      "segmentId": "CPG_VALUE",
+      "score": 0.00123
+    },
+    {
+      "segmentId": "CPG_PREM",
+      "score": 0.000637
+    },
+    {
+      "segmentId": "CPG_CLEAN",
+      "score": -0.0
+    },
+    {
+      "segmentId": "CPG_SNACK",
+      "score": -0.0
+    }
+  ],
+  "CPG_SNACK": [
+    {
+      "segmentId": "CPG_CLEAN",
+      "score": 0.482306
+    },
+    {
+      "segmentId": "CPG_VALUE",
+      "score": 0.406078
+    },
+    {
+      "segmentId": "CPG_BRAND",
+      "score": 0.344941
+    },
+    {
+      "segmentId": "SG_MS",
+      "score": 0.342085
+    },
+    {
+      "segmentId": "CPG_MOM",
+      "score": 0.14076
+    },
+    {
+      "segmentId": "CPG_PREM",
+      "score": 0.0
+    },
+    {
+      "segmentId": "SG_FEMALE",
+      "score": 0.0
+    },
+    {
+      "segmentId": "CPG_ORG",
+      "score": 0.0
+    },
+    {
+      "segmentId": "CPG_HEALTH",
+      "score": 0.0
+    },
+    {
+      "segmentId": "CPG_SKIN",
+      "score": -0.0
+    },
+    {
+      "segmentId": "CPG_BEAUTY",
+      "score": -0.0
+    },
+    {
+      "segmentId": "CPG_BABY",
+      "score": -0.0
+    },
+    {
+      "segmentId": "CPG_PET",
+      "score": -1e-06
+    }
+  ],
+  "CPG_VALUE": [
+    {
+      "segmentId": "CPG_BRAND",
+      "score": 0.5012
+    },
+    {
+      "segmentId": "CPG_SNACK",
+      "score": 0.406078
+    },
+    {
+      "segmentId": "CPG_MOM",
+      "score": 0.329344
+    },
+    {
+      "segmentId": "SG_MS",
+      "score": 0.21126
+    },
+    {
+      "segmentId": "CPG_BABY",
+      "score": 0.141037
+    },
+    {
+      "segmentId": "CPG_CLEAN",
+      "score": 0.116204
+    },
+    {
+      "segmentId": "CPG_ORG",
+      "score": 0.05105
+    },
+    {
+      "segmentId": "SG_FEMALE",
+      "score": 0.002435
+    },
+    {
+      "segmentId": "CPG_HEALTH",
+      "score": 0.001608
+    },
+    {
+      "segmentId": "CPG_SKIN",
+      "score": 0.00123
+    },
+    {
+      "segmentId": "CPG_BEAUTY",
+      "score": 0.000859
+    },
+    {
+      "segmentId": "CPG_PREM",
+      "score": -0.0
+    },
+    {
+      "segmentId": "CPG_PET",
+      "score": -0.0
+    }
+  ],
+  "SG_FEMALE": [
+    {
+      "segmentId": "CPG_PET",
+      "score": 0.57325
+    },
+    {
+      "segmentId": "CPG_BEAUTY",
+      "score": 0.511483
+    },
+    {
+      "segmentId": "CPG_SKIN",
+      "score": 0.507715
+    },
+    {
+      "segmentId": "SG_MS",
+      "score": 0.399123
+    },
+    {
+      "segmentId": "CPG_HEALTH",
+      "score": 0.054234
+    },
+    {
+      "segmentId": "CPG_BABY",
+      "score": 0.027938
+    },
+    {
+      "segmentId": "CPG_ORG",
+      "score": 0.023617
+    },
+    {
+      "segmentId": "CPG_BRAND",
+      "score": 0.006851
+    },
+    {
+      "segmentId": "CPG_MOM",
+      "score": 0.00482
+    },
+    {
+      "segmentId": "CPG_VALUE",
+      "score": 0.002435
+    },
+    {
+      "segmentId": "CPG_PREM",
+      "score": 0.000695
+    },
+    {
+      "segmentId": "CPG_SNACK",
+      "score": 0.0
+    },
+    {
+      "segmentId": "CPG_CLEAN",
+      "score": -0.0
+    }
+  ],
+  "SG_MS": [
+    {
+      "segmentId": "CPG_PET",
+      "score": 0.854981
+    },
+    {
+      "segmentId": "CPG_BEAUTY",
+      "score": 0.718934
+    },
+    {
+      "segmentId": "CPG_SKIN",
+      "score": 0.645212
+    },
+    {
+      "segmentId": "CPG_PREM",
+      "score": 0.405059
+    },
+    {
+      "segmentId": "SG_FEMALE",
+      "score": 0.399123
+    },
+    {
+      "segmentId": "CPG_SNACK",
+      "score": 0.342085
+    },
+    {
+      "segmentId": "CPG_ORG",
+      "score": 0.306172
+    },
+    {
+      "segmentId": "CPG_BABY",
+      "score": 0.29476
+    },
+    {
+      "segmentId": "CPG_CLEAN",
+      "score": 0.229626
+    },
+    {
+      "segmentId": "CPG_VALUE",
+      "score": 0.21126
+    },
+    {
+      "segmentId": "CPG_MOM",
+      "score": 0.207055
+    },
+    {
+      "segmentId": "CPG_HEALTH",
+      "score": 0.113041
+    },
+    {
+      "segmentId": "CPG_BRAND",
+      "score": 0.071504
+    }
+  ]
+}

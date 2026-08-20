@@ -1,0 +1,88 @@
+{
+  "Dining": [
+    {
+      "segmentId": "FD_FINE",
+      "count": 613,
+      "weightSum": 143.803098,
+      "score": 1.0
+    },
+    {
+      "segmentId": "FD_QSR",
+      "count": 554,
+      "weightSum": 129.691635,
+      "score": 0.893977
+    },
+    {
+      "segmentId": "FD_FAMILY",
+      "count": 547,
+      "weightSum": 127.963677,
+      "score": 0.880995
+    },
+    {
+      "segmentId": "FD_DELIV",
+      "count": 493,
+      "weightSum": 110.435254,
+      "score": 0.749299
+    },
+    {
+      "segmentId": "FD_NIGHT",
+      "count": 298,
+      "weightSum": 73.720648,
+      "score": 0.473454
+    },
+    {
+      "segmentId": "FD_VEG",
+      "count": 314,
+      "weightSum": 71.446133,
+      "score": 0.456365
+    },
+    {
+      "segmentId": "FD_TEA",
+      "count": 286,
+      "weightSum": 63.43045,
+      "score": 0.396141
+    },
+    {
+      "segmentId": "FD_CAFE",
+      "count": 273,
+      "weightSum": 63.00019,
+      "score": 0.392908
+    },
+    {
+      "segmentId": "FD_LUNCH",
+      "count": 231,
+      "weightSum": 53.013779,
+      "score": 0.317878
+    },
+    {
+      "segmentId": "SG_LADY",
+      "count": 222,
+      "weightSum": 52.691744,
+      "score": 0.315459
+    },
+    {
+      "segmentId": "FD_LOYAL",
+      "count": 210,
+      "weightSum": 49.073484,
+      "score": 0.288274
+    },
+    {
+      "segmentId": "SG_FEMALE",
+      "count": 160,
+      "weightSum": 37.926124,
+      "score": 0.204521
+    },
+    {
+      "segmentId": "FD_BUFFET",
+      "count": 44,
+      "weightSum": 10.902844,
+      "score": 0.001489
+    },
+    {
+      "segmentId": "FD_SPICY",
+      "count": 46,
+      "weightSum": 10.704701,
+      "score": 0.0
+    }
+  ]
+}

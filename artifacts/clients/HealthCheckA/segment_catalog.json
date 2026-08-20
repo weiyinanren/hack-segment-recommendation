@@ -1,0 +1,19 @@
+{
+  "clientName": "HealthCheckA",
+  "segmentIds": [
+    "HC_ANNUAL",
+    "HC_CANCER",
+    "HC_CARDIO",
+    "HC_CORP",
+    "HC_DIAB",
+    "HC_ELDER",
+    "HC_EXEC",
+    "HC_FAMILY",
+    "HC_MATERN",
+    "HC_ONLINE",
+    "HC_PREM",
+    "HC_REPEAT",
+    "SG_FEMALE",
+    "SG_WOMEN"
+  ]
+}

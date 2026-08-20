@@ -1,0 +1,205 @@
+{
+  "version": "20260820T024805Z",
+  "trainedAt": "2026-08-20T02:48:36.419781+00:00",
+  "mode": "three_layer_global_industry_client",
+  "sampleWeights": {
+    "half_life_days": 90.0,
+    "weight_distributed": 1.0,
+    "weight_undistributed": 0.4,
+    "min_weight": 0.05,
+    "as_of": "2026-08-19T00:00:00+00:00",
+    "formula": "w = max(min_weight, exp(-ln2/half_life * age_days) * w_distributed)"
+  },
+  "layers": {
+    "global": "global/ (segment_prior + name_neighbors + segment_names)",
+    "industry": "industries/{slug}/popularity.json",
+    "client": "clients/{slug}/ (private CF + embeddings + catalog)"
+  },
+  "serving": {
+    "default": "mix(global, industry, client, name) ∩ client.segment_catalog",
+    "expandBeyondCatalog": "optional; allow industry/global/name candidates outside catalog",
+    "nameSimilarity": "global/name_neighbors.json via sentence-transformers (MiniLM)"
+  },
+  "industries": [
+    {
+      "industry": "CPG",
+      "industrySlug": "CPG",
+      "path": "industries/CPG",
+      "segmentCount": 50
+    },
+    {
+      "industry": "Dining",
+      "industrySlug": "Dining",
+      "path": "industries/Dining",
+      "segmentCount": 17
+    },
+    {
+      "industry": "HealthCheck",
+      "industrySlug": "HealthCheck",
+      "path": "industries/HealthCheck",
+      "segmentCount": 17
+    },
+    {
+      "industry": "OEM",
+      "industrySlug": "OEM",
+      "path": "industries/OEM",
+      "segmentCount": 16
+    },
+    {
+      "industry": "Retail",
+      "industrySlug": "Retail",
+      "path": "industries/Retail",
+      "segmentCount": 16
+    }
+  ],
+  "clientCount": 21,
+  "clients": [
+    {
+      "clientName": "AutoOEM1",
+      "clientSlug": "AutoOEM1",
+      "path": "clients/AutoOEM1",
+      "segmentCount": 14,
+      "audienceCount": 1414
+    },
+    {
+      "clientName": "CPGStart",
+      "clientSlug": "CPGStart",
+      "path": "clients/CPGStart",
+      "segmentCount": 14,
+      "audienceCount": 1825
+    },
+    {
+      "clientName": "CafeGroup",
+      "clientSlug": "CafeGroup",
+      "path": "clients/CafeGroup",
+      "segmentCount": 14,
+      "audienceCount": 1433
+    },
+    {
+      "clientName": "ClinicNet",
+      "clientSlug": "ClinicNet",
+      "path": "clients/ClinicNet",
+      "segmentCount": 14,
+      "audienceCount": 1446
+    },
+    {
+      "clientName": "ConveniencePlus",
+      "clientSlug": "ConveniencePlus",
+      "path": "clients/ConveniencePlus",
+      "segmentCount": 13,
+      "audienceCount": 1858
+    },
+    {
+      "clientName": "FashionHub",
+      "clientSlug": "FashionHub",
+      "path": "clients/FashionHub",
+      "segmentCount": 14,
+      "audienceCount": 1873
+    },
+    {
+      "clientName": "FineDineCo",
+      "clientSlug": "FineDineCo",
+      "path": "clients/FineDineCo",
+      "segmentCount": 14,
+      "audienceCount": 1433
+    },
+    {
+      "clientName": "FoodChainA",
+      "clientSlug": "FoodChainA",
+      "path": "clients/FoodChainA",
+      "segmentCount": 14,
+      "audienceCount": 1371
+    },
+    {
+      "clientName": "HealthCheckA",
+      "clientSlug": "HealthCheckA",
+      "path": "clients/HealthCheckA",
+      "segmentCount": 14,
+      "audienceCount": 1450
+    },
+    {
+      "clientName": "MedExamB",
+      "clientSlug": "MedExamB",
+      "path": "clients/MedExamB",
+      "segmentCount": 14,
+      "audienceCount": 1381
+    },
+    {
+      "clientName": "NestleBrand",
+      "clientSlug": "NestleBrand",
+      "path": "clients/NestleBrand",
+      "segmentCount": 14,
+      "audienceCount": 1772
+    },
+    {
+      "clientName": "PAndGRetail",
+      "clientSlug": "PAndGRetail",
+      "path": "clients/PAndGRetail",
+      "segmentCount": 14,
+      "audienceCount": 1736
+    },
+    {
+      "clientName": "PartsMaker",
+      "clientSlug": "PartsMaker",
+      "path": "clients/PartsMaker",
+      "segmentCount": 13,
+      "audienceCount": 1499
+    },
+    {
+      "clientName": "QSRBrand",
+      "clientSlug": "QSRBrand",
+      "path": "clients/QSRBrand",
+      "segmentCount": 14,
+      "audienceCount": 1431
+    },
+    {
+      "clientName": "RetailCo",
+      "clientSlug": "RetailCo",
+      "path": "clients/RetailCo",
+      "segmentCount": 14,
+      "audienceCount": 1939
+    },
+    {
+      "clientName": "SuperMart",
+      "clientSlug": "SuperMart",
+      "path": "clients/SuperMart",
+      "segmentCount": 14,
+      "audienceCount": 1838
+    },
+    {
+      "clientName": "TierOneSup",
+      "clientSlug": "TierOneSup",
+      "path": "clients/TierOneSup",
+      "segmentCount": 14,
+      "audienceCount": 1461
+    },
+    {
+      "clientName": "UnileverDemo",
+      "clientSlug": "UnileverDemo",
+      "path": "clients/UnileverDemo",
+      "segmentCount": 13,
+      "audienceCount": 1718
+    },
+    {
+      "clientName": "VehicleOEM",
+      "clientSlug": "VehicleOEM",
+      "path": "clients/VehicleOEM",
+      "segmentCount": 14,
+      "audienceCount": 1396
+    },
+    {
+      "clientName": "WellnessLab",
+      "clientSlug": "WellnessLab",
+      "path": "clients/WellnessLab",
+      "segmentCount": 14,
+      "audienceCount": 1411
+    },
+    {
+      "clientName": "cpg_demo_0819",
+      "clientSlug": "cpg_demo_0819",
+      "path": "clients/cpg_demo_0819",
+      "segmentCount": 2197,
+      "audienceCount": 299
+    }
+  ]
+}

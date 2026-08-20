@@ -1,0 +1,88 @@
+{
+  "HealthCheck": [
+    {
+      "segmentId": "HC_ANNUAL",
+      "count": 628,
+      "weightSum": 142.428023,
+      "score": 1.0
+    },
+    {
+      "segmentId": "HC_FAMILY",
+      "count": 569,
+      "weightSum": 125.235671,
+      "score": 0.870973
+    },
+    {
+      "segmentId": "HC_CARDIO",
+      "count": 427,
+      "weightSum": 95.809042,
+      "score": 0.650129
+    },
+    {
+      "segmentId": "HC_MATERN",
+      "count": 337,
+      "weightSum": 70.842966,
+      "score": 0.462761
+    },
+    {
+      "segmentId": "HC_EXEC",
+      "count": 305,
+      "weightSum": 70.696945,
+      "score": 0.461665
+    },
+    {
+      "segmentId": "HC_ELDER",
+      "count": 315,
+      "weightSum": 70.582685,
+      "score": 0.460807
+    },
+    {
+      "segmentId": "HC_CORP",
+      "count": 317,
+      "weightSum": 69.983921,
+      "score": 0.456314
+    },
+    {
+      "segmentId": "HC_CANCER",
+      "count": 316,
+      "weightSum": 69.860761,
+      "score": 0.455389
+    },
+    {
+      "segmentId": "HC_PREM",
+      "count": 293,
+      "weightSum": 64.895299,
+      "score": 0.418124
+    },
+    {
+      "segmentId": "SG_WOMEN",
+      "count": 301,
+      "weightSum": 61.874204,
+      "score": 0.395451
+    },
+    {
+      "segmentId": "HC_ONLINE",
+      "count": 264,
+      "weightSum": 58.84425,
+      "score": 0.372711
+    },
+    {
+      "segmentId": "HC_DIAB",
+      "count": 267,
+      "weightSum": 58.075648,
+      "score": 0.366943
+    },
+    {
+      "segmentId": "SG_MADAM",
+      "count": 202,
+      "weightSum": 43.986949,
+      "score": 0.261209
+    },
+    {
+      "segmentId": "HC_REPEAT",
+      "count": 50,
+      "weightSum": 9.181925,
+      "score": 0.0
+    }
+  ]
+}

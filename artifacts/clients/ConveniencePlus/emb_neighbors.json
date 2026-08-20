@@ -1,0 +1,652 @@
+{
+  "RTL_BEAUTY": [
+    {
+      "segmentId": "RTL_COSM",
+      "score": 0.520082
+    },
+    {
+      "segmentId": "RTL_SKIN",
+      "score": 0.453193
+    },
+    {
+      "segmentId": "RTL_SPORT",
+      "score": 0.19854
+    },
+    {
+      "segmentId": "RTL_KIDS",
+      "score": 0.025674
+    },
+    {
+      "segmentId": "RTL_ONLINE",
+      "score": 0.024478
+    },
+    {
+      "segmentId": "RTL_GROC",
+      "score": 0.012733
+    },
+    {
+      "segmentId": "RTL_PROMO",
+      "score": 0.008118
+    },
+    {
+      "segmentId": "RTL_MALL",
+      "score": 0.001744
+    },
+    {
+      "segmentId": "SG_MADAM",
+      "score": 0.0
+    },
+    {
+      "segmentId": "RTL_FASH",
+      "score": 0.0
+    },
+    {
+      "segmentId": "RTL_VIP",
+      "score": -0.0
+    },
+    {
+      "segmentId": "RTL_HOME",
+      "score": -1e-06
+    }
+  ],
+  "RTL_COSM": [
+    {
+      "segmentId": "RTL_SKIN",
+      "score": 0.527344
+    },
+    {
+      "segmentId": "RTL_BEAUTY",
+      "score": 0.520082
+    },
+    {
+      "segmentId": "RTL_SPORT",
+      "score": 0.404918
+    },
+    {
+      "segmentId": "RTL_KIDS",
+      "score": 0.010998
+    },
+    {
+      "segmentId": "RTL_ONLINE",
+      "score": 0.010485
+    },
+    {
+      "segmentId": "RTL_GROC",
+      "score": 0.005452
+    },
+    {
+      "segmentId": "RTL_PROMO",
+      "score": 0.003473
+    },
+    {
+      "segmentId": "RTL_MALL",
+      "score": 0.000745
+    },
+    {
+      "segmentId": "RTL_HOME",
+      "score": 1e-06
+    },
+    {
+      "segmentId": "RTL_VIP",
+      "score": 1e-06
+    },
+    {
+      "segmentId": "RTL_FASH",
+      "score": -1e-06
+    },
+    {
+      "segmentId": "SG_MADAM",
+      "score": -1e-06
+    }
+  ],
+  "RTL_FASH": [
+    {
+      "segmentId": "RTL_HOME",
+      "score": 0.481524
+    },
+    {
+      "segmentId": "RTL_VIP",
+      "score": 0.303909
+    },
+    {
+      "segmentId": "SG_MADAM",
+      "score": 0.275124
+    },
+    {
+      "segmentId": "RTL_MALL",
+      "score": 0.183771
+    },
+    {
+      "segmentId": "RTL_SPORT",
+      "score": 2.8e-05
+    },
+    {
+      "segmentId": "RTL_KIDS",
+      "score": 0.0
+    },
+    {
+      "segmentId": "RTL_BEAUTY",
+      "score": 0.0
+    },
+    {
+      "segmentId": "RTL_ONLINE",
+      "score": 0.0
+    },
+    {
+      "segmentId": "RTL_COSM",
+      "score": -1e-06
+    },
+    {
+      "segmentId": "RTL_SKIN",
+      "score": -1e-06
+    },
+    {
+      "segmentId": "RTL_GROC",
+      "score": -1e-06
+    },
+    {
+      "segmentId": "RTL_PROMO",
+      "score": -2e-06
+    }
+  ],
+  "RTL_GROC": [
+    {
+      "segmentId": "RTL_SPORT",
+      "score": 0.593015
+    },
+    {
+      "segmentId": "RTL_ONLINE",
+      "score": 0.425964
+    },
+    {
+      "segmentId": "RTL_PROMO",
+      "score": 0.397808
+    },
+    {
+      "segmentId": "RTL_KIDS",
+      "score": 0.351659
+    },
+    {
+      "segmentId": "RTL_MALL",
+      "score": 0.233908
+    },
+    {
+      "segmentId": "RTL_BEAUTY",
+      "score": 0.012733
+    },
+    {
+      "segmentId": "RTL_COSM",
+      "score": 0.005452
+    },
+    {
+      "segmentId": "RTL_SKIN",
+      "score": 0.002558
+    },
+    {
+      "segmentId": "RTL_HOME",
+      "score": 3e-06
+    },
+    {
+      "segmentId": "RTL_VIP",
+      "score": 2e-06
+    },
+    {
+      "segmentId": "RTL_FASH",
+      "score": -1e-06
+    },
+    {
+      "segmentId": "SG_MADAM",
+      "score": -2e-06
+    }
+  ],
+  "RTL_HOME": [
+    {
+      "segmentId": "RTL_FASH",
+      "score": 0.481524
+    },
+    {
+      "segmentId": "RTL_ONLINE",
+      "score": 0.43151
+    },
+    {
+      "segmentId": "SG_MADAM",
+      "score": 0.369733
+    },
+    {
+      "segmentId": "RTL_MALL",
+      "score": 0.246967
+    },
+    {
+      "segmentId": "RTL_PROMO",
+      "score": 0.199521
+    },
+    {
+      "segmentId": "RTL_VIP",
+      "score": 0.158117
+    },
+    {
+      "segmentId": "RTL_SPORT",
+      "score": 0.022927
+    },
+    {
+      "segmentId": "RTL_GROC",
+      "score": 3e-06
+    },
+    {
+      "segmentId": "RTL_SKIN",
+      "score": 2e-06
+    },
+    {
+      "segmentId": "RTL_COSM",
+      "score": 1e-06
+    },
+    {
+      "segmentId": "RTL_BEAUTY",
+      "score": -1e-06
+    },
+    {
+      "segmentId": "RTL_KIDS",
+      "score": -1e-06
+    }
+  ],
+  "RTL_KIDS": [
+    {
+      "segmentId": "RTL_PROMO",
+      "score": 0.508693
+    },
+    {
+      "segmentId": "RTL_ONLINE",
+      "score": 0.394014
+    },
+    {
+      "segmentId": "RTL_SPORT",
+      "score": 0.363206
+    },
+    {
+      "segmentId": "RTL_GROC",
+      "score": 0.351659
+    },
+    {
+      "segmentId": "RTL_MALL",
+      "score": 0.204744
+    },
+    {
+      "segmentId": "RTL_BEAUTY",
+      "score": 0.025674
+    },
+    {
+      "segmentId": "RTL_COSM",
+      "score": 0.010998
+    },
+    {
+      "segmentId": "RTL_SKIN",
+      "score": 0.005166
+    },
+    {
+      "segmentId": "SG_MADAM",
+      "score": 1e-06
+    },
+    {
+      "segmentId": "RTL_FASH",
+      "score": 0.0
+    },
+    {
+      "segmentId": "RTL_VIP",
+      "score": -1e-06
+    },
+    {
+      "segmentId": "RTL_HOME",
+      "score": -1e-06
+    }
+  ],
+  "RTL_MALL": [
+    {
+      "segmentId": "RTL_VIP",
+      "score": 0.413236
+    },
+    {
+      "segmentId": "RTL_SPORT",
+      "score": 0.384323
+    },
+    {
+      "segmentId": "RTL_PROMO",
+      "score": 0.332161
+    },
+    {
+      "segmentId": "RTL_ONLINE",
+      "score": 0.250729
+    },
+    {
+      "segmentId": "RTL_HOME",
+      "score": 0.246967
+    },
+    {
+      "segmentId": "RTL_GROC",
+      "score": 0.233908
+    },
+    {
+      "segmentId": "RTL_KIDS",
+      "score": 0.204744
+    },
+    {
+      "segmentId": "RTL_FASH",
+      "score": 0.183771
+    },
+    {
+      "segmentId": "SG_MADAM",
+      "score": 0.141105
+    },
+    {
+      "segmentId": "RTL_BEAUTY",
+      "score": 0.001744
+    },
+    {
+      "segmentId": "RTL_COSM",
+      "score": 0.000745
+    },
+    {
+      "segmentId": "RTL_SKIN",
+      "score": 0.000348
+    }
+  ],
+  "RTL_ONLINE": [
+    {
+      "segmentId": "RTL_HOME",
+      "score": 0.43151
+    },
+    {
+      "segmentId": "RTL_GROC",
+      "score": 0.425964
+    },
+    {
+      "segmentId": "RTL_KIDS",
+      "score": 0.394014
+    },
+    {
+      "segmentId": "RTL_PROMO",
+      "score": 0.25746
+    },
+    {
+      "segmentId": "RTL_MALL",
+      "score": 0.250729
+    },
+    {
+      "segmentId": "RTL_VIP",
+      "score": 0.19334
+    },
+    {
+      "segmentId": "RTL_SPORT",
+      "score": 0.161144
+    },
+    {
+      "segmentId": "RTL_BEAUTY",
+      "score": 0.024478
+    },
+    {
+      "segmentId": "RTL_COSM",
+      "score": 0.010485
+    },
+    {
+      "segmentId": "RTL_SKIN",
+      "score": 0.004925
+    },
+    {
+      "segmentId": "SG_MADAM",
+      "score": 0.0
+    },
+    {
+      "segmentId": "RTL_FASH",
+      "score": 0.0
+    }
+  ],
+  "RTL_PROMO": [
+    {
+      "segmentId": "RTL_SPORT",
+      "score": 0.749753
+    },
+    {
+      "segmentId": "RTL_KIDS",
+      "score": 0.508693
+    },
+    {
+      "segmentId": "RTL_GROC",
+      "score": 0.397808
+    },
+    {
+      "segmentId": "RTL_MALL",
+      "score": 0.332161
+    },
+    {
+      "segmentId": "RTL_ONLINE",
+      "score": 0.25746
+    },
+    {
+      "segmentId": "RTL_HOME",
+      "score": 0.199521
+    },
+    {
+      "segmentId": "RTL_VIP",
+      "score": 0.089398
+    },
+    {
+      "segmentId": "RTL_BEAUTY",
+      "score": 0.008118
+    },
+    {
+      "segmentId": "RTL_COSM",
+      "score": 0.003473
+    },
+    {
+      "segmentId": "RTL_SKIN",
+      "score": 0.001627
+    },
+    {
+      "segmentId": "RTL_FASH",
+      "score": -2e-06
+    },
+    {
+      "segmentId": "SG_MADAM",
+      "score": -3e-06
+    }
+  ],
+  "RTL_SKIN": [
+    {
+      "segmentId": "RTL_COSM",
+      "score": 0.527344
+    },
+    {
+      "segmentId": "RTL_SPORT",
+      "score": 0.482449
+    },
+    {
+      "segmentId": "RTL_BEAUTY",
+      "score": 0.453193
+    },
+    {
+      "segmentId": "RTL_KIDS",
+      "score": 0.005166
+    },
+    {
+      "segmentId": "RTL_ONLINE",
+      "score": 0.004925
+    },
+    {
+      "segmentId": "RTL_GROC",
+      "score": 0.002558
+    },
+    {
+      "segmentId": "RTL_PROMO",
+      "score": 0.001627
+    },
+    {
+      "segmentId": "RTL_MALL",
+      "score": 0.000348
+    },
+    {
+      "segmentId": "RTL_HOME",
+      "score": 2e-06
+    },
+    {
+      "segmentId": "RTL_VIP",
+      "score": 1e-06
+    },
+    {
+      "segmentId": "RTL_FASH",
+      "score": -1e-06
+    },
+    {
+      "segmentId": "SG_MADAM",
+      "score": -1e-06
+    }
+  ],
+  "RTL_SPORT": [
+    {
+      "segmentId": "RTL_PROMO",
+      "score": 0.749753
+    },
+    {
+      "segmentId": "RTL_GROC",
+      "score": 0.593015
+    },
+    {
+      "segmentId": "RTL_SKIN",
+      "score": 0.482449
+    },
+    {
+      "segmentId": "RTL_COSM",
+      "score": 0.404918
+    },
+    {
+      "segmentId": "RTL_MALL",
+      "score": 0.384323
+    },
+    {
+      "segmentId": "RTL_KIDS",
+      "score": 0.363206
+    },
+    {
+      "segmentId": "RTL_BEAUTY",
+      "score": 0.19854
+    },
+    {
+      "segmentId": "RTL_ONLINE",
+      "score": 0.161144
+    },
+    {
+      "segmentId": "RTL_HOME",
+      "score": 0.022927
+    },
+    {
+      "segmentId": "RTL_VIP",
+      "score": 0.010256
+    },
+    {
+      "segmentId": "SG_MADAM",
+      "score": 4.5e-05
+    },
+    {
+      "segmentId": "RTL_FASH",
+      "score": 2.8e-05
+    }
+  ],
+  "RTL_VIP": [
+    {
+      "segmentId": "SG_MADAM",
+      "score": 0.486507
+    },
+    {
+      "segmentId": "RTL_MALL",
+      "score": 0.413236
+    },
+    {
+      "segmentId": "RTL_FASH",
+      "score": 0.303909
+    },
+    {
+      "segmentId": "RTL_ONLINE",
+      "score": 0.19334
+    },
+    {
+      "segmentId": "RTL_HOME",
+      "score": 0.158117
+    },
+    {
+      "segmentId": "RTL_PROMO",
+      "score": 0.089398
+    },
+    {
+      "segmentId": "RTL_SPORT",
+      "score": 0.010256
+    },
+    {
+      "segmentId": "RTL_GROC",
+      "score": 2e-06
+    },
+    {
+      "segmentId": "RTL_SKIN",
+      "score": 1e-06
+    },
+    {
+      "segmentId": "RTL_COSM",
+      "score": 1e-06
+    },
+    {
+      "segmentId": "RTL_BEAUTY",
+      "score": -0.0
+    },
+    {
+      "segmentId": "RTL_KIDS",
+      "score": -1e-06
+    }
+  ],
+  "SG_MADAM": [
+    {
+      "segmentId": "RTL_VIP",
+      "score": 0.486507
+    },
+    {
+      "segmentId": "RTL_HOME",
+      "score": 0.369733
+    },
+    {
+      "segmentId": "RTL_FASH",
+      "score": 0.275124
+    },
+    {
+      "segmentId": "RTL_MALL",
+      "score": 0.141105
+    },
+    {
+      "segmentId": "RTL_SPORT",
+      "score": 4.5e-05
+    },
+    {
+      "segmentId": "RTL_KIDS",
+      "score": 1e-06
+    },
+    {
+      "segmentId": "RTL_BEAUTY",
+      "score": 0.0
+    },
+    {
+      "segmentId": "RTL_ONLINE",
+      "score": 0.0
+    },
+    {
+      "segmentId": "RTL_COSM",
+      "score": -1e-06
+    },
+    {
+      "segmentId": "RTL_SKIN",
+      "score": -1e-06
+    },
+    {
+      "segmentId": "RTL_GROC",
+      "score": -2e-06
+    },
+    {
+      "segmentId": "RTL_PROMO",
+      "score": -3e-06
+    }
+  ]
+}

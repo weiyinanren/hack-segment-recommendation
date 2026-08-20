@@ -1,26 +1,98 @@
 [
   {
-    "segmentId": "S8",
-    "count": 4,
-    "weightSum": 2.562009,
+    "segmentId": "RTL_PROMO",
+    "count": 3234,
+    "weightSum": 774.981924,
     "score": 1.0
   },
   {
-    "segmentId": "S2",
-    "count": 4,
-    "weightSum": 1.947154,
-    "score": 0.649363
+    "segmentId": "RTL_MALL",
+    "count": 2786,
+    "weightSum": 661.170332,
+    "score": 0.843694
   },
   {
-    "segmentId": "S4",
-    "count": 3,
-    "weightSum": 1.662371,
-    "score": 0.486958
+    "segmentId": "RTL_VIP",
+    "count": 2701,
+    "weightSum": 648.750193,
+    "score": 0.826636
   },
   {
-    "segmentId": "S9",
-    "count": 2,
-    "weightSum": 0.808472,
+    "segmentId": "RTL_GROC",
+    "count": 1748,
+    "weightSum": 423.244755,
+    "score": 0.516933
+  },
+  {
+    "segmentId": "SG_MADAM",
+    "count": 1649,
+    "weightSum": 398.170306,
+    "score": 0.482496
+  },
+  {
+    "segmentId": "RTL_HOME",
+    "count": 1639,
+    "weightSum": 397.959809,
+    "score": 0.482207
+  },
+  {
+    "segmentId": "RTL_SKIN",
+    "count": 1649,
+    "weightSum": 391.734525,
+    "score": 0.473657
+  },
+  {
+    "segmentId": "RTL_FASH",
+    "count": 1663,
+    "weightSum": 390.636727,
+    "score": 0.472149
+  },
+  {
+    "segmentId": "RTL_BEAUTY",
+    "count": 1647,
+    "weightSum": 387.778168,
+    "score": 0.468224
+  },
+  {
+    "segmentId": "RTL_KIDS",
+    "count": 1371,
+    "weightSum": 335.385047,
+    "score": 0.396268
+  },
+  {
+    "segmentId": "RTL_ONLINE",
+    "count": 1378,
+    "weightSum": 326.489017,
+    "score": 0.384051
+  },
+  {
+    "segmentId": "RTL_COSM",
+    "count": 1305,
+    "weightSum": 303.70583,
+    "score": 0.352761
+  },
+  {
+    "segmentId": "SG_FEMALE",
+    "count": 273,
+    "weightSum": 64.803453,
+    "score": 0.024658
+  },
+  {
+    "segmentId": "SG_MS",
+    "count": 243,
+    "weightSum": 59.637207,
+    "score": 0.017563
+  },
+  {
+    "segmentId": "SG_MISS",
+    "count": 225,
+    "weightSum": 57.013815,
+    "score": 0.01396
+  },
+  {
+    "segmentId": "RTL_SPORT",
+    "count": 198,
+    "weightSum": 46.849298,
     "score": 0.0
   }
 ]

@@ -1,0 +1,184 @@
+{
+  "S1": [
+    {
+      "segmentId": "S3",
+      "score": 0.486631
+    },
+    {
+      "segmentId": "S5",
+      "score": 0.289295
+    },
+    {
+      "segmentId": "S6",
+      "score": 0.271232
+    },
+    {
+      "segmentId": "S7",
+      "score": 0.0
+    },
+    {
+      "segmentId": "S14",
+      "score": 0.0
+    },
+    {
+      "segmentId": "S15",
+      "score": 0.0
+    }
+  ],
+  "S14": [
+    {
+      "segmentId": "S1",
+      "score": 0.0
+    },
+    {
+      "segmentId": "S15",
+      "score": 0.0
+    },
+    {
+      "segmentId": "S3",
+      "score": 0.0
+    },
+    {
+      "segmentId": "S5",
+      "score": 0.0
+    },
+    {
+      "segmentId": "S6",
+      "score": 0.0
+    },
+    {
+      "segmentId": "S7",
+      "score": 0.0
+    }
+  ],
+  "S15": [
+    {
+      "segmentId": "S1",
+      "score": 0.0
+    },
+    {
+      "segmentId": "S14",
+      "score": 0.0
+    },
+    {
+      "segmentId": "S3",
+      "score": 0.0
+    },
+    {
+      "segmentId": "S5",
+      "score": 0.0
+    },
+    {
+      "segmentId": "S6",
+      "score": 0.0
+    },
+    {
+      "segmentId": "S7",
+      "score": 0.0
+    }
+  ],
+  "S3": [
+    {
+      "segmentId": "S1",
+      "score": 0.486631
+    },
+    {
+      "segmentId": "S7",
+      "score": 0.446971
+    },
+    {
+      "segmentId": "S6",
+      "score": 0.286634
+    },
+    {
+      "segmentId": "S5",
+      "score": 0.256848
+    },
+    {
+      "segmentId": "S14",
+      "score": 0.0
+    },
+    {
+      "segmentId": "S15",
+      "score": 0.0
+    }
+  ],
+  "S5": [
+    {
+      "segmentId": "S6",
+      "score": 0.996474
+    },
+    {
+      "segmentId": "S7",
+      "score": 0.574641
+    },
+    {
+      "segmentId": "S1",
+      "score": 0.289295
+    },
+    {
+      "segmentId": "S3",
+      "score": 0.256848
+    },
+    {
+      "segmentId": "S14",
+      "score": 0.0
+    },
+    {
+      "segmentId": "S15",
+      "score": 0.0
+    }
+  ],
+  "S6": [
+    {
+      "segmentId": "S5",
+      "score": 0.996474
+    },
+    {
+      "segmentId": "S7",
+      "score": 0.641281
+    },
+    {
+      "segmentId": "S3",
+      "score": 0.286634
+    },
+    {
+      "segmentId": "S1",
+      "score": 0.271232
+    },
+    {
+      "segmentId": "S14",
+      "score": 0.0
+    },
+    {
+      "segmentId": "S15",
+      "score": 0.0
+    }
+  ],
+  "S7": [
+    {
+      "segmentId": "S6",
+      "score": 0.641281
+    },
+    {
+      "segmentId": "S5",
+      "score": 0.574641
+    },
+    {
+      "segmentId": "S3",
+      "score": 0.446971
+    },
+    {
+      "segmentId": "S1",
+      "score": 0.0
+    },
+    {
+      "segmentId": "S14",
+      "score": 0.0
+    },
+    {
+      "segmentId": "S15",
+      "score": 0.0
+    }
+  ]
+}
