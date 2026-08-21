@@ -156,6 +156,7 @@ score = w_g*global + w_i*industry + w_c*client + w_sim*sim + w_emb*emb_nbr + w_n
 
 ## Knowledge base
 
+- [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md) — Offline training + online recommendation overview
 - [`docs/ARTIFACTS.md`](docs/ARTIFACTS.md) — 产物字典（含 embeddings vs emb_neighbors、多选）
 - [`docs/NAME_SIMILARITY.md`](docs/NAME_SIMILARITY.md) — 全局名称近邻（MiniLM）
 - [`docs/ALGORITHMS.md`](docs/ALGORITHMS.md) — 训练算法

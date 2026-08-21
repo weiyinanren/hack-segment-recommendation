@@ -113,6 +113,7 @@ public class RankingService {
         double wSim = hasSelection ? w.getSimilarity() : 0.0;
         double wEmb = hasSelection ? w.getEmbedding() : 0.0;
         double wName = hasSelection ? w.getNameSimilarity() : 0.0;
+        Map<String, String> segmentNames = artifactStore.globalSegmentNames();
 
         List<RecommendedItem> items = scores.entrySet().stream()
                 .filter(e -> !exclude.contains(e.getKey()))
@@ -121,6 +122,7 @@ public class RankingService {
                     double[] c = e.getValue();
                     RecommendedItem item = new RecommendedItem();
                     item.setSegmentId(e.getKey());
+                    item.setSegmentName(segmentNames.getOrDefault(e.getKey(), e.getKey()));
                     item.setInCatalog(client.isInCatalog(e.getKey()));
                     item.setGlobalPopularityScore(round(c[0]));
                     item.setIndustryPopularityScore(round(c[1]));

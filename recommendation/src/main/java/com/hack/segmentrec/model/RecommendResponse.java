@@ -53,6 +53,7 @@ public class RecommendResponse {
 
     public static class RecommendedItem {
         private String segmentId;
+        private String segmentName;
         private double score;
         /** Whether this segment is in the requesting client's catalog. */
         private boolean inCatalog;
@@ -69,6 +70,14 @@ public class RecommendResponse {
 
         public void setSegmentId(String segmentId) {
             this.segmentId = segmentId;
+        }
+
+        public String getSegmentName() {
+            return segmentName;
+        }
+
+        public void setSegmentName(String segmentName) {
+            this.segmentName = segmentName;
         }
 
         public double getScore() {

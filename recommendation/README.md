@@ -69,6 +69,7 @@ curl -s -X POST http://localhost:8080/api/recommend/segments \
 
 ## 文档
 
+- [`docs/ARCHITECTURE.md`](../docs/ARCHITECTURE.md) — Offline + online overview (English)
 - [`docs/ARTIFACTS.md`](../docs/ARTIFACTS.md) — 产物字典（embeddings vs emb_neighbors 等）
 - [`docs/TENANCY.md`](../docs/TENANCY.md) — 隔离与打分
 - [`docs/QUERY_UNDERSTANDING.md`](../docs/QUERY_UNDERSTANDING.md) — LLM query 解析配置
