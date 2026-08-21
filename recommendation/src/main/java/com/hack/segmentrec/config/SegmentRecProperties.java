@@ -337,13 +337,58 @@ public class SegmentRecProperties {
     }
 
     public static class QueryEmbedding {
+        /**
+         * {@code vertex} calls Vertex AI over ADC and needs no Python; {@code local} runs
+         * sentence-transformers in a child process, which keeps queries on the machine but
+         * requires the training virtualenv to be present.
+         */
+        private String provider = "vertex";
         private String pythonPath = "../training/.venv/bin/python";
         private String scriptPath = "../training/scripts/embed_texts.py";
         private String model = "sentence-transformers/all-MiniLM-L6-v2";
+        private String vertexModel = "gemini-embedding-001";
+        private String vertexLocation = "us-central1";
+        /**
+         * Vertex returns 3072 dimensions unless truncated. 768 is Google's recommended balance and
+         * keeps the artifact small; it must match what training wrote.
+         */
+        private int vertexOutputDimensionality = 768;
         private int topK = 8;
         private double minScore = 0.25;
         /** Covers the worker's one-off model load on the first request, not just an encode. */
         private int timeoutSeconds = 60;
+
+        public String getProvider() {
+            return provider;
+        }
+
+        public void setProvider(String provider) {
+            this.provider = provider;
+        }
+
+        public String getVertexModel() {
+            return vertexModel;
+        }
+
+        public void setVertexModel(String vertexModel) {
+            this.vertexModel = vertexModel;
+        }
+
+        public String getVertexLocation() {
+            return vertexLocation;
+        }
+
+        public void setVertexLocation(String vertexLocation) {
+            this.vertexLocation = vertexLocation;
+        }
+
+        public int getVertexOutputDimensionality() {
+            return vertexOutputDimensionality;
+        }
+
+        public void setVertexOutputDimensionality(int vertexOutputDimensionality) {
+            this.vertexOutputDimensionality = vertexOutputDimensionality;
+        }
 
         public int getTimeoutSeconds() {
             return timeoutSeconds;

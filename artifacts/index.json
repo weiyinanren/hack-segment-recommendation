@@ -1,13 +1,13 @@
 {
-  "version": "20260820T055342Z",
-  "trainedAt": "2026-08-20T05:53:47.496385+00:00",
+  "version": "20260820T090832Z",
+  "trainedAt": "2026-08-20T09:10:25.201908+00:00",
   "mode": "three_layer_global_industry_client",
   "sampleWeights": {
     "half_life_days": 90.0,
     "weight_distributed": 1.0,
     "weight_undistributed": 0.4,
     "min_weight": 0.05,
-    "as_of": "2026-08-19T00:00:00+00:00",
+    "as_of": null,
     "formula": "w = max(min_weight, exp(-ln2/half_life * age_days) * w_distributed)"
   },
   "layers": {

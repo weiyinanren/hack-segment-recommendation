@@ -175,10 +175,20 @@ public class ArtifactStore {
             if (meta.has("version")) {
                 g.version = meta.get("version").asText();
             }
+            // Which model produced segment_name_embeddings.json. Query vectors must come from
+            // the same model, so retrieval compares against this before trusting a cosine.
+            JsonNode embedding = meta.path("segmentNameEmbeddings");
+            if (embedding.isObject()) {
+                g.embeddingBackend = embedding.path("backendUsed").asText("unknown");
+                g.embeddingModel = embedding.path("model").asText("");
+                g.embeddingVectorDim = embedding.path("vectorDim").asInt(0);
+            }
         }
         g.loaded = true;
-        log.info("Global layer loaded segmentPrior={} nameEmbeddings={} nameNeighbors={}",
-                g.segmentPrior.size(), g.segmentNameEmbeddings.size(), g.nameNeighbors.size());
+        log.info("Global layer loaded segmentPrior={} nameEmbeddings={} nameNeighbors={} backend={} model={} dim={}",
+                g.segmentPrior.size(), g.segmentNameEmbeddings.size(), g.nameNeighbors.size(),
+                g.embeddingBackend, g.embeddingModel.isEmpty() ? "unrecorded" : g.embeddingModel,
+                g.embeddingVectorDim);
         return g;
     }
 
@@ -309,6 +319,9 @@ public class ArtifactStore {
         private Map<String, String> segmentNames = Collections.emptyMap();
         private Map<String, List<Double>> segmentNameEmbeddings = Collections.emptyMap();
         private Map<String, List<ScoredSegment>> nameNeighbors = Collections.emptyMap();
+        private String embeddingBackend = "unknown";
+        private String embeddingModel = "";
+        private int embeddingVectorDim = 0;
 
         static GlobalArtifacts empty() {
             GlobalArtifacts g = new GlobalArtifacts();
@@ -334,6 +347,24 @@ public class ArtifactStore {
 
         public Map<String, List<Double>> getSegmentNameEmbeddings() {
             return segmentNameEmbeddings;
+        }
+
+        /** Embedding backend recorded by training, e.g. {@code sentence_transformers}. */
+        public String getEmbeddingBackend() {
+            return embeddingBackend;
+        }
+
+        /**
+         * Exact model id training used, e.g. {@code sentence-transformers/all-MiniLM-L6-v2}.
+         * Empty for artifacts built before this was recorded.
+         */
+        public String getEmbeddingModel() {
+            return embeddingModel;
+        }
+
+        /** Width of the stored name vectors, or 0 when training did not record it. */
+        public int getEmbeddingVectorDim() {
+            return embeddingVectorDim;
         }
 
         public List<ScoredSegment> nameNeighborsOf(String segmentId) {

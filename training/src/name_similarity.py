@@ -90,7 +90,7 @@ def _l2_normalize(mat: np.ndarray) -> np.ndarray:
     return mat / np.clip(norms, 1e-9, None)
 
 
-def embed_texts_openai(texts: list[str], model: str | None = None) -> np.ndarray:
+def embed_texts_openai(texts: list[str], model: str | None = None) -> tuple[np.ndarray, str]:
     api_key = os.environ.get("OPENAI_API_KEY")
     if not api_key:
         raise RuntimeError("OPENAI_API_KEY not set")
@@ -112,10 +112,10 @@ def embed_texts_openai(texts: list[str], model: str | None = None) -> np.ndarray
         vectors[row["index"]] = row["embedding"]
     if any(v is None for v in vectors):
         raise RuntimeError("Incomplete OpenAI embedding response")
-    return np.asarray(vectors, dtype=np.float32)
+    return np.asarray(vectors, dtype=np.float32), model
 
 
-def embed_texts_http(texts: list[str], url: str | None = None) -> np.ndarray:
+def embed_texts_http(texts: list[str], url: str | None = None) -> tuple[np.ndarray, str]:
     """
     Generic embedding HTTP API.
     POST JSON: {"texts": ["...", "..."]}
@@ -136,13 +136,109 @@ def embed_texts_http(texts: list[str], url: str | None = None) -> np.ndarray:
     vectors = body.get("embeddings") or body.get("data")
     if not vectors or len(vectors) != len(texts):
         raise RuntimeError("Unexpected embedding API response shape")
-    return np.asarray(vectors, dtype=np.float32)
+    return np.asarray(vectors, dtype=np.float32), str(body.get("model") or url)
+
+
+def _tls_context() -> Any:
+    """
+    macOS python.org builds do not read the system keychain, so googleapis.com fails to verify
+    against an empty default trust store. certifi ships with the training dependencies.
+    """
+    import ssl
+
+    try:
+        import certifi
+
+        return ssl.create_default_context(cafile=certifi.where())
+    except ImportError:
+        return ssl.create_default_context()
+
+
+def _vertex_access_token() -> str:
+    """ADC token via gcloud, so training uses the same credentials as the service."""
+    import subprocess
+
+    result = subprocess.run(
+        ["gcloud", "auth", "application-default", "print-access-token"],
+        capture_output=True,
+        text=True,
+    )
+    if result.returncode != 0:
+        raise RuntimeError(
+            "could not obtain an ADC token; run "
+            f"'gcloud auth application-default login'. {result.stderr.strip()}"
+        )
+    return result.stdout.strip()
+
+
+def embed_texts_vertex(
+    texts: list[str],
+    model: str | None = None,
+    project: str | None = None,
+    location: str | None = None,
+    output_dim: int | None = None,
+) -> tuple[np.ndarray, str]:
+    """
+    Vertex AI text embeddings. Chosen so the serving side can encode queries with the same
+    model over plain HTTP, with no Python or model weights on the serving host.
+
+    Requests are batched because the endpoint accepts several instances per call, and 420
+    segment names would otherwise cost 420 round trips.
+    """
+    model = model or os.environ.get("VERTEX_EMBEDDING_MODEL", "gemini-embedding-001")
+    project = project or os.environ.get("GOOGLE_CLOUD_PROJECT")
+    location = location or os.environ.get("VERTEX_EMBEDDING_LOCATION", "us-central1")
+    output_dim = int(output_dim or os.environ.get("VERTEX_EMBEDDING_DIM", "768"))
+    if not project:
+        raise RuntimeError("GOOGLE_CLOUD_PROJECT not set")
+
+    host = (
+        "https://aiplatform.googleapis.com"
+        if location == "global"
+        else f"https://{location}-aiplatform.googleapis.com"
+    )
+    url = (
+        f"{host}/v1/projects/{project}/locations/{location}"
+        f"/publishers/google/models/{model}:predict"
+    )
+    token = _vertex_access_token()
+
+    context = _tls_context()
+    vectors: list[list[float]] = []
+    batch_size = int(os.environ.get("VERTEX_EMBEDDING_BATCH", "20"))
+    for start in range(0, len(texts), batch_size):
+        chunk = texts[start : start + batch_size]
+        payload = json.dumps(
+            {
+                "instances": [{"content": t} for t in chunk],
+                "parameters": {"outputDimensionality": output_dim},
+            }
+        ).encode("utf-8")
+        req = urllib.request.Request(
+            url,
+            data=payload,
+            headers={
+                "Authorization": f"Bearer {token}",
+                "Content-Type": "application/json",
+            },
+            method="POST",
+        )
+        with urllib.request.urlopen(req, timeout=120, context=context) as resp:
+            body = json.loads(resp.read().decode("utf-8"))
+        predictions = body.get("predictions") or []
+        if len(predictions) != len(chunk):
+            raise RuntimeError(
+                f"Vertex returned {len(predictions)} embeddings for {len(chunk)} inputs"
+            )
+        vectors.extend(p["embeddings"]["values"] for p in predictions)
+
+    return np.asarray(vectors, dtype=np.float32), model
 
 
 def embed_texts_sentence_transformers(
     texts: list[str],
     model_name: str | None = None,
-) -> np.ndarray:
+) -> tuple[np.ndarray, str]:
     from sentence_transformers import SentenceTransformer
 
     model_name = model_name or os.environ.get(
@@ -156,32 +252,45 @@ def embed_texts_sentence_transformers(
         embed_texts_sentence_transformers._cache = cache  # type: ignore[attr-defined]
     model = cache[model_name]
     mat = model.encode(texts, normalize_embeddings=True, show_progress_bar=False)
-    return np.asarray(mat, dtype=np.float32)
+    return np.asarray(mat, dtype=np.float32), model_name
 
 
-def embed_texts(texts: list[str]) -> tuple[np.ndarray, str]:
+def embed_texts(texts: list[str]) -> tuple[np.ndarray, str, str]:
     """
-    Prefer local sentence-transformers; optional overrides via env:
-      EMBEDDING_API_URL, OPENAI_API_KEY
-    Returns (matrix, backend_name).
+    Backend order follows EMBEDDING_BACKEND (default 'vertex'), then falls back.
+
+    Returns (matrix, backend_name, model_id). The model id is recorded in the artifact
+    metadata because the serving side must encode queries with this exact model — vectors
+    from a different model are not comparable even at the same width.
     """
     errors: list[str] = []
+    preferred = os.environ.get("EMBEDDING_BACKEND", "vertex").strip().lower()
 
-    # Primary: sentence-transformers (project choice)
+    # Default: Vertex, so serving needs no Python or local model weights.
+    if preferred == "vertex":
+        try:
+            mat, model_id = embed_texts_vertex(texts)
+            return mat, "vertex", model_id
+        except Exception as exc:  # noqa: BLE001
+            errors.append(f"vertex: {exc}")
+
     try:
-        return embed_texts_sentence_transformers(texts), "sentence_transformers"
+        mat, model_id = embed_texts_sentence_transformers(texts)
+        return mat, "sentence_transformers", model_id
     except Exception as exc:  # noqa: BLE001
         errors.append(f"sentence_transformers: {exc}")
 
     if os.environ.get("EMBEDDING_API_URL"):
         try:
-            return embed_texts_http(texts), "http"
+            mat, model_id = embed_texts_http(texts)
+            return mat, "http", model_id
         except Exception as exc:  # noqa: BLE001
             errors.append(f"http: {exc}")
 
     if os.environ.get("OPENAI_API_KEY"):
         try:
-            return embed_texts_openai(texts), "openai"
+            mat, model_id = embed_texts_openai(texts)
+            return mat, "openai", model_id
         except Exception as exc:  # noqa: BLE001
             errors.append(f"openai: {exc}")
 
@@ -233,9 +342,10 @@ def build_name_embeddings_map(
         return {}, meta
 
     display = [segment_names[i] if segment_names[i].strip() else i for i in ids]
-    mat, used = embed_texts(display)
+    mat, used, model_id = embed_texts(display)
     mat = _l2_normalize(mat)
     meta["backendUsed"] = used
+    meta["model"] = model_id
     meta["vectorDim"] = int(mat.shape[1])
     return {
         sid: [round(float(x), 8) for x in mat[idx].tolist()]
@@ -280,11 +390,12 @@ def build_name_neighbors(
 
     if backend in ("auto", "embedding"):
         try:
-            mat, used_name = embed_texts(embed_inputs)
+            mat, used_name, model_id = embed_texts(embed_inputs)
             mat = _l2_normalize(mat)
             sims = mat @ mat.T
             used = used_name  # type: ignore[assignment]
             meta["backendUsed"] = used_name
+            meta["model"] = model_id
             meta["vectorDim"] = int(mat.shape[1])
         except Exception as exc:
             if backend == "embedding":

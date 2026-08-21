@@ -82,12 +82,14 @@ mvn -s maven-settings.xml -DskipTests package
 方式 A — Maven 直接跑：
 
 ```bash
-export OPENAI_API_KEY=sk-...
+export GOOGLE_CLOUD_PROJECT=eng-genai-pilot   # 需先 gcloud auth application-default login
 cd recommendation
 mvn -s maven-settings.xml spring-boot:run
 ```
 
-Chat 接口 `/api/chat/recommend` 用 OpenAI `gpt-4o-mini` 解析自然语言。详见 [`docs/QUERY_UNDERSTANDING.md`](docs/QUERY_UNDERSTANDING.md)。
+自然语言入口是 `/api/audience/intelligence`，由 Gemini 经 Vertex AI（ADC，无 API key）做路由和语义解析。
+未配置凭据时它不会失败，而是降级为关键词路由 + 名称匹配检索。详见
+[`docs/QUERY_UNDERSTANDING.md`](docs/QUERY_UNDERSTANDING.md)。
 
 方式 B — 跑已打好的 jar：
 

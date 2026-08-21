@@ -38,7 +38,7 @@ LLM 失败且 `fallback-to-rule: true` 时自动退回规则解析。
 > `segment-rec.gemini.temperature` 默认不下发。Gemini 3 系列按默认 1.0 调优，
 > 强行调到 0 可能出现循环或推理退化；只有切回 2.x 模型时才建议显式设置。
 
-### Gemini 工具路由（`/api/agent/ask`）
+### Gemini 工具路由（`/api/audience/intelligence`）
 
 同一个 Gemini 配置还驱动一层工具路由：把用户的自然语言交给 Gemini，由它决定调用本服务的哪个能力，
 再由服务执行并让 Gemini 用自然语言总结结果。
@@ -68,7 +68,7 @@ LLM 失败且 `fallback-to-rule: true` 时自动退回规则解析。
 
 ```bash
 # Gemini 决定调用哪个能力，再执行并总结
-curl -s -X POST http://localhost:8080/api/agent/ask \
+curl -s -X POST http://localhost:8080/api/audience/intelligence \
   -H 'Content-Type: application/json' \
   -d '{
     "clientName":"UnileverDemo",
@@ -77,21 +77,12 @@ curl -s -X POST http://localhost:8080/api/agent/ask \
   }'
 
 # 同一入口的 lookalike：UI 把用户已选中的 segment 一并传入，路由改走 recommend_segments
-curl -s -X POST http://localhost:8080/api/agent/ask \
+curl -s -X POST http://localhost:8080/api/audience/intelligence \
   -H 'Content-Type: application/json' \
   -d '{
     "clientName":"Hack CPG Demo",
     "query":"帮我找和这个人群类似的",
     "selectedSegmentIds":["626558140458404040"],
-    "topN":5
-  }'
-
-# 自然语言 query -> industry/concept -> seed segments -> final recommendations
-curl -s -X POST http://localhost:8080/api/chat/recommend \
-  -H 'Content-Type: application/json' \
-  -d '{
-    "clientName":"UnileverDemo",
-    "query":"你帮我推荐一些CPG行业的高价值人群，不想要女性",
     "topN":5
   }'
 
@@ -122,24 +113,36 @@ curl -s -X POST http://localhost:8080/api/recommend/segments \
   -d '{"clientName":"HealthCheckA","industry":"HealthCheck","topN":5,"expandBeyondCatalog":true}'
 ```
 
-`/api/agent/ask` 返回：`tool`（选中的能力）、`toolArguments`（模型填的参数）、
+`/api/audience/intelligence` 返回：`tool`（选中的能力）、`toolArguments`（模型填的参数）、
 `routingStrategy`（`gemini:<model>` 或 `heuristic:*`）、`reply`（自然语言总结）、`result`（原始返回）。
 
 `/api/recommend/segments` 的 `items` 带 `segmentId` / `segmentName` / `score` 及六个通道分；
 响应顶层的 `industry` 是本次实际使用的行业，`industrySource` 为 `request`（调用方传的）、
 `client_primary`（由租户 popularity 推断）或 `none`（该租户无 popularity 数据）。
 
-`/api/chat/recommend` 返回三块：
+路由到 `chat_recommend` 时，`result` 里是三块：
 
-- `parsedQuery`: LLM（或规则）抽取的 `industry` / `concept` / `excludeConcepts`
+- `parsedQuery`: Gemini（或规则 fallback）抽取的 `industry` / `concept` / `excludeConcepts`
 - `seedSegments`: 概念检索得到的种子 segments
 - `recommendations`: 复用现有 ranking 的最终结果
 
+这条链路过去还有一个独立的 `/api/chat/recommend` HTTP 端点，现已移除：它和 `/api/audience/intelligence`
+走同一个 `ConversationalRecommendationService`，对外保留两个自然语言入口只会让调用方犹豫该用哪个。
+Gemini 不可用时 `/api/audience/intelligence` 会以 `heuristic:gemini_unavailable` 路由到同一个 tool，
+所以移除它不影响无 LLM 环境下的可用性。
+
 当前 `ConceptRetrievalService` 是独立模块；默认优先走 query embedding 检索：
 
-- query/concept：本机 `sentence-transformers/all-MiniLM-L6-v2`
+- query/concept：Vertex AI `gemini-embedding-001`（768 维，走 Gemini 同一套 ADC，无需 Python）
 - candidate 向量：`artifacts/global/segment_name_embeddings.json`
 - fallback：规则 + 名称 lexical 检索
+
+两侧必须是同一个模型，否则向量不可比。训练把模型 id 和维度写进
+`artifacts/global/meta.json`，服务启动时读出来，首次检索时与在线配置比对；不一致会打一条
+`Embedding mismatch` 警告并跳过向量检索退回名称匹配，而不是拿不可比的向量算出垃圾余弦。
+
+想把查询留在本机不出网时，设 `SEGMENT_QUERY_EMBED_PROVIDER=local` 切回
+sentence-transformers，但那需要服务端有 `training/.venv`，且要用相同后端重训 artifacts。
 
 ## 文档
 

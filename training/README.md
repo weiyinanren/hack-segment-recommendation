@@ -81,11 +81,24 @@ python train.py --client AcmeAuto --skip-shared
 
 样本权重：[`docs/SAMPLE_WEIGHTS.md`](../docs/SAMPLE_WEIGHTS.md)
 
-名称语义（默认 sentence-transformers）：
+名称语义（默认 Vertex AI，服务端因此不需要 Python）：
 
 ```bash
-pip install -r requirements.txt
-python train.py --name-backend embedding --as-of 2026-08-12
+gcloud auth application-default login
+GOOGLE_CLOUD_PROJECT=eng-genai-pilot \
+  python train.py --input data/audience_hack_cpg_demo.csv
+```
+
+`EMBEDDING_BACKEND` 控制后端，默认 `vertex`，失败时退回本机 sentence-transformers。相关变量：
+`VERTEX_EMBEDDING_MODEL`（默认 `gemini-embedding-001`）、`VERTEX_EMBEDDING_LOCATION`（默认
+`us-central1`）、`VERTEX_EMBEDDING_DIM`（默认 `768`）。
+
+维度和模型 id 会写进 `artifacts/global/meta.json`，服务启动时比对；改了这里就必须重训，
+否则查询向量和存量向量不在同一空间，检索会退回名称匹配。
+
+```bash
+# 不出网的老路径：本机 MiniLM（服务端需相应设 SEGMENT_QUERY_EMBED_PROVIDER=local）
+EMBEDDING_BACKEND=sentence_transformers python train.py --name-backend embedding
 ```
 
 详见 [`docs/NAME_SIMILARITY.md`](../docs/NAME_SIMILARITY.md)

@@ -4,6 +4,8 @@ import com.hack.segmentrec.config.SegmentRecProperties;
 import com.hack.segmentrec.model.ChatRecommendResponse.SeedSegment;
 import com.hack.segmentrec.service.query.QueryEmbeddingClient;
 import com.hack.segmentrec.service.query.SegmentExclusionFilter;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -14,9 +16,15 @@ import java.util.List;
 import java.util.Locale;
 import java.util.Map;
 import java.util.Set;
+import java.util.concurrent.atomic.AtomicReference;
 
 @Service
 public class ConceptRetrievalService {
+
+    private static final Logger log = LoggerFactory.getLogger(ConceptRetrievalService.class);
+
+    /** Last mismatching model/width pair, so a standing mismatch logs once instead of per request. */
+    private final AtomicReference<String> warnedSignature = new AtomicReference<>("");
 
     private final ArtifactStore artifactStore;
     private final SegmentRecProperties properties;
@@ -58,6 +66,7 @@ public class ConceptRetrievalService {
 
         String normalizedConcept = normalize(concept);
         Map<String, List<Double>> nameEmbeddings = artifactStore.getGlobal().getSegmentNameEmbeddings();
+        long startedAt = System.currentTimeMillis();
         List<SeedSegment> embeddingSeeds = embeddingRetrieve(
                 concept,
                 names,
@@ -68,9 +77,16 @@ public class ConceptRetrievalService {
                 excludeConcepts
         );
         if (!embeddingSeeds.isEmpty()) {
+            log.info("Concept retrieval used vectors ({}): concept='{}' seeds={} top={} in {}ms",
+                    queryEmbeddingClient.modelId(), concept, embeddingSeeds.size(),
+                    embeddingSeeds.get(0).getSegmentName(), System.currentTimeMillis() - startedAt);
             return embeddingSeeds;
         }
-        return lexicalRetrieve(normalizedConcept, names, client, expandBeyondCatalog, topK, excludeConcepts);
+        List<SeedSegment> lexicalSeeds =
+                lexicalRetrieve(normalizedConcept, names, client, expandBeyondCatalog, topK, excludeConcepts);
+        log.info("Concept retrieval fell back to name matching: concept='{}' seeds={} in {}ms",
+                concept, lexicalSeeds.size(), System.currentTimeMillis() - startedAt);
+        return lexicalSeeds;
     }
 
     private List<SeedSegment> lexicalRetrieve(
@@ -129,6 +145,9 @@ public class ConceptRetrievalService {
         if (query.length == 0) {
             return List.of();
         }
+        if (!embeddingsComparable(query.length)) {
+            return List.of();
+        }
 
         int limit = Math.max(1, Math.min(topK, properties.getQueryEmbedding().getTopK()));
         List<SeedSegment> seeds = new ArrayList<>();
@@ -161,6 +180,41 @@ public class ConceptRetrievalService {
 
     private double[] embedConcept(String concept) {
         return queryEmbeddingClient.embed(concept);
+    }
+
+    /**
+     * Query vectors are only comparable to the stored ones when both come from the same model.
+     * {@link #cosine} truncates to the shorter vector, so a mismatch would otherwise score
+     * unrelated coordinates against each other and quietly degrade to lexical retrieval.
+     *
+     * <p>Width alone is not enough: different models share widths (several sentence-transformers
+     * models are 384-dim), and the two sides are configured independently. So the model id of the
+     * active provider is compared too whenever the artifacts recorded one.
+     */
+    private boolean embeddingsComparable(int queryDim) {
+        ArtifactStore.GlobalArtifacts global = artifactStore.getGlobal();
+        int artifactDim = global.getEmbeddingVectorDim();
+        String artifactModel = global.getEmbeddingModel();
+        String queryModel = queryEmbeddingClient.modelId();
+
+        boolean dimConflict = artifactDim > 0 && artifactDim != queryDim;
+        boolean modelConflict = !artifactModel.isEmpty()
+                && queryModel != null
+                && !artifactModel.equals(queryModel);
+        if (!dimConflict && !modelConflict) {
+            return true;
+        }
+
+        String signature = queryModel + "/" + queryDim;
+        if (!signature.equals(warnedSignature.getAndSet(signature))) {
+            log.warn("Embedding mismatch: queries use '{}' ({}-dim) but artifacts were built with "
+                            + "'{}' ({}-dim, backend {}). Skipping vector retrieval and falling back "
+                            + "to name matching until both sides use the same model.",
+                    queryModel, queryDim,
+                    artifactModel.isEmpty() ? "unrecorded" : artifactModel,
+                    artifactDim, global.getEmbeddingBackend());
+        }
+        return false;
     }
 
     private static double cosine(double[] query, List<Double> target) {

@@ -110,12 +110,14 @@ public class SegmentToolRouter {
             return fallback(available, seeds, "heuristic:gemini_unavailable");
         }
 
+        long startedAt = System.currentTimeMillis();
         try {
             GeminiClient.FunctionCall call = geminiClient.generateFunctionCall(
                     buildRoutingPrompt(explicitIndustry, seeds, available),
                     query,
                     declarations(available)
             );
+            long elapsed = System.currentTimeMillis() - startedAt;
             SegmentTool chosen = available.stream()
                     .filter(tool -> tool.name().equals(call.getName()))
                     .findFirst()
@@ -124,6 +126,8 @@ public class SegmentToolRouter {
                 log.warn("Gemini picked unknown tool '{}', falling back", call.getName());
                 return fallback(available, seeds, "heuristic:unknown_tool");
             }
+            log.info("Gemini routed query to tool '{}' in {}ms (model={}, args={})",
+                    chosen.name(), elapsed, geminiClient.getModel(), call.getArguments());
             return new Selection(chosen, call.getArguments(), "gemini:" + geminiClient.getModel());
         } catch (Exception e) {
             log.warn("Gemini tool routing failed, falling back: {}", e.getMessage());
@@ -144,6 +148,7 @@ public class SegmentToolRouter {
                 .findFirst()
                 .orElse(available.get(0));
         String resolved = seeds != null && !seeds.isEmpty() ? strategy + "+seeds" : strategy;
+        log.info("Routing without Gemini ({}), using tool '{}'", resolved, tool.name());
         return new Selection(tool, objectMapper.createObjectNode(), resolved);
     }
 

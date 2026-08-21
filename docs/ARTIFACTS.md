@@ -33,13 +33,25 @@ artifacts/
 
 | 文件 | 范围 | 依据 | Serving？ | 回答的问题 |
 |------|------|------|-----------|------------|
-| `global/name_neighbors.json` | **全局一份即可** | MiniLM 对 `segment_name` 的向量余弦 | ✅ | 名字语义像谁？与共现无关 |
+| `global/name_neighbors.json` | **全局一份即可** | embedding 模型对 `segment_name` 的向量余弦 | ✅ | 名字语义像谁？与共现无关 |
 | `clients/.../similarity.json` | 本 client | Audience 直接共现 | ✅ | 常和谁一起被选？ |
 | `clients/.../emb_neighbors.json` | 本 client | PPMI+SVD 行为向量近邻 | ✅ | 选购行为模式像谁？（可含间接关系） |
 
 `name_neighbors` **不按 client / industry 拆分**；Serving 再用 `segment_catalog` 过滤。
 
-`segment_name_embeddings.json` 也是 **global 一份**，给 `/api/chat/recommend` 做 `concept -> seed segments` 的实时余弦检索。
+`segment_name_embeddings.json` 也是 **global 一份**，给 `/api/audience/intelligence` 的 `chat_recommend` 链路做 `concept -> seed segments` 的实时余弦检索。
+
+### embedding 模型必须两侧一致
+
+用户的查询是训练时不存在的新文本，只能在线编码，才能和这里存好的向量比余弦。不同模型的向量
+空间互不相通，即便维度相同也不可比，所以换模型必须重训。`meta.json` 里记录了判据：
+
+```json
+"segmentNameEmbeddings": { "backendUsed": "vertex", "model": "gemini-embedding-001", "vectorDim": 768 }
+```
+
+服务启动时读出 `model` / `vectorDim`，与在线 provider 比对，不一致就退回名称匹配并告警。老产物
+没有 `model` 字段时只校验维度，重训后保护才完整。
 
 ---
 

@@ -2,12 +2,9 @@ package com.hack.segmentrec.controller;
 
 import com.hack.segmentrec.model.AgentAskRequest;
 import com.hack.segmentrec.model.AgentAskResponse;
-import com.hack.segmentrec.model.ChatRecommendRequest;
-import com.hack.segmentrec.model.ChatRecommendResponse;
 import com.hack.segmentrec.model.RecommendRequest;
 import com.hack.segmentrec.model.RecommendResponse;
 import com.hack.segmentrec.service.ArtifactStore;
-import com.hack.segmentrec.service.ConversationalRecommendationService;
 import com.hack.segmentrec.service.RankingService;
 import com.hack.segmentrec.service.agent.SegmentToolRouter;
 import com.hack.segmentrec.service.agent.tools.ServiceHealthTool;
@@ -30,20 +27,17 @@ import java.util.TreeSet;
 public class RecommendController {
 
     private final RankingService rankingService;
-    private final ConversationalRecommendationService conversationalRecommendationService;
     private final SegmentToolRouter segmentToolRouter;
     private final ServiceHealthTool serviceHealthTool;
     private final ArtifactStore artifactStore;
 
     public RecommendController(
             RankingService rankingService,
-            ConversationalRecommendationService conversationalRecommendationService,
             SegmentToolRouter segmentToolRouter,
             ServiceHealthTool serviceHealthTool,
             ArtifactStore artifactStore
     ) {
         this.rankingService = rankingService;
-        this.conversationalRecommendationService = conversationalRecommendationService;
         this.segmentToolRouter = segmentToolRouter;
         this.serviceHealthTool = serviceHealthTool;
         this.artifactStore = artifactStore;
@@ -65,22 +59,12 @@ public class RecommendController {
     }
 
     /**
-     * Natural-language recommendation flow:
-     * query -> parse industry/concept -> retrieve seed segments -> rank final segments.
-     */
-    @PostMapping("/chat/recommend")
-    public ChatRecommendResponse chatRecommend(@RequestBody ChatRecommendRequest request) {
-        if (request.getTopN() <= 0) {
-            request.setTopN(10);
-        }
-        return conversationalRecommendationService.recommend(request);
-    }
-
-    /**
      * Natural-language entry point: Gemini decides which capability of this service
-     * answers the query, invokes it, and summarizes the result.
+     * answers the query, invokes it, and summarizes the result. The chat flow it used to
+     * sit next to is now reachable only as the {@code chat_recommend} tool behind this
+     * router, so callers have one natural-language door instead of two.
      */
-    @PostMapping("/agent/ask")
+    @PostMapping("/audience/intelligence")
     public AgentAskResponse ask(@RequestBody AgentAskRequest request) {
         return segmentToolRouter.ask(request);
     }

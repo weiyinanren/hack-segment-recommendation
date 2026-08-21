@@ -17,7 +17,10 @@ segment-rec:
   gemini:
     # Vertex AI via Application Default Credentials; no API key.
     # Grant the ADC principal roles/aiplatform.user on this project.
-    project-id: ${GOOGLE_CLOUD_PROJECT:${GCLOUD_PROJECT:}}
+    # Defaulted so `java -jar` works without extra env vars. ADC often resolves no project of
+    # its own (gcloud's core.project is commonly unset), and an empty value silently degrades
+    # both routing and vector retrieval instead of failing.
+    project-id: ${GOOGLE_CLOUD_PROJECT:${GCLOUD_PROJECT:eng-genai-pilot}}
     location: ${GOOGLE_CLOUD_LOCATION:global}
     endpoint: ${VERTEX_AI_ENDPOINT:}
     model: ${GEMINI_MODEL:gemini-3.5-flash}
@@ -35,6 +38,13 @@ segment-rec:
     allow-admin-tools: ${SEGMENT_AGENT_ALLOW_ADMIN:false}
     fallback-tool: chat_recommend
   query-embedding:
+    # vertex | local. vertex needs no Python and reuses the Gemini ADC credentials;
+    # local runs sentence-transformers from the training virtualenv instead.
+    provider: ${SEGMENT_QUERY_EMBED_PROVIDER:vertex}
+    vertex-model: ${SEGMENT_QUERY_EMBED_VERTEX_MODEL:gemini-embedding-001}
+    vertex-location: ${SEGMENT_QUERY_EMBED_LOCATION:us-central1}
+    # Must equal the width training wrote into artifacts/global/meta.json.
+    vertex-output-dimensionality: ${SEGMENT_QUERY_EMBED_DIM:768}
     python-path: ${SEGMENT_QUERY_EMBED_PYTHON:../training/.venv/bin/python}
     script-path: ${SEGMENT_QUERY_EMBED_SCRIPT:../training/scripts/embed_texts.py}
     model: ${SEGMENT_QUERY_EMBED_MODEL:sentence-transformers/all-MiniLM-L6-v2}

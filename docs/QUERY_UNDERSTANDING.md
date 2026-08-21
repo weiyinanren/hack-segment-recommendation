@@ -1,6 +1,7 @@
 # Query understanding（自然语言 → industry + concept）
 
-`/api/chat/recommend` 的第一步：把用户 query 解析成结构化意图，再交给 embedding 检索和 ranking。
+`/api/audience/intelligence` 路由到 `chat_recommend` 后的第一步：把用户 query 解析成结构化意图，
+再交给 embedding 检索和 ranking。
 
 **默认厂商：Vertex AI 上的 Gemini**（`gemini-3.5-flash`），鉴权走 **ADC + IAM，不用 API key**。
 
@@ -35,7 +36,7 @@ segment-rec:
     timeout-seconds: 30
 ```
 
-`segment-rec.gemini` 这一块同时服务于 query 理解和 `/api/agent/ask` 的工具路由。
+`segment-rec.gemini` 这一块同时服务于 query 理解和 `/api/audience/intelligence` 的工具路由。
 
 > **不要给 Gemini 3 设 temperature。** 官方建议保持默认的 `1.0`；调到 0 反而可能出现循环或推理退化，
 > 所以 `temperature` 默认不下发。只有把 `model` 换回 2.x 时才建议显式设置。
@@ -141,9 +142,13 @@ mvn -s maven-settings.xml spring-boot:run
 | 配置块 | 用途 | 模型 |
 |--------|------|------|
 | `query-understanding` | 理解自然语言，抽 industry + concept + 排除项 | **Gemini** `gemini-3.5-flash` |
-| `query-embedding` | concept 文本 → 向量，检索 seed segments | **本地** `sentence-transformers/all-MiniLM-L6-v2` |
+| `query-embedding` | concept 文本 → 向量，检索 seed segments | **Vertex AI** `gemini-embedding-001`（768 维） |
 
-LLM 只负责「听懂」；检索和打分不走 LLM。
+LLM 只负责「听懂」；检索和打分不走 LLM。两个配置块共用同一套 ADC 凭据，但调的是不同 API：
+理解走 `:generateContent`，embedding 走 `:predict`。生成式模型产不出向量，两者不能互相替代。
+
+`query-embedding` 的 `provider` 可设为 `local` 切回本机 sentence-transformers（查询不出网，但
+服务端需要 `training/.venv`）。切换后必须用相同后端重训 artifacts，否则向量不可比。
 
 ---
 
@@ -157,4 +162,4 @@ LLM 只负责「听懂」；检索和打分不走 LLM。
 - `service/query/QueryUnderstandingSupport.java`（各厂商共用的 prompt 与结果映射）
 - `service/QueryUnderstandingService.java`（按 provider 路由 + 回退）
 - `service/query/SegmentExclusionFilter.java`（不想要 / 排除）
-- `service/agent/`（`/api/agent/ask` 的工具路由）
+- `service/agent/`（`/api/audience/intelligence` 的工具路由）
